@@ -162,6 +162,20 @@ class Flur(Set):
         a = c.p(0, yc, 2.0)
         P.line(ctx, [a, (a[0], a[1] + 40)], 3)
         P.ellipse(ctx, a[0], a[1] + 55, 34, 22, "#f2f0e6")
+        if self.variant == "note":
+            # Zettel, unter der Tür durchgeschoben (liegt auf dem Boden)
+            pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
+            P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
+            P.poly(ctx, pts, "#fbf7e8", 4)
+            cx = sum(p[0] for p in pts) / 4
+            cy = sum(p[1] for p in pts) / 4
+            ctx.save()
+            ctx.translate(cx, cy)
+            ctx.scale(1.0, 0.42)
+            ctx.rotate(0.06)
+            P.text(ctx, "Gut gemacht.", -6, 8, 36, color="#2b2b33")
+            P.text(ctx, "– O.", 60, 62, 36, color="#2b2b33")
+            ctx.restore()
 
     def dynamic(self, ctx, t):
         pass

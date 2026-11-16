@@ -9,8 +9,8 @@ Jede Person zählt einmal (letzte eindeutige Stimme gilt).
 import re
 
 PATTERNS = {
-    "A": [r"^\W*a\W*$", r"\b(antwort|option|team|für)\s*a\b", r"^\W*a[\s!.,]", r"\btür (auf|öffnen)\b", r"\bmach auf\b", r"[\s,.!:]a\W*$"],
-    "B": [r"^\W*b\W*$", r"\b(antwort|option|team|für)\s*b\b", r"^\W*b[\s!.,]", r"\bnicht öffnen\b", r"\bbleib drin\b",
+    "A": [r"^\W*a\W*$", r"^\W*a+\b", r"\b(antwort|option|team|für)\s*a\b", r"^\W*a[\s!.,]", r"\btür (auf|öffnen)\b", r"\bmach auf\b", r"[\s,.!:]a\W*$"],
+    "B": [r"^\W*b\W*$", r"^\W*b+\b", r"\bnicht ö+f+n+e*n\b", r"\b(antwort|option|team|für)\s*b\b", r"^\W*b[\s!.,]", r"\bnicht öffnen\b", r"\bbleib drin\b",
           r"\bniemals\b", r"[\s,.!:]b\W*$"],
 }
 
@@ -24,7 +24,7 @@ def classify(text, options=None):
     for k, label in (options or {}).items():
         if label and label.lower() in t:
             hits.add(k)
-    if "nicht öffnen" in t:
+    if re.search(r"\bnicht ö+f+n+e*n\b", t):
         hits.discard("A")
     return hits.pop() if len(hits) == 1 else None
 

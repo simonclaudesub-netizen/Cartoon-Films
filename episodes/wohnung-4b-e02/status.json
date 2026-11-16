@@ -1,0 +1,82 @@
+{
+  "id": "wohnung-4b-e02",
+  "state": "veröffentlicht",
+  "history": [
+    {
+      "t": "2026-11-16 18:05:33",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 18:18:16",
+      "state": "freigabe_ausstehend",
+      "score": 96.0,
+      "duration": 58.9,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 18:18:16",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 18:19:24",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 18:23:12",
+      "state": "freigabe_ausstehend",
+      "score": 96.0,
+      "duration": 56.433,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 18:23:12",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 18:23:30",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 18:26:05",
+      "state": "freigabe_ausstehend",
+      "score": 96.0,
+      "duration": 57.3,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 18:26:05",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 18:26:19",
+      "state": "veröffentlicht"
+    }
+  ],
+  "score": 96.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 96.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 155.4,
+      "rendered_shots": [
+        5
+      ]
+    }
+  ],
+  "duration": 57.3,
+  "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "ehgI-k-milA",
+      "url": "https://youtube.com/shorts/ehgI-k-milA",
+      "privacy": "public"
+    }
+  }
+}

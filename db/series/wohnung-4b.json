@@ -10,12 +10,14 @@
     "regeln": [
       "Nach Mitternacht niemandem die Tür öffnen",
       "Das Klopfen kommt immer um 03:07 Uhr",
-      "Frau Brandt sagt: 'Wenn jemand sagt, ich bin's, dann bin das nicht ich'"
+      "Frau Brandt sagt: 'Wenn jemand sagt, ich bin's, dann bin das nicht ich'",
+      "Wer nicht öffnet, bekommt am Morgen einen Zettel 'Gut gemacht. – O.'"
     ],
     "geheimnisse": [
-      "Was ist mit dem Vormieter von 4B passiert?",
+      "Was ist mit dem Vormieter von 4B passiert? (Okan verbietet, darüber zu reden)",
       "Warum spricht Okan ernste Sätze zweimal?",
-      "Wer imitiert Frau Brandts Stimme?"
+      "Wer imitiert Frau Brandts Stimme?",
+      "Wer ist 'O.' auf dem Zettel 'Gut gemacht.'? (Okan? Oder jemand anderes mit O?)"
     ]
   },
   "cast": [
@@ -34,12 +36,37 @@
       "id": "wohnung-4b-e01",
       "n": 1,
       "title": "Die Regel"
+    },
+    {
+      "id": "wohnung-4b-e02",
+      "n": 2,
+      "title": "Der Zettel"
     }
   ],
-  "votes": [],
+  "votes": [
+    {
+      "episode": "wohnung-4b-e01",
+      "counts": {
+        "A": 0,
+        "B": 4
+      },
+      "total": 4,
+      "winner": "B",
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 4
+          },
+          "total": 4,
+          "winner": "B"
+        }
+      }
+    }
+  ],
   "next_plans": {
-    "A": "Du öffnest die Tür einen Spalt (Kette bleibt dran). Der Flur ist leer – aber auf der Fußmatte liegt ein alter Schlüssel mit dem Anhänger '4B – 1983'.",
-    "B": "Du bleibst still. Das Klopfen hört auf. Am Morgen klebt ein Zettel an deiner Tür: 'Gut gemacht. – O.' Frau Brandt schwört, sie habe die ganze Nacht geschlafen."
+    "A": "Teil 3: 03:07 Uhr, du schaust durch den Türspion. Im Treppenhaus steht niemand – aber das Licht flackert, und vor 4A steht ein Paar Hausschuhe. Dann klopft es von INNEN an der Wohnungstür von Frau Brandt.",
+    "B": "Teil 3: Du folgst Okan in den Keller. Ein Kellerabteil trägt die Nummer 4B und ein neues Schloss. Okan spricht leise mit jemandem hinter der Tür: 'Er hat nicht geöffnet. Er hat nicht geöffnet.'"
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

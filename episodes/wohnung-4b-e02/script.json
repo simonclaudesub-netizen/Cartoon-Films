@@ -1,0 +1,391 @@
+{
+  "id": "wohnung-4b-e02",
+  "series": "wohnung-4b",
+  "episode": 2,
+  "title": "Der Zettel",
+  "label": "WOHNUNG 4B · TEIL 2",
+  "summary": "Die Zuschauer wählten B: nicht öffnen. Nach 30 Minuten Klopfen geht die Stimme. Am Morgen liegt ein Zettel unter der Tür: 'Gut gemacht. – O.' Frau Brandt hat die ganze Nacht geschlafen – und verrät: Du bist nicht der Erste. Dann taucht Okan auf.",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Heute Nacht durch den Türspion schauen",
+      "B": "Okan heimlich folgen"
+    }
+  },
+  "cover_shot": 7,
+  "publish": {
+    "title": "Ich habe NICHT geöffnet… 😳 | Wohnung 4B – Teil 2",
+    "description": "Ihr habt entschieden: B – nicht öffnen. Aber am Morgen liegt ein Zettel unter meiner Tür… und Frau Brandt sagt, ich bin nicht der Erste. Was soll ich jetzt tun? Schreib A (durch den Türspion schauen) oder B (Okan folgen) in die Kommentare! Die Mehrheit entscheidet Teil 3.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
+  },
+  "shots": [
+    {
+      "set": "flur",
+      "time": "night",
+      "variant": "feet",
+      "zoom": 1.25,
+      "lens": 0.08,
+      "caption": "IHR HABT B GEWÄHLT",
+      "music": "tension",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.2
+      },
+      "sfx": [
+        {
+          "name": "knock",
+          "at": 0.15
+        },
+        {
+          "name": "knock",
+          "at": 2.4
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Ihr habt euch für B entschieden. Richtige Antwort ... oder?",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.5
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "variant": "feet",
+      "zoom": 1.6,
+      "lens": 0.08,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "shake": [
+          0.3
+        ]
+      },
+      "pov": {
+        "mode": "door",
+        "target": [
+          615,
+          965
+        ],
+        "reach": 0.35
+      },
+      "sfx": [
+        {
+          "name": "knock_hard",
+          "at": 0.1
+        },
+        {
+          "name": "knock_hard",
+          "at": 1.6
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Nach dreißig Minuten ununterbrochenem Klopfen ging sie endlich.",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.4
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 1.3,
+      "lens": 0.08,
+      "music": "mystery",
+      "camera": {
+        "move": "zoom_out",
+        "strength": 0.6
+      },
+      "sfx": [
+        {
+          "name": "steps",
+          "at": 0.0,
+          "gain": 0.7
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Doch schlafen konnte ich diese Nacht nicht.",
+          "emotion": "neutral",
+          "fx": "inner",
+          "delay": 0.9
+        }
+      ]
+    },
+    {
+      "set": "schlafzimmer",
+      "time": "night",
+      "music": "mystery",
+      "caption": "04:12 UHR",
+      "caption_dur": 1.3,
+      "pov": {
+        "mode": "phone",
+        "contact": "Lina",
+        "avatar": "#c4473a",
+        "status": "zuletzt online 23:58",
+        "messages": [
+          {
+            "from": "du",
+            "text": "Es hat 30 Minuten an meiner Tür geklopft",
+            "at": 0.3
+          },
+          {
+            "from": "du",
+            "text": "Mit der Stimme von Frau Brandt!!",
+            "at": 1.4
+          }
+        ]
+      },
+      "sfx": [
+        {
+          "name": "ping",
+          "at": 0.3
+        },
+        {
+          "name": "ping",
+          "at": 1.4
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Ich beschloss herauszufinden, was hier los ist.",
+          "emotion": "neutral",
+          "fx": "inner",
+          "delay": 2.3
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "day",
+      "zoom": 1.9,
+      "lens": 0.08,
+      "music": "mystery",
+      "caption": "„GUT GEMACHT. – O.“",
+      "caption_dur": 3.0,
+      "camera": {
+        "move": "tilt_down",
+        "strength": 0.8
+      },
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "sting",
+          "at": 0.6,
+          "gain": 0.7
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Am Morgen lag ein Zettel unter meiner Tür.",
+          "emotion": "surprised",
+          "fx": "inner",
+          "delay": 0.4
+        }
+      ],
+      "variant": "note"
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 1.7,
+      "lens": 0.08,
+      "music": "cozy",
+      "camera": {
+        "move": "pan_right",
+        "strength": 0.5
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "down",
+          "expr": "happy"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "creak",
+          "at": 0.0,
+          "gain": 0.6
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Guten Morgen, Frau Brandt. Haben Sie heute Nacht bei mir geklopft?",
+          "emotion": "neutral",
+          "delay": 0.3
+        },
+        {
+          "speaker": "helga",
+          "text": "Ich? Ich habe die ganze Nacht geschlafen. Wie ein Stein!",
+          "expr": "surprised",
+          "gap": 0.2
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 2.4,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "push_in",
+        "strength": 0.8
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "down",
+          "expr": "suspicious"
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Aber ... hat die Stimme gesagt: Ich bin's?",
+          "expr": "suspicious",
+          "delay": 0.2
+        },
+        {
+          "speaker": "du",
+          "text": "Ja.",
+          "emotion": "scared",
+          "gap": 0.3
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 3.0,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "punch": [
+          0.2
+        ]
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "down",
+          "expr": "scared"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.15
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Dann sind Sie nicht der Erste.",
+          "expr": "scared",
+          "delay": 0.1
+        }
+      ],
+      "pad_end": 0.6
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 1.6,
+      "lens": 0.08,
+      "music": "tension",
+      "camera": {
+        "move": "pan_left",
+        "strength": 0.6
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "down",
+          "expr": "scared"
+        },
+        {
+          "id": "okan",
+          "spot": "links",
+          "arms": "cross",
+          "expr": "angry",
+          "enter": "left"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "steps",
+          "at": 0.0,
+          "gain": 0.8
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "okan",
+          "text": "Frau Brandt. Wir reden nicht über den Vormieter.",
+          "expr": "angry",
+          "delay": 0.8
+        },
+        {
+          "speaker": "okan",
+          "text": "Nicht über den Vormieter.",
+          "expr": "suspicious",
+          "gap": 0.3
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "day",
+      "music": "tension",
+      "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {
+          "A": "TÜRSPION UM 03:07",
+          "B": "OKAN FOLGEN"
+        },
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 3 FOLGT"
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Heute Nacht durch den Türspion schauen. Oder B: Okan heimlich folgen? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.5,
+          "no_sub": true
+        }
+      ]
+    }
+  ]
+}

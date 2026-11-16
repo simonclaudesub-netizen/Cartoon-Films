@@ -1,0 +1,370 @@
+{
+  "checks": [
+    {
+      "cat": "technik",
+      "name": "Auflösung 1080x1920 (9:16)",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "1080x1920"
+    },
+    {
+      "cat": "technik",
+      "name": "30 fps",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "30.00"
+    },
+    {
+      "cat": "technik",
+      "name": "Dauer 30-60 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "57.3 s"
+    },
+    {
+      "cat": "technik",
+      "name": "H.264/yuv420p + AAC",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "h264/yuv420p"
+    },
+    {
+      "cat": "technik",
+      "name": "Dateigröße < 250 MB",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "10.1 MB"
+    },
+    {
+      "cat": "ton",
+      "name": "Lautheit -14 LUFS ±1,5",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "-14.2 LUFS"
+    },
+    {
+      "cat": "ton",
+      "name": "True Peak ≤ -1 dBTP",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "-1.2 dBTP"
+    },
+    {
+      "cat": "ton",
+      "name": "Keine Übersteuerung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0.000 % Samples"
+    },
+    {
+      "cat": "ton",
+      "name": "Ton hörbar (nicht stumm)",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "-14.2 LUFS"
+    },
+    {
+      "cat": "stimmen",
+      "name": "Sprachverständlichkeit (Whisper-Abgleich)",
+      "ok": true,
+      "points": 20.0,
+      "max": 20,
+      "detail": "Ø 0.97, 0 Zeile(n) unter 0.85 oder mit Nachlaut"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine Render-Fehler",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "0 fehlerhafte Bilder"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine ungeplanten Schwarzbilder",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine eingefrorenen Bilder > 2,5 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Bildinhalt vorhanden (kein Leerbild)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0 leere Stichproben"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Alle Figuren in der Datenbank",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Aussehen = gesperrtes Model-Sheet",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "abweichend: [], nicht gesperrt: []"
+    },
+    {
+      "cat": "story",
+      "name": "Hook in der 1. Sekunde",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "0.00 s"
+    },
+    {
+      "cat": "story",
+      "name": "Cliffhanger + A/B-Abstimmung",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": ""
+    },
+    {
+      "cat": "story",
+      "name": "Zeilen ≤ 22 Wörter",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Sprechtempo ≤ 4 Wörter/s",
+      "ok": false,
+      "points": 0,
+      "max": 2,
+      "detail": "['Dann sind Sie nicht der Erste.']"
+    },
+    {
+      "cat": "story",
+      "name": "Einstellungslänge 1-8,5 s (Tempo)",
+      "ok": false,
+      "points": 0,
+      "max": 2,
+      "detail": "[5, 9]"
+    },
+    {
+      "cat": "story",
+      "name": "Nur Figuren aus dem Serien-Cast",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Jede Dialogzeile untertitelt",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "28 Einblendungen"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Max. 30 Zeichen je Einblendung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Mindest-Lesezeit 0,4 s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Keine Überlappung, innerhalb der Laufzeit",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": ""
+    }
+  ],
+  "critical": [],
+  "categories": {
+    "technik": {
+      "points": 15,
+      "max": 15
+    },
+    "ton": {
+      "points": 15,
+      "max": 15
+    },
+    "stimmen": {
+      "points": 20.0,
+      "max": 20
+    },
+    "bild": {
+      "points": 15,
+      "max": 15
+    },
+    "konsistenz": {
+      "points": 10,
+      "max": 10
+    },
+    "story": {
+      "points": 11,
+      "max": 15
+    },
+    "untertitel": {
+      "points": 10,
+      "max": 10
+    }
+  },
+  "line_tests": [
+    {
+      "key": "0.0",
+      "speaker": "du",
+      "text": "Ihr habt euch für B entschieden. Richtige Antwort ... oder?",
+      "heard": "Ihr habt euch für B entschieden. Richtig Antwort, oder?",
+      "similarity": 0.93,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "1.0",
+      "speaker": "du",
+      "text": "Nach dreißig Minuten ununterbrochenem Klopfen ging sie endlich.",
+      "heard": "Nach 30 Minuten ununterbrochenem Klopfen ging sie endlich.",
+      "similarity": 0.895,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.0",
+      "speaker": "du",
+      "text": "Doch schlafen konnte ich diese Nacht nicht.",
+      "heard": "Doch schlafen konnte ich diese Nacht nicht.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.0",
+      "speaker": "du",
+      "text": "Ich beschloss herauszufinden, was hier los ist.",
+      "heard": "Ich beschloss herauszufinden, was hier los ist.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "4.0",
+      "speaker": "du",
+      "text": "Am Morgen lag ein Zettel unter meiner Tür.",
+      "heard": "Am Morgen lag ein Zettel unter meiner Tür.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.0",
+      "speaker": "du",
+      "text": "Guten Morgen, Frau Brandt. Haben Sie heute Nacht bei mir geklopft?",
+      "heard": "Guten Morgen Frau Brunt. Haben Sie heute Nacht bei mir geklopft?",
+      "similarity": 0.936,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.1",
+      "speaker": "helga",
+      "text": "Ich? Ich habe die ganze Nacht geschlafen. Wie ein Stein!",
+      "heard": "Ich habe die ganze Nacht geschlafen, wie ein Stein.",
+      "similarity": 0.953,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "6.0",
+      "speaker": "helga",
+      "text": "Aber ... hat die Stimme gesagt: Ich bin's?",
+      "heard": "Aber hat die Stimme gesagt, ich bin's?",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "6.1",
+      "speaker": "du",
+      "text": "Ja.",
+      "heard": "Ja.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "7.0",
+      "speaker": "helga",
+      "text": "Dann sind Sie nicht der Erste.",
+      "heard": "und dann sind sie nicht der Erste.",
+      "similarity": 0.928,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "8.0",
+      "speaker": "okan",
+      "text": "Frau Brandt. Wir reden nicht über den Vormieter.",
+      "heard": "Frau Brandt, wir reden nicht über den Vormieter.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "8.1",
+      "speaker": "okan",
+      "text": "Nicht über den Vormieter.",
+      "heard": "Nicht über den Vormieter.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "9.0",
+      "speaker": "du",
+      "text": "Was soll ich tun? A: Heute Nacht durch den Türspion schauen. Oder B: Okan heimlich folgen? Schreib es in die Kommentare!",
+      "heard": "was soll ich tun? A. Heute naft durch den Türspion schauen oder B. Okan heimlich folgen schreib es in die Kommentare.",
+      "similarity": 0.966,
+      "extra": [],
+      "ok": true
+    }
+  ],
+  "fast_lines": [
+    "7.0"
+  ],
+  "score": 96.0,
+  "blocking": [],
+  "passed": true,
+  "duration": 57.3,
+  "contact_sheet": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/qc_contact.png"
+}

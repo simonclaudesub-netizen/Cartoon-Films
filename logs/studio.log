@@ -114,3 +114,26 @@ IndexError: list index out of range
 2026-11-16 14:23:55 [INFO] [wohnung-4b-e01] freigegeben von mensch
 2026-11-16 14:36:22 [ERROR] [wohnung-4b-e01] Veröffentlichung auf youtube fehlgeschlagen: YouTube-Zugangsdaten fehlen (python -m studio auth-youtube)
 2026-11-16 15:37:15 [INFO] [wohnung-4b-e01] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'ITDHPKi_O-Y', 'url': 'https://youtube.com/shorts/ITDHPKi_O-Y', 'privacy': 'public'}
+2026-11-16 18:05:33 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 18:14:59 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 1: neue Takes für [('1.0', 0.81, 'Nach 30 Minuten ununterbrochenem Klopfen ding sie endlich.')]
+2026-11-16 18:16:01 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 2)
+2026-11-16 18:16:01 [INFO] [wohnung-4b-e02] Laufzeit 58.9 s, 10 Einstellungen – rendere Video
+2026-11-16 18:17:03 [INFO] [wohnung-4b-e02] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | aus Cache: []
+2026-11-16 18:17:39 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 18:18:16 [INFO] [wohnung-4b-e02] QC Versuch 1: 96.0 Punkte – bestanden
+2026-11-16 18:18:16 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 96.0 >= 90)
+2026-11-16 18:19:24 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 18:20:58 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-16 18:20:58 [INFO] [wohnung-4b-e02] Laufzeit 56.4 s, 10 Einstellungen – rendere Video
+2026-11-16 18:21:55 [INFO] [wohnung-4b-e02] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | aus Cache: []
+2026-11-16 18:22:32 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 18:23:12 [INFO] [wohnung-4b-e02] QC Versuch 1: 96.0 Punkte – bestanden
+2026-11-16 18:23:12 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 96.0 >= 90)
+2026-11-16 18:23:30 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 18:24:35 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-16 18:24:35 [INFO] [wohnung-4b-e02] Laufzeit 57.3 s, 10 Einstellungen – rendere Video
+2026-11-16 18:24:49 [INFO] [wohnung-4b-e02] gerendert: [5] | aus Cache: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+2026-11-16 18:25:26 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 18:26:05 [INFO] [wohnung-4b-e02] QC Versuch 1: 96.0 Punkte – bestanden
+2026-11-16 18:26:05 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 96.0 >= 90)
+2026-11-16 18:26:19 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'ehgI-k-milA', 'url': 'https://youtube.com/shorts/ehgI-k-milA', 'privacy': 'public'}
