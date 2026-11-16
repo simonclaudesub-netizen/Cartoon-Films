@@ -32,6 +32,7 @@
         "grund": "TikTok-Richtlinien (16.11.2026): 'Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages'; ungeprüfte Apps nur SELF_ONLY. Daher: Upload-Paket fürs Handy, Upload durch den Menschen."
       }
     },
-    "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)"
+    "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",
+    "credits": "Stimmvorlagen: Thorsten-Voice (CC0) und CML-TTS Deutsch (CC BY 4.0, LibriVox-Sprecher)."
   }
 }

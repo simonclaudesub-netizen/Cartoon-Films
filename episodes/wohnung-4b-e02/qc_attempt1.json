@@ -22,7 +22,7 @@
       "ok": true,
       "points": 4,
       "max": 4,
-      "detail": "57.3 s"
+      "detail": "52.2 s"
     },
     {
       "cat": "technik",
@@ -38,7 +38,7 @@
       "ok": true,
       "points": 2,
       "max": 2,
-      "detail": "10.1 MB"
+      "detail": "9.3 MB"
     },
     {
       "cat": "ton",
@@ -46,7 +46,7 @@
       "ok": true,
       "points": 6,
       "max": 6,
-      "detail": "-14.2 LUFS"
+      "detail": "-14.3 LUFS"
     },
     {
       "cat": "ton",
@@ -70,7 +70,7 @@
       "ok": true,
       "points": 3,
       "max": 3,
-      "detail": "-14.2 LUFS"
+      "detail": "-14.3 LUFS"
     },
     {
       "cat": "stimmen",
@@ -163,10 +163,10 @@
     {
       "cat": "story",
       "name": "Einstellungslänge 1-8,5 s (Tempo)",
-      "ok": false,
-      "points": 0,
+      "ok": true,
+      "points": 2,
       "max": 2,
-      "detail": "[5, 9]"
+      "detail": "[]"
     },
     {
       "cat": "story",
@@ -195,10 +195,10 @@
     {
       "cat": "untertitel",
       "name": "Mindest-Lesezeit 0,4 s",
-      "ok": true,
-      "points": 2,
+      "ok": false,
+      "points": 1,
       "max": 2,
-      "detail": "[]"
+      "detail": "['Ja.']"
     },
     {
       "cat": "untertitel",
@@ -232,11 +232,11 @@
       "max": 10
     },
     "story": {
-      "points": 11,
+      "points": 13,
       "max": 15
     },
     "untertitel": {
-      "points": 10,
+      "points": 9,
       "max": 10
     }
   },
@@ -245,8 +245,8 @@
       "key": "0.0",
       "speaker": "du",
       "text": "Ihr habt euch für B entschieden. Richtige Antwort ... oder?",
-      "heard": "Ihr habt euch für B entschieden. Richtig Antwort, oder?",
-      "similarity": 0.93,
+      "heard": "habt euch für b entschieden. Richtige Antwort oder?",
+      "similarity": 0.949,
       "extra": [],
       "ok": true
     },
@@ -263,8 +263,8 @@
       "key": "2.0",
       "speaker": "du",
       "text": "Doch schlafen konnte ich diese Nacht nicht.",
-      "heard": "Doch schlafen konnte ich diese Nacht nicht.",
-      "similarity": 1.0,
+      "heard": "schlafen konnte ich diese Nacht nicht.",
+      "similarity": 0.929,
       "extra": [],
       "ok": true
     },
@@ -272,8 +272,8 @@
       "key": "3.0",
       "speaker": "du",
       "text": "Ich beschloss herauszufinden, was hier los ist.",
-      "heard": "Ich beschloss herauszufinden, was hier los ist.",
-      "similarity": 1.0,
+      "heard": "Ich beschwosse herauszufinden, was hier los ist.",
+      "similarity": 0.901,
       "extra": [],
       "ok": true
     },
@@ -290,8 +290,8 @@
       "key": "5.0",
       "speaker": "du",
       "text": "Guten Morgen, Frau Brandt. Haben Sie heute Nacht bei mir geklopft?",
-      "heard": "Guten Morgen Frau Brunt. Haben Sie heute Nacht bei mir geklopft?",
-      "similarity": 0.936,
+      "heard": "Guten Morgen Frau Brandt, haben Sie heute Nacht bei mir geklopft?",
+      "similarity": 1.0,
       "extra": [],
       "ok": true
     },
@@ -299,8 +299,8 @@
       "key": "5.1",
       "speaker": "helga",
       "text": "Ich? Ich habe die ganze Nacht geschlafen. Wie ein Stein!",
-      "heard": "Ich habe die ganze Nacht geschlafen, wie ein Stein.",
-      "similarity": 0.953,
+      "heard": "Ich? Ich habe die ganze Nacht geschlafen, wie ein Stein.",
+      "similarity": 1.0,
       "extra": [],
       "ok": true
     },
@@ -308,7 +308,7 @@
       "key": "6.0",
       "speaker": "helga",
       "text": "Aber ... hat die Stimme gesagt: Ich bin's?",
-      "heard": "Aber hat die Stimme gesagt, ich bin's?",
+      "heard": "Aber, hat die Stimme gesagt, ich bin's.",
       "similarity": 1.0,
       "extra": [],
       "ok": true
@@ -326,8 +326,8 @@
       "key": "7.0",
       "speaker": "helga",
       "text": "Dann sind Sie nicht der Erste.",
-      "heard": "und dann sind sie nicht der Erste.",
-      "similarity": 0.928,
+      "heard": "Dann sind sie nicht der Erste.",
+      "similarity": 1.0,
       "extra": [],
       "ok": true
     },
@@ -344,7 +344,7 @@
       "key": "8.1",
       "speaker": "okan",
       "text": "Nicht über den Vormieter.",
-      "heard": "Nicht über den Vormieter.",
+      "heard": "nicht über den Vormieter.",
       "similarity": 1.0,
       "extra": [],
       "ok": true
@@ -353,8 +353,8 @@
       "key": "9.0",
       "speaker": "du",
       "text": "Was soll ich tun? A: Heute Nacht durch den Türspion schauen. Oder B: Okan heimlich folgen? Schreib es in die Kommentare!",
-      "heard": "was soll ich tun? A. Heute naft durch den Türspion schauen oder B. Okan heimlich folgen schreib es in die Kommentare.",
-      "similarity": 0.966,
+      "heard": "Was soll ich tun? A. Heute Nacht durch den Türspion schauen. Oder B. O. Kann heimlich folgen? Schreibe es in die Kommentare.",
+      "similarity": 0.925,
       "extra": [],
       "ok": true
     }
@@ -362,9 +362,9 @@
   "fast_lines": [
     "7.0"
   ],
-  "score": 96.0,
+  "score": 97.0,
   "blocking": [],
   "passed": true,
-  "duration": 57.3,
+  "duration": 52.166667,
   "contact_sheet": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/qc_contact.png"
 }

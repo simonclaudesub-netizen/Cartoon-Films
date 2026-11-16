@@ -20,13 +20,14 @@
     "cfg": 0.5,
     "temperature": 0.8,
     "pitch": 0.0,
-    "ref_source": "Piper ramona-low (HUI-Korpus/LibriVox, gemeinfrei)",
+    "ref_source": "CML-TTS Deutsch, Sprecherin 3885 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
     "fallback": {
       "model": "de_DE-ramona-low",
       "speaker": 0,
       "length_scale": 0.95,
       "pitch": 1.0
-    }
+    },
+    "ref_previous": "assets/voices/ref/alt/lina_piper.wav"
   },
   "id": "lina",
   "locked": true

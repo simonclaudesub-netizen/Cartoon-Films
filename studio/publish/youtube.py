@@ -96,7 +96,7 @@ def _token():
 
 def build_metadata(meta, privacy="private", publish_at=None):
     tags = [h.lstrip("#") for h in meta.get("hashtags", [])]
-    desc = meta["description"] + "\n\n" + " ".join(meta.get("hashtags", []))
+    desc = meta["description"] + (f"\n{meta['credits']}" if meta.get("credits") else "") + "\n\n" + " ".join(meta.get("hashtags", []))
     if "#shorts" not in desc.lower():
         desc += " #Shorts"
     body = {"snippet": {"title": meta["title"][:100], "description": desc[:5000], "tags": tags[:30],

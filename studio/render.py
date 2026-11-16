@@ -116,7 +116,7 @@ def mix_audio(tl, work, overrides=None):
     duck = np.clip(env / 0.03, 0, 1)
     k = np.ones(int(0.25 * SR)) / int(0.25 * SR)
     duck = np.convolve(duck, k, mode="same")
-    mus *= (1 - 0.6 * duck) * ov.get("music_gain", 0.32)
+    mus *= (1 - 0.82 * duck) * ov.get("music_gain", 0.32)
     mix = dia * 1.0 + fx * ov.get("sfx_gain", 0.8) + mus
     mix = mix[:int(tl["duration"] * SR)]
     peak = np.max(np.abs(mix)) + 1e-9

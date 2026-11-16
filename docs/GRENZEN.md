@@ -15,7 +15,11 @@
    (ca. 5-6x Echtzeit, ~5 Minuten pro Episode) und hängen gelegentlich Silben an – die Whisper-QC
    erkennt das und lässt die Zeile automatisch neu einsprechen („Take 2“). Echtes Flüstern kann das
    Modell nicht (wird mit Effekt simuliert). Referenzstimmen stammen nur aus frei lizenzierten
-   Datensätzen (Thorsten CC0, HUI-Korpus/LibriVox gemeinfrei). Piper bleibt als Rückfallebene.
+   Datensätzen mit echten Sprecheraufnahmen (seit 16.11.2026):
+   Erzähler = Thorsten-Voice TV-2022.10 (CC0, Studioaufnahme), Okan/Frau Brandt/Lina = Sprecher aus
+   CML-TTS Deutsch (LibriVox-Hörbücher, Datensatz unter CC BY 4.0 → Quellenangabe in jeder
+   Videobeschreibung). Vorher waren die Vorlagen Piper-Ausgaben – der Klon klang dadurch blechern.
+   Piper bleibt als Rückfallebene.
 4. **Geschichten brauchen Claude.** Die lokale Software kann keine originellen Geschichten erfinden.
    Das Schreiben übernimmt Claude in einer täglich geplanten Sitzung. Ohne diese Sitzung
    produziert das Studio nichts Neues.

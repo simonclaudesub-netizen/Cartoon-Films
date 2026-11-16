@@ -28,9 +28,10 @@ PRONOUNCE = {
 }
 
 FX = {
-    "door": "highpass=f=180,lowpass=f=1100,aecho=0.8:0.5:35:0.25,volume=0.85",
+    # Kein Echo/Delay mehr (klang wie eine doppelte Stimme) – nur Klangfarbe
+    "door": "highpass=f=160,lowpass=f=1600,volume=0.9",
     "phone": "highpass=f=320,lowpass=f=3400,volume=0.95",
-    "inner": "aecho=0.85:0.6:55:0.18",
+    "inner": "equalizer=f=180:t=q:w=1:g=1.5",
     "radio": "highpass=f=400,lowpass=f=3000,acrusher=bits=10:mix=0.2",
 }
 
@@ -56,12 +57,26 @@ EXAGGERATION = {"neutral": 0.5, "happy": 0.6, "angry": 0.7, "scared": 0.75, "sur
                 "creepy": 0.65, "whisper": 0.35, "suspicious": 0.55}
 
 
+# Klarheits-Kette für jede Stimme: Rumpeln weg, Präsenz anheben, sanft komprimieren
+CLARITY = ("highpass=f=75,equalizer=f=300:t=q:w=1.2:g=-1.5,equalizer=f=3200:t=q:w=1.0:g=2.5,"
+           "equalizer=f=7500:t=q:w=1.0:g=-1.5,acompressor=threshold=-21dB:ratio=2.5:attack=8:release=120:makeup=1.5")
+POST_VERSION = 4
+_REF_HASH = {}
+
+
+def _ref_hash(ref):
+    if ref not in _REF_HASH:
+        p = ROOT / ref
+        _REF_HASH[ref] = hashlib.sha1(p.read_bytes()).hexdigest()[:12] if p.exists() else ref
+    return _REF_HASH[ref]
+
+
 def _key(text, voice, emotion, fx, length_mul, noise, seed):
     if voice.get("engine") == "chatterbox":
         ex = voice.get("exaggeration", {}).get(emotion) if isinstance(voice.get("exaggeration"), dict) else None
         ex = ex if ex is not None else EXAGGERATION.get(emotion, 0.5)
-        k = ["cb", text, voice["ref"], ex, voice.get("cfg", 0.5), voice.get("temperature", 0.8), seed, fx,
-             length_mul, voice.get("pitch", 0.0), 2]
+        k = ["cb", text, _ref_hash(voice["ref"]), ex, voice.get("cfg", 0.5), voice.get("temperature", 0.8), seed]
+        k += [fx, FX.get(fx), length_mul, voice.get("pitch", 0.0), CLARITY, POST_VERSION]
         return hashlib.sha1(json.dumps(k, ensure_ascii=False).encode()).hexdigest()[:16], ex
     speaker = (voice.get("emotions") or {}).get(emotion, voice.get("speaker", 0))
     ls = voice.get("length_scale", 1.0) * length_mul
@@ -100,6 +115,7 @@ def _post(raw, out, pitch, fx, tempo=1.0):
     filt.append(f"aresample={SR}")
     if abs(tempo - 1.0) > 0.01:
         filt.append(f"atempo={tempo:.3f}")
+    filt.append(CLARITY)
     if fx in FX:
         filt.append(FX[fx])
     filt.append("silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
