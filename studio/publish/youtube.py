@@ -135,6 +135,14 @@ def upload(video_path, meta, privacy="private", publish_at=None):
     raise RuntimeError("YouTube-Upload nach 4 Versuchen fehlgeschlagen")
 
 
+def delete(video_id):
+    """Video löschen (nur auf ausdrückliche Anweisung des Kanalinhabers, z. B. Ersetzen einer Fassung)."""
+    r = requests.delete("https://www.googleapis.com/youtube/v3/videos", params={"id": video_id},
+                        headers={"Authorization": f"Bearer {_token()}"}, timeout=30)
+    r.raise_for_status()
+    return True
+
+
 def comments(video_id, max_pages=10):
     tok = _token()
     out, page = [], None

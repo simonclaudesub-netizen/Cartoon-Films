@@ -1,6 +1,6 @@
 {
   "id": "wohnung-4b-e02",
-  "state": "freigegeben",
+  "state": "geplant",
   "history": [
     {
       "t": "2026-11-16 18:05:33",
@@ -81,6 +81,14 @@
       "t": "2026-11-16 19:17:55",
       "state": "freigegeben",
       "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 19:20:04",
+      "state": "freigegeben"
+    },
+    {
+      "t": "2026-11-16 19:20:08",
+      "state": "geplant"
     }
   ],
   "score": 97.0,
@@ -111,8 +119,8 @@
   "published": {
     "youtube": {
       "platform": "youtube",
-      "id": "LR2S_nm4mjU",
-      "url": "https://youtube.com/shorts/LR2S_nm4mjU",
+      "id": "AI2AUZReYSg",
+      "url": "https://youtube.com/shorts/AI2AUZReYSg",
       "privacy": "private",
       "publish_at": "2026-11-17T17:00:00Z"
     }
