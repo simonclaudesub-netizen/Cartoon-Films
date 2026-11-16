@@ -1,0 +1,116 @@
+2026-11-16 12:50:17 [ERROR] Frame-Fehler in Einstellung 7 Bild 9: Error('invalid matrix (not invertible)', cairo.Status.INVALID_MATRIX)
+2026-11-16 12:50:22 [ERROR] Frame-Fehler in Einstellung 7 Bild 57: Error('invalid matrix (not invertible)', cairo.Status.INVALID_MATRIX)
+2026-11-16 12:50:25 [ERROR] Frame-Fehler in Einstellung 7 Bild 84: Error('invalid matrix (not invertible)', cairo.Status.INVALID_MATRIX)
+2026-11-16 12:54:56 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 12:54:56 [INFO] [wohnung-4b-e01] Laufzeit 53.5 s, 12 Einstellungen – rendere Video
+2026-11-16 12:56:14 [INFO] [wohnung-4b-e01] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 12:56:51 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 12:57:36 [INFO] [wohnung-4b-e01] QC Versuch 1: 94.2 Punkte – bestanden
+2026-11-16 13:12:54 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:12:55 [INFO] [wohnung-4b-e01] Laufzeit 57.0 s, 12 Einstellungen – rendere Video
+2026-11-16 13:13:38 [INFO] [wohnung-4b-e01] gerendert: [1, 2, 3, 4, 5, 6, 8, 10] | aus Cache: [0, 7, 9, 11]
+2026-11-16 13:14:14 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 13:14:57 [INFO] [wohnung-4b-e01] QC Versuch 1: 96.0 Punkte – bestanden
+2026-11-16 13:15:31 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:15:31 [INFO] [wohnung-4b-e01] Laufzeit 57.0 s, 12 Einstellungen – rendere Video
+2026-11-16 13:16:44 [INFO] [wohnung-4b-e01] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 13:17:22 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 13:18:06 [INFO] [wohnung-4b-e01] QC Versuch 1: 98.0 Punkte – bestanden
+2026-11-16 13:18:20 [INFO] [zz-test-korrektur] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:18:20 [INFO] [zz-test-korrektur] Laufzeit 72.2 s, 12 Einstellungen – rendere Video
+2026-11-16 13:19:52 [INFO] [zz-test-korrektur] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 13:20:38 [INFO] [zz-test-korrektur] Qualitätskontrolle läuft
+2026-11-16 13:21:23 [INFO] [zz-test-korrektur] QC Versuch 1: 59 Punkte – nicht bestanden
+2026-11-16 13:21:23 [WARN] [zz-test-korrektur] Korrekturen: ['Episode zu lang: Pausen kürzen, Sprechtempo +5 %', "Zu schnelle Zeilen ['6.0'] langsamer sprechen"]
+2026-11-16 13:21:23 [INFO] [zz-test-korrektur] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 13:21:29 [INFO] [zz-test-korrektur] Laufzeit 64.5 s, 12 Einstellungen – rendere Video
+2026-11-16 13:22:52 [INFO] [zz-test-korrektur] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 13:23:33 [INFO] [zz-test-korrektur] Qualitätskontrolle läuft
+2026-11-16 13:24:15 [INFO] [zz-test-korrektur] QC Versuch 2: 94.0 Punkte – bestanden
+2026-11-16 13:24:31 [INFO] [zz-test-korrektur] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:24:31 [INFO] [zz-test-korrektur] Laufzeit 72.2 s, 12 Einstellungen – rendere Video
+2026-11-16 13:26:06 [INFO] [zz-test-korrektur] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 13:26:51 [INFO] [zz-test-korrektur] Qualitätskontrolle läuft
+2026-11-16 13:27:36 [INFO] [zz-test-korrektur] QC Versuch 1: 59 Punkte – nicht bestanden
+2026-11-16 13:27:36 [WARN] [zz-test-korrektur] Korrekturen: ['Episode 72.2 s zu lang: Pausen auf 40% kürzen', "Zu schnelle Zeilen ['6.0'] langsamer sprechen"]
+2026-11-16 13:27:36 [INFO] [zz-test-korrektur] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 13:27:37 [INFO] [zz-test-korrektur] Laufzeit 58.3 s, 12 Einstellungen – rendere Video
+2026-11-16 13:28:54 [INFO] [zz-test-korrektur] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 13:29:33 [INFO] [zz-test-korrektur] Qualitätskontrolle läuft
+2026-11-16 13:30:18 [INFO] [zz-test-korrektur] QC Versuch 2: 100.0 Punkte – bestanden
+2026-11-16 13:30:32 [INFO] [zz-test-ablehnung] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:30:32 [ERROR] [zz-test-ablehnung] Fehler in Versuch 1: IndexError('list index out of range')
+Traceback (most recent call last):
+  File "/home/user/cartoon-studio/studio/pipeline.py", line 105, in produce
+    tl["cover_t"] = tl["shots"][cs]["_t0"] + tl["shots"][cs]["_dur"] * 0.6
+                    ~~~~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-11-16 13:30:32 [INFO] [zz-test-ablehnung] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 13:30:32 [ERROR] [zz-test-ablehnung] Fehler in Versuch 2: IndexError('list index out of range')
+Traceback (most recent call last):
+  File "/home/user/cartoon-studio/studio/pipeline.py", line 105, in produce
+    tl["cover_t"] = tl["shots"][cs]["_t0"] + tl["shots"][cs]["_dur"] * 0.6
+                    ~~~~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-11-16 13:30:32 [INFO] [zz-test-ablehnung] Versuch 3: Zeitleiste + Stimmen
+2026-11-16 13:30:32 [ERROR] [zz-test-ablehnung] Fehler in Versuch 3: IndexError('list index out of range')
+Traceback (most recent call last):
+  File "/home/user/cartoon-studio/studio/pipeline.py", line 105, in produce
+    tl["cover_t"] = tl["shots"][cs]["_t0"] + tl["shots"][cs]["_dur"] * 0.6
+                    ~~~~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-11-16 13:30:32 [ERROR] [zz-test-ablehnung] Episode nach 3 Versuchen abgelehnt – wird NICHT veröffentlicht
+2026-11-16 13:30:50 [INFO] [zz-test-ablehnung] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 13:30:50 [INFO] [zz-test-ablehnung] Laufzeit 81.2 s, 2 Einstellungen – rendere Video
+2026-11-16 13:35:24 [INFO] [zz-test-ablehnung] gerendert: [0, 1] | aus Cache: []
+2026-11-16 13:36:17 [INFO] [zz-test-ablehnung] Qualitätskontrolle läuft
+2026-11-16 13:36:41 [INFO] [zz-test-ablehnung] QC Versuch 1: 59 Punkte – nicht bestanden
+2026-11-16 13:36:41 [WARN] [zz-test-ablehnung] Korrekturen: ['Episode 81.2 s zu lang: Pausen auf 30% kürzen']
+2026-11-16 13:36:41 [INFO] [zz-test-ablehnung] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 13:36:41 [INFO] [zz-test-ablehnung] Laufzeit 81.0 s, 2 Einstellungen – rendere Video
+2026-11-16 13:41:17 [INFO] [zz-test-ablehnung] gerendert: [0, 1] | aus Cache: []
+2026-11-16 13:42:11 [INFO] [zz-test-ablehnung] Qualitätskontrolle läuft
+2026-11-16 13:42:33 [INFO] [zz-test-ablehnung] QC Versuch 2: 59 Punkte – nicht bestanden
+2026-11-16 13:42:33 [WARN] [zz-test-ablehnung] Korrekturen: ['Episode 81.0 s zu lang: Pausen auf 30% kürzen']
+2026-11-16 13:42:33 [INFO] [zz-test-ablehnung] Versuch 3: Zeitleiste + Stimmen
+2026-11-16 13:42:35 [INFO] [zz-test-ablehnung] Laufzeit 81.0 s, 2 Einstellungen – rendere Video
+2026-11-16 13:47:06 [INFO] [zz-test-ablehnung] gerendert: [0, 1] | aus Cache: []
+2026-11-16 13:48:01 [INFO] [zz-test-ablehnung] Qualitätskontrolle läuft
+2026-11-16 13:48:24 [INFO] [zz-test-ablehnung] QC Versuch 3: 59 Punkte – nicht bestanden
+2026-11-16 13:48:24 [WARN] [zz-test-ablehnung] Korrekturen: ['Episode 81.0 s zu lang: Pausen auf 30% kürzen']
+2026-11-16 13:48:24 [ERROR] [zz-test-ablehnung] Episode nach 3 Versuchen abgelehnt – wird NICHT veröffentlicht
+2026-11-16 14:00:07 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 14:04:35 [INFO] [wohnung-4b-e01] Laufzeit 56.9 s, 12 Einstellungen – rendere Video
+2026-11-16 14:05:59 [INFO] [wohnung-4b-e01] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] | aus Cache: []
+2026-11-16 14:06:37 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 14:07:22 [INFO] [wohnung-4b-e01] QC Versuch 1: 98.0 Punkte – bestanden
+2026-11-16 14:08:12 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 14:08:39 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 1: neue Takes für [('3.0', 0.82, 'Und warum?'), ('10.0', 0.88, 'Ich weiß, dass sie da sind. A, O.')]
+2026-11-16 14:09:53 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 2: neue Takes für [('3.0', 0.82, 'Und warum?')]
+2026-11-16 14:10:59 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 3: neue Takes für [('3.0', 0.82, 'Und warum?')]
+2026-11-16 14:11:58 [WARN] [wohnung-4b-e01] Sprachaufnahme: 1 Zeile(n) nach 4 Takes noch fehlerhaft: [('3.0', 0.82, 'Und warum?')]
+2026-11-16 14:11:58 [INFO] [wohnung-4b-e01] Laufzeit 56.0 s, 12 Einstellungen – rendere Video
+2026-11-16 14:12:16 [INFO] [wohnung-4b-e01] gerendert: [3, 10] | aus Cache: [0, 1, 2, 4, 5, 6, 7, 8, 9, 11]
+2026-11-16 14:12:51 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 14:13:32 [INFO] [wohnung-4b-e01] QC Versuch 1: 95.0 Punkte – nicht bestanden
+2026-11-16 14:13:32 [WARN] [wohnung-4b-e01] Korrekturen: ['Zeile 3.0 neu einsprechen, Take 5 (Ähnlichkeit 0.823)', "Zu schnelle Zeilen ['6.0', '10.0'] langsamer sprechen"]
+2026-11-16 14:13:32 [INFO] [wohnung-4b-e01] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 14:14:55 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 1: neue Takes für [('3.0', 0.82, 'Und warum?')]
+2026-11-16 14:15:53 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 2: neue Takes für [('3.0', 0.82, 'Und warum?')]
+2026-11-16 14:16:53 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 3: neue Takes für [('3.0', 0.54, 'Warum?')]
+2026-11-16 14:17:57 [WARN] [wohnung-4b-e01] Sprachaufnahme: 1 Zeile(n) nach 4 Takes noch fehlerhaft: [('3.0', 0.59, 'Und warum und war')]
+2026-11-16 14:17:57 [INFO] [wohnung-4b-e01] Laufzeit 57.1 s, 12 Einstellungen – rendere Video
+2026-11-16 14:18:17 [INFO] [wohnung-4b-e01] gerendert: [3, 6, 10] | aus Cache: [0, 1, 2, 4, 5, 7, 8, 9, 11]
+2026-11-16 14:18:45 [INFO] [wohnung-4b-e01] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 14:19:19 [INFO] [wohnung-4b-e01] Sprachaufnahme Runde 1: neue Takes für [('10.0', 0.88, 'Ich weiß, dass sie da sind. A, O.')]
+2026-11-16 14:19:45 [INFO] [wohnung-4b-e01] Sprachaufnahme: alle Zeilen sauber (Runde 2)
+2026-11-16 14:19:45 [INFO] [wohnung-4b-e01] Laufzeit 56.2 s, 12 Einstellungen – rendere Video
+2026-11-16 14:20:04 [INFO] [wohnung-4b-e01] gerendert: [3, 6, 10] | aus Cache: [0, 1, 2, 4, 5, 7, 8, 9, 11]
+2026-11-16 14:20:40 [INFO] [wohnung-4b-e01] Qualitätskontrolle läuft
+2026-11-16 14:21:24 [INFO] [wohnung-4b-e01] QC Versuch 1: 98.0 Punkte – bestanden
+2026-11-16 14:23:55 [INFO] [wohnung-4b-e01] freigegeben von mensch
+2026-11-16 14:36:22 [ERROR] [wohnung-4b-e01] Veröffentlichung auf youtube fehlgeschlagen: YouTube-Zugangsdaten fehlen (python -m studio auth-youtube)
+2026-11-16 15:37:15 [INFO] [wohnung-4b-e01] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'ITDHPKi_O-Y', 'url': 'https://youtube.com/shorts/ITDHPKi_O-Y', 'privacy': 'public'}

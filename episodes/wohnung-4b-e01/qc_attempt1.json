@@ -1,0 +1,380 @@
+{
+  "checks": [
+    {
+      "cat": "technik",
+      "name": "Auflösung 1080x1920 (9:16)",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "1080x1920"
+    },
+    {
+      "cat": "technik",
+      "name": "30 fps",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "30.00"
+    },
+    {
+      "cat": "technik",
+      "name": "Dauer 30-60 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "56.2 s"
+    },
+    {
+      "cat": "technik",
+      "name": "H.264/yuv420p + AAC",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "h264/yuv420p"
+    },
+    {
+      "cat": "technik",
+      "name": "Dateigröße < 250 MB",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "10.0 MB"
+    },
+    {
+      "cat": "ton",
+      "name": "Lautheit -14 LUFS ±1,5",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "-14.5 LUFS"
+    },
+    {
+      "cat": "ton",
+      "name": "True Peak ≤ -1 dBTP",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "-1.2 dBTP"
+    },
+    {
+      "cat": "ton",
+      "name": "Keine Übersteuerung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0.000 % Samples"
+    },
+    {
+      "cat": "ton",
+      "name": "Ton hörbar (nicht stumm)",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "-14.5 LUFS"
+    },
+    {
+      "cat": "stimmen",
+      "name": "Sprachverständlichkeit (Whisper-Abgleich)",
+      "ok": true,
+      "points": 20.0,
+      "max": 20,
+      "detail": "Ø 0.97, 0 Zeile(n) unter 0.85 oder mit Nachlaut"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine Render-Fehler",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "0 fehlerhafte Bilder"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine ungeplanten Schwarzbilder",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine eingefrorenen Bilder > 2,5 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Bildinhalt vorhanden (kein Leerbild)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0 leere Stichproben"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Alle Figuren in der Datenbank",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Aussehen = gesperrtes Model-Sheet",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "abweichend: [], nicht gesperrt: []"
+    },
+    {
+      "cat": "story",
+      "name": "Hook in der 1. Sekunde",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "0.00 s"
+    },
+    {
+      "cat": "story",
+      "name": "Cliffhanger + A/B-Abstimmung",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": ""
+    },
+    {
+      "cat": "story",
+      "name": "Zeilen ≤ 22 Wörter",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Sprechtempo ≤ 4 Wörter/s",
+      "ok": false,
+      "points": 0,
+      "max": 2,
+      "detail": "['... dann bin das nicht ich.', 'Ich weiß, dass Sie da sind.']"
+    },
+    {
+      "cat": "story",
+      "name": "Einstellungslänge 1-8,5 s (Tempo)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Nur Figuren aus dem Serien-Cast",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Jede Dialogzeile untertitelt",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "25 Einblendungen"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Max. 30 Zeichen je Einblendung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Mindest-Lesezeit 0,4 s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Keine Überlappung, innerhalb der Laufzeit",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": ""
+    }
+  ],
+  "critical": [],
+  "categories": {
+    "technik": {
+      "points": 15,
+      "max": 15
+    },
+    "ton": {
+      "points": 15,
+      "max": 15
+    },
+    "stimmen": {
+      "points": 20.0,
+      "max": 20
+    },
+    "bild": {
+      "points": 15,
+      "max": 15
+    },
+    "konsistenz": {
+      "points": 10,
+      "max": 10
+    },
+    "story": {
+      "points": 13,
+      "max": 15
+    },
+    "untertitel": {
+      "points": 10,
+      "max": 10
+    }
+  },
+  "line_tests": [
+    {
+      "key": "0.0",
+      "speaker": "du",
+      "text": "Drei Uhr nachts. Und jemand klopft an meine Tür.",
+      "heard": "3 Uhr nachts und jemand klopft an meine Tür.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "1.0",
+      "speaker": "okan",
+      "text": "Willkommen in 4B! Hier sind Ihre Schlüssel.",
+      "heard": "Sie kommen in 4B, hier sind Ihre Schlüssel.",
+      "similarity": 0.851,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.0",
+      "speaker": "okan",
+      "text": "Es gibt nur eine Regel: Nach Mitternacht öffnen Sie niemandem die Tür.",
+      "heard": "Es gibt nur eine Regel, nach Mitternacht öffnen sie niemandem die Tür.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.1",
+      "speaker": "okan",
+      "text": "Niemandem.",
+      "heard": "Niemandem.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.0",
+      "speaker": "du",
+      "text": "Äh... und warum?",
+      "heard": "Und warum?",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.1",
+      "speaker": "okan",
+      "text": "Fragen Sie lieber nicht.",
+      "heard": "Fragen Sie lieber nicht.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "4.0",
+      "speaker": "helga",
+      "text": "Ach, der Neue aus 4B! Ich bin Frau Brandt. Ich hab Ihnen Kuchen gebacken.",
+      "heard": "Ach, der Neue aus Vierbe, ich bin Frau Brandt. Ich habe Ihnen Kuchen gebacken.",
+      "similarity": 0.895,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.0",
+      "speaker": "helga",
+      "text": "Und noch etwas. Wenn nachts jemand klopft und sagt: Ich bin's ...",
+      "heard": "und noch etwas, wenn nachts jemand klopft und sagt, ich bin's.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "6.0",
+      "speaker": "helga",
+      "text": "... dann bin das nicht ich.",
+      "heard": "Und dann bin das nicht ich.",
+      "similarity": 0.912,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "7.0",
+      "speaker": "du",
+      "text": "Lina hält das für einen Witz. Ich nicht.",
+      "heard": "Lina hält das für einen Witz, ich nicht.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "8.0",
+      "speaker": "helga",
+      "text": "Hallo? Ich bin's, Frau Brandt! Bitte machen Sie auf!",
+      "heard": "Hallo, ich bin es Frau Brandt, bitte machen Sie auf.",
+      "similarity": 0.936,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "9.0",
+      "speaker": "du",
+      "text": "Aber sie hat gesagt ... das ist nicht sie.",
+      "heard": "Aber sie hat gesagt, das ist nicht sie.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "10.0",
+      "speaker": "helga",
+      "text": "Ich weiß, dass Sie da sind.",
+      "heard": "Ich weiß, dass sie da sind.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "11.0",
+      "speaker": "du",
+      "text": "Was soll ich tun? A: Tür öffnen. Oder B: nicht öffnen? Schreib es in die Kommentare!",
+      "heard": "Was soll ich tun? a. Triö öffnen oder b. Nicht öffnen? Schreib es in die Kommentare.",
+      "similarity": 0.955,
+      "extra": [],
+      "ok": true
+    }
+  ],
+  "fast_lines": [
+    "6.0",
+    "10.0"
+  ],
+  "score": 98.0,
+  "blocking": [],
+  "passed": true,
+  "duration": 56.166667,
+  "contact_sheet": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/qc_contact.png"
+}

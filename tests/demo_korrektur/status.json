@@ -1,0 +1,70 @@
+{
+  "id": "zz-test-korrektur",
+  "state": "freigabe_ausstehend",
+  "history": [
+    {
+      "t": "2026-11-16 13:24:31",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 13:30:18",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 58.266667,
+      "final": "/home/user/cartoon-studio/episodes/zz-test-korrektur/final.mp4"
+    }
+  ],
+  "score": 100.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 59,
+      "passed": false,
+      "critical": [
+        "technik: Dauer 30-60 s (72.2 s)"
+      ],
+      "seconds": 184.6,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "fixes": [
+        "Episode 72.2 s zu lang: Pausen auf 40% kürzen",
+        "Zu schnelle Zeilen ['6.0'] langsamer sprechen"
+      ]
+    },
+    {
+      "attempt": 2,
+      "score": 100.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 161.9,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "duration": 58.266667,
+  "final": "/home/user/cartoon-studio/episodes/zz-test-korrektur/final.mp4"
+}

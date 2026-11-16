@@ -1,0 +1,64 @@
+{
+  "id": "zz-test-ablehnung",
+  "state": "abgelehnt",
+  "history": [
+    {
+      "t": "2026-11-16 13:30:50",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 13:48:24",
+      "state": "abgelehnt"
+    }
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 59,
+      "passed": false,
+      "critical": [
+        "technik: Dauer 30-60 s (81.2 s)"
+      ],
+      "seconds": 351.1,
+      "rendered_shots": [
+        0,
+        1
+      ],
+      "fixes": [
+        "Episode 81.2 s zu lang: Pausen auf 30% kürzen"
+      ]
+    },
+    {
+      "attempt": 2,
+      "score": 59,
+      "passed": false,
+      "critical": [
+        "technik: Dauer 30-60 s (81.0 s)"
+      ],
+      "seconds": 352.3,
+      "rendered_shots": [
+        0,
+        1
+      ],
+      "fixes": [
+        "Episode 81.0 s zu lang: Pausen auf 30% kürzen"
+      ]
+    },
+    {
+      "attempt": 3,
+      "score": 59,
+      "passed": false,
+      "critical": [
+        "technik: Dauer 30-60 s (81.0 s)"
+      ],
+      "seconds": 350.2,
+      "rendered_shots": [
+        0,
+        1
+      ],
+      "fixes": [
+        "Episode 81.0 s zu lang: Pausen auf 30% kürzen"
+      ]
+    }
+  ]
+}

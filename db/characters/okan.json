@@ -1,0 +1,41 @@
+{
+  "name": "Okan Yilmaz",
+  "role": "Hausmeister des Hauses Lindenweg 9",
+  "personality": "freundlich, aber verschwiegen; weiß mehr als er sagt; sagt Sätze immer zweimal, wenn es ernst wird",
+  "look": {
+    "skin": "#c58c5f",
+    "hair": "#2a211c",
+    "hair_style": "cap",
+    "accent": "#2f5d8a",
+    "top": "overall",
+    "top_color": "#3f6d9a",
+    "shirt_color": "#d9d4c4",
+    "pants_color": "#3f6d9a",
+    "shoe_color": "#3a2a20",
+    "mustache": true,
+    "height": 1.02,
+    "build": 1.15,
+    "name_tag": true
+  },
+  "voice": {
+    "engine": "chatterbox",
+    "ref": "assets/voices/ref/okan.wav",
+    "cfg": 0.5,
+    "temperature": 0.8,
+    "pitch": 0.0,
+    "ref_source": "Piper karlsson-low (HUI-Korpus/LibriVox, gemeinfrei)",
+    "fallback": {
+      "model": "de_DE-karlsson-low",
+      "speaker": 0,
+      "length_scale": 1.08,
+      "pitch": -1.5,
+      "casting": {
+        "datum": "2026-11-16",
+        "whisper_aehnlichkeit": 0.945,
+        "f0_hz": 97
+      }
+    }
+  },
+  "id": "okan",
+  "locked": true
+}

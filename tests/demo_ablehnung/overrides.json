@@ -1,0 +1,8 @@
+{
+  "global": {
+    "pad_mul": 0.027,
+    "gap": 0.12,
+    "length_mul": 0.9
+  },
+  "lines": {}
+}

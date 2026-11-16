@@ -1,0 +1,54 @@
+# Autopilot – täglicher Ablauf
+
+Diese Datei ist die Arbeitsanweisung für die tägliche, geplante Claude-Sitzung
+(„Writers' Room + Regie“). Claude übernimmt die kreative Arbeit (Geschichte, Dialoge,
+Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
+
+## Ablauf (jeden Tag, Start ca. 14:20 Uhr deutscher Zeit)
+
+0. **Arbeitsplatz**: Repository klonen (falls nicht vorhanden), `bash setup.sh` ausführen
+   (installiert Werkzeuge, Stimmen, Chatterbox, Whisper – ca. 10 Minuten).
+   YouTube-Zugang kommt aus den Umgebungsvariablen `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
+   `YT_REFRESH_TOKEN` der Cloud-Umgebung (nie ins Repository schreiben).
+1. **Systemprüfung**: `python -m studio check` – bei fehlenden Pflicht-Werkzeugen erneut `bash setup.sh`.
+2. **Stimmen einsammeln** für die letzte veröffentlichte Episode:
+   `python -m studio votes <letzte-episode>`
+   (YouTube automatisch; TikTok nur, wenn `episodes/<id>/tiktok_comments.txt` importiert wurde).
+3. **Serienbibel lesen**: `db/series/<serie>.json` – Logline, Weltregeln, Geheimnisse, `next_plans`,
+   bisherige Abstimmungen. Gewinner-Option der Abstimmung bestimmt die Handlung.
+   Bei Gleichstand/keinen Stimmen: die spannendere Option wählen und im Log begründen.
+4. **Drehbuch schreiben**: `episodes/<serie>-eNN/script.json` nach `docs/DREHBUCH_FORMAT.md`.
+   - Eigene, originelle Handlung; keine realen Personen, Marken oder fremden Figuren.
+   - Hook in Sekunde 1, 30–60 s, Cliffhanger + A/B-Abstimmung.
+   - Neue Figuren: zuerst in `db/characters/<id>.json` anlegen, Stimme mit
+     `python -m studio.voicecast <id> --female|--male` casten, `python -m studio sheets`.
+   - Serienbibel aktualisieren: neue Geheimnisse, `next_plans` für A und B der neuen Folge.
+5. **Prüfen & produzieren**: `python -m studio validate <id>` → `python -m studio produce <id>`
+   (inkl. automatischer QC und bis zu 3 Korrekturversuchen).
+6. **Sichtprüfung durch Claude**: `episodes/<id>/qc_contact.png` ansehen und `qc_report.md` lesen.
+   Bei sichtbaren Fehlern (Figur abgeschnitten, Text überdeckt, unlogische Szene) Drehbuch
+   korrigieren und erneut produzieren (zählt zu den 3 Versuchen).
+7. **Freigabe**: Der Kanalinhaber hat entschieden (16.11.2026): bestandene QC (≥ 90, keine kritischen
+   Fehler) gilt als Freigabe (`require_manual_approval = false`, Status „freigegeben“ durch
+   „qc-automatik“). Findet die Sichtprüfung in Schritt 6 einen Fehler, wird NICHT veröffentlicht,
+   bevor er behoben ist.
+8. **Veröffentlichen**:
+   - YouTube automatisch: `python -m studio publish <id> --platform youtube`. Das Video wird sofort
+     hochgeladen und von YouTube um **18:00 Uhr (Europe/Berlin)** freigeschaltet (`publishAt`);
+     ist es später als 17:40, geht es sofort öffentlich online.
+   - TikTok halbautomatisch: `python -m studio tiktok-paket <id>`, dann `final.mp4` und die
+     Beschreibung per Datei-Versand (Push) aufs Handy des Menschen schicken; der Mensch lädt in der
+     TikTok-App hoch und schaltet „KI-generierte Inhalte“ ein. Danach
+     `python -m studio manuell-gepostet <id> tiktok <url>`.
+9. **Dashboard** aktualisieren: `python -m studio dashboard`; Änderungen committen und pushen
+   (`final.mp4` ist absichtlich nicht im Git).
+10. **Kurzbericht** als letzte Nachricht: Folge, QC-Wert, YouTube-Link, Abstimmungsergebnis der
+    Vorfolge. Bei Ablehnung oder Fehler: klar sagen, was fehlt (z. B. abgelaufener YouTube-Zugang →
+    Mensch muss `python -m studio auth-youtube` neu durchlaufen).
+
+## Harte Regeln
+- Nie veröffentlichen ohne bestandene QC (≥ 90, keine kritischen Fehler).
+- Nie Zugangsdaten ins Repository schreiben (`config/secrets/` ist ignoriert).
+- Keine kostenpflichtigen Dienste, keine externen KI-Generatoren.
+- Jedes Video wird als KI-generiert gekennzeichnet (YouTube `containsSyntheticMedia`, TikTok `is_aigc`).
+- Fehler ins Log (`logs/studio.log`) und, wenn nicht selbst behebbar, im Dashboard sichtbar lassen.

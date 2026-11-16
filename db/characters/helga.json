@@ -1,0 +1,42 @@
+{
+  "name": "Helga Brandt",
+  "role": "Nachbarin aus 4A, wohnt seit 41 Jahren im Haus",
+  "personality": "warmherzig, backt ständig, plötzlich sehr ernst; hütet ein Geheimnis über das Haus",
+  "look": {
+    "skin": "#f0c6a6",
+    "hair": "#bdbdc6",
+    "hair_style": "bun",
+    "top": "cardigan",
+    "top_color": "#8b5d7d",
+    "shirt_color": "#efe6d2",
+    "pants_color": "#4b4a5c",
+    "shoe_color": "#3a2a20",
+    "glasses": true,
+    "age": "old",
+    "earrings": true,
+    "height": 0.9,
+    "build": 1.05,
+    "necklace": true
+  },
+  "voice": {
+    "engine": "chatterbox",
+    "ref": "assets/voices/ref/helga.wav",
+    "cfg": 0.5,
+    "temperature": 0.8,
+    "pitch": 0.0,
+    "ref_source": "Piper kerstin-low (HUI-Korpus/LibriVox, gemeinfrei)",
+    "fallback": {
+      "model": "de_DE-eva_k-x_low",
+      "speaker": 0,
+      "length_scale": 1.05,
+      "pitch": -2.0,
+      "casting": {
+        "datum": "2026-11-16",
+        "whisper_aehnlichkeit": 0.948,
+        "f0_hz": 169
+      }
+    }
+  },
+  "id": "helga",
+  "locked": true
+}

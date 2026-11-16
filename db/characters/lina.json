@@ -1,0 +1,33 @@
+{
+  "name": "Lina",
+  "role": "Beste Freundin, meist per Handy-Chat dabei",
+  "personality": "lacht über alles Gruselige, mutig, schickt Sprachnachrichten",
+  "look": {
+    "skin": "#a8714c",
+    "hair": "#1d1512",
+    "hair_style": "curly",
+    "top": "jacket",
+    "top_color": "#c4473a",
+    "shirt_color": "#f2efe6",
+    "pants_color": "#2e3340",
+    "shoe_color": "#f2f2f2",
+    "height": 0.95,
+    "build": 0.95
+  },
+  "voice": {
+    "engine": "chatterbox",
+    "ref": "assets/voices/ref/lina.wav",
+    "cfg": 0.5,
+    "temperature": 0.8,
+    "pitch": 0.0,
+    "ref_source": "Piper ramona-low (HUI-Korpus/LibriVox, gemeinfrei)",
+    "fallback": {
+      "model": "de_DE-ramona-low",
+      "speaker": 0,
+      "length_scale": 0.95,
+      "pitch": 1.0
+    }
+  },
+  "id": "lina",
+  "locked": true
+}

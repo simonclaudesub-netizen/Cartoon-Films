@@ -1,0 +1,41 @@
+{
+  "name": "Du (Ich-Erzähler)",
+  "role": "Hauptfigur, Zuschauer-Perspektive (POV). Neu eingezogen in Wohnung 4B.",
+  "personality": "neugierig, etwas ängstlich, trockener Humor, will Geheimnisse lösen",
+  "look": {
+    "skin": "#e9b98f",
+    "hair": "#4a3426",
+    "hair_style": "short",
+    "top": "hoodie",
+    "top_color": "#c9a23a",
+    "shirt_color": "#efe9dc",
+    "pants_color": "#3d4a5c",
+    "shoe_color": "#2b2b2b",
+    "height": 1.0,
+    "build": 1.0
+  },
+  "voice": {
+    "engine": "chatterbox",
+    "ref": "assets/voices/ref/du.wav",
+    "cfg": 0.5,
+    "temperature": 0.8,
+    "pitch": 0.0,
+    "ref_source": "Piper thorsten-medium (Thorsten-Datensatz, CC0)",
+    "fallback": {
+      "model": "de_DE-thorsten_emotional-medium",
+      "speaker": 4,
+      "emotions": {
+        "neutral": 4,
+        "whisper": 7,
+        "surprised": 6,
+        "scared": 7,
+        "happy": 0,
+        "angry": 1
+      },
+      "length_scale": 1.0,
+      "pitch": 0.0
+    }
+  },
+  "id": "du",
+  "locked": true
+}

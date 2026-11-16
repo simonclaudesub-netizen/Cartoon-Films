@@ -1,0 +1,55 @@
+{
+  "id": "wohnung-4b",
+  "title": "Wohnung 4B",
+  "language": "de",
+  "status": "aktiv",
+  "logline": "Du ziehst in Wohnung 4B im Lindenweg 9. Der Hausmeister hat nur eine Regel: Nach Mitternacht niemandem die Tür öffnen. Dann klopft es um 03:07 Uhr.",
+  "genre": "POV-Mystery / Grusel-Light (jugendfrei, ohne Gewalt)",
+  "world": {
+    "ort": "Lindenweg 9, ein altes fünfstöckiges Mietshaus mit grünem Ölsockel im Treppenhaus",
+    "regeln": [
+      "Nach Mitternacht niemandem die Tür öffnen",
+      "Das Klopfen kommt immer um 03:07 Uhr",
+      "Frau Brandt sagt: 'Wenn jemand sagt, ich bin's, dann bin das nicht ich'"
+    ],
+    "geheimnisse": [
+      "Was ist mit dem Vormieter von 4B passiert?",
+      "Warum spricht Okan ernste Sätze zweimal?",
+      "Wer imitiert Frau Brandts Stimme?"
+    ]
+  },
+  "cast": [
+    "du",
+    "okan",
+    "helga",
+    "lina"
+  ],
+  "style": {
+    "zeichenstil": "2D-Cartoon, schwarze Konturen, flächige Farben, POV-Weitwinkel, detaillierte Hintergründe",
+    "format": "1080x1920, 30 fps, 30-60 s",
+    "label": "WOHNUNG 4B · TEIL {n}"
+  },
+  "episodes": [
+    {
+      "id": "wohnung-4b-e01",
+      "n": 1,
+      "title": "Die Regel"
+    }
+  ],
+  "votes": [],
+  "next_plans": {
+    "A": "Du öffnest die Tür einen Spalt (Kette bleibt dran). Der Flur ist leer – aber auf der Fußmatte liegt ein alter Schlüssel mit dem Anhänger '4B – 1983'.",
+    "B": "Du bleibst still. Das Klopfen hört auf. Am Morgen klebt ein Zettel an deiner Tür: 'Gut gemacht. – O.' Frau Brandt schwört, sie habe die ganze Nacht geschlafen."
+  },
+  "content_rules": [
+    "Keine Gewalt, kein Blut, keine realen Personen oder Marken",
+    "Jede Episode: Hook in den ersten 2 Sekunden, Cliffhanger + A/B-Abstimmung am Ende",
+    "Kennzeichnung als KI-generiert auf allen Plattformen"
+  ],
+  "model_sheet_hashes": {
+    "du": "ebe862094d01c224",
+    "okan": "fa55286f01de4ae5",
+    "helga": "52bddf345ba6560c",
+    "lina": "4dffd529f17fa11c"
+  }
+}

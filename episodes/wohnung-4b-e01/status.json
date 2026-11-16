@@ -1,0 +1,108 @@
+{
+  "id": "wohnung-4b-e01",
+  "state": "veröffentlicht",
+  "history": [
+    {
+      "t": "2026-11-16 12:54:56",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 12:57:36",
+      "state": "freigabe_ausstehend",
+      "score": 94.2,
+      "duration": 53.5,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4"
+    },
+    {
+      "t": "2026-11-16 13:12:54",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 13:14:57",
+      "state": "freigabe_ausstehend",
+      "score": 96.0,
+      "duration": 56.966667,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4"
+    },
+    {
+      "t": "2026-11-16 13:15:31",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 13:18:06",
+      "state": "freigabe_ausstehend",
+      "score": 98.0,
+      "duration": 56.966667,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4"
+    },
+    {
+      "t": "2026-11-16 14:00:07",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 14:07:22",
+      "state": "freigabe_ausstehend",
+      "score": 98.0,
+      "duration": 56.866667,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4"
+    },
+    {
+      "t": "2026-11-16 14:08:12",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 14:18:45",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 14:21:24",
+      "state": "freigabe_ausstehend",
+      "score": 98.0,
+      "duration": 56.166667,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4"
+    },
+    {
+      "t": "2026-11-16 14:23:55",
+      "state": "freigegeben",
+      "approved_by": "mensch"
+    },
+    {
+      "t": "2026-11-16 14:36:22",
+      "state": "freigegeben"
+    },
+    {
+      "t": "2026-11-16 15:37:15",
+      "state": "veröffentlicht"
+    },
+    {
+      "t": "2026-11-16 15:37:23",
+      "state": "veröffentlicht"
+    }
+  ],
+  "score": 98.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 98.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 158.8,
+      "rendered_shots": [
+        3,
+        6,
+        10
+      ]
+    }
+  ],
+  "duration": 56.166667,
+  "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e01/final.mp4",
+  "approved_by": "mensch",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "ITDHPKi_O-Y",
+      "url": "https://youtube.com/shorts/ITDHPKi_O-Y",
+      "privacy": "public"
+    }
+  }
+}

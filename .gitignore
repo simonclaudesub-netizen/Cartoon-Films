@@ -1,0 +1,10 @@
+config/secrets/
+cache/
+episodes/*/work/
+assets/voices/*.onnx
+assets/whisper/
+__pycache__/
+*.pyc
+logs/run_*.txt
+.venv-tts/
+episodes/*/final.mp4

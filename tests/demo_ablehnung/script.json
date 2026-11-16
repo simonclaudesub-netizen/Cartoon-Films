@@ -1,0 +1,86 @@
+{
+ "id": "zz-test-ablehnung",
+ "series": "wohnung-4b",
+ "episode": 1,
+ "title": "Die Regel",
+ "label": "WOHNUNG 4B · TEIL 1",
+ "summary": "Neu in 4B: Hausmeister Okan verbietet, nachts die Tür zu öffnen. Nachbarin Frau Brandt warnt: 'Wenn jemand sagt, ich bin's – dann bin das nicht ich.' Um 03:07 klopft es – mit ihrer Stimme.",
+ "cliffhanger": {
+  "question": "Tür öffnen?",
+  "options": {
+   "A": "Tür öffnen",
+   "B": "Nicht öffnen"
+  }
+ },
+ "cover_shot": 0,
+ "publish": {
+  "title": "Öffne nachts NIEMALS diese Tür 🚪 | Wohnung 4B – Teil 1",
+  "description": "Neu eingezogen – und der Hausmeister hat nur eine Regel. Um 03:07 Uhr klopft es... Was soll ich tun? Schreib A (Tür öffnen) oder B (nicht öffnen) in die Kommentare! Die Mehrheit entscheidet Teil 2.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+  "hashtags": [
+   "#wohnung4b",
+   "#pov",
+   "#mystery",
+   "#gruselig",
+   "#cartoon",
+   "#animation",
+   "#serie",
+   "#storytime",
+   "#shorts"
+  ]
+ },
+ "shots": [
+  {
+   "set": "flur",
+   "time": "night",
+   "variant": "feet",
+   "zoom": 1.25,
+   "lens": 0.08,
+   "caption": "03:07 UHR",
+   "music": "tension",
+   "camera": {
+    "move": "push_in",
+    "strength": 1.3
+   },
+   "sfx": [
+    {
+     "name": "knock",
+     "at": 0.25
+    }
+   ],
+   "lines": [
+    {
+     "speaker": "du",
+     "text": "Drei Uhr nachts. Und jemand klopft an meine Tür.",
+     "emotion": "whisper",
+     "fx": "inner",
+     "delay": 0.75
+    }
+   ],
+   "min_dur": 75
+  },
+  {
+   "set": "flur",
+   "time": "night",
+   "music": "tension",
+   "min_dur": 6.0,
+   "endcard": {
+    "question": "WAS SOLL ICH TUN?",
+    "options": {
+     "A": "TÜR ÖFFNEN",
+     "B": "NICHT ÖFFNEN"
+    },
+    "cta": "Schreib A oder B in die Kommentare!",
+    "next": "TEIL 2 FOLGT"
+   },
+   "lines": [
+    {
+     "speaker": "du",
+     "text": "Was soll ich tun? A: Tür öffnen. Oder B: nicht öffnen? Schreib es in die Kommentare!",
+     "emotion": "neutral",
+     "delay": 0.6,
+     "no_sub": true
+    }
+   ]
+  }
+ ]
+}

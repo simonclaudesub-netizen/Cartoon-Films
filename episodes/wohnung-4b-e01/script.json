@@ -1,0 +1,448 @@
+{
+  "id": "wohnung-4b-e01",
+  "series": "wohnung-4b",
+  "episode": 1,
+  "title": "Die Regel",
+  "label": "WOHNUNG 4B · TEIL 1",
+  "summary": "Neu in 4B: Hausmeister Okan verbietet, nachts die Tür zu öffnen. Nachbarin Frau Brandt warnt: 'Wenn jemand sagt, ich bin's – dann bin das nicht ich.' Um 03:07 klopft es – mit ihrer Stimme.",
+  "cliffhanger": {
+    "question": "Tür öffnen?",
+    "options": {
+      "A": "Tür öffnen",
+      "B": "Nicht öffnen"
+    }
+  },
+  "cover_shot": 9,
+  "publish": {
+    "title": "Öffne nachts NIEMALS diese Tür 🚪 | Wohnung 4B – Teil 1",
+    "description": "Neu eingezogen – und der Hausmeister hat nur eine Regel. Um 03:07 Uhr klopft es... Was soll ich tun? Schreib A (Tür öffnen) oder B (nicht öffnen) in die Kommentare! Die Mehrheit entscheidet Teil 2.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
+  },
+  "shots": [
+    {
+      "set": "flur",
+      "time": "night",
+      "variant": "feet",
+      "zoom": 1.25,
+      "lens": 0.08,
+      "caption": "03:07 UHR",
+      "music": "tension",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.3
+      },
+      "sfx": [
+        {
+          "name": "knock",
+          "at": 0.25
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Drei Uhr nachts. Und jemand klopft an meine Tür.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.75
+        }
+      ]
+    },
+    {
+      "set": "wohnzimmer",
+      "zoom": 1.45,
+      "lens": 0.08,
+      "caption": "3 TAGE VORHER",
+      "music": "cozy",
+      "pov": {
+        "mode": "box"
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "mitte",
+          "arms": "keys",
+          "prop": "keys",
+          "expr": "happy"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "keys",
+          "at": 1.2
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "okan",
+          "text": "Willkommen in 4B! Hier sind Ihre Schlüssel.",
+          "expr": "happy",
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "set": "wohnzimmer",
+      "zoom": 2.1,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "push_in"
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "mitte",
+          "arms": "down",
+          "expr": "suspicious"
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "okan",
+          "text": "Es gibt nur eine Regel: Nach Mitternacht öffnen Sie niemandem die Tür.",
+          "expr": "suspicious"
+        },
+        {
+          "speaker": "okan",
+          "text": "Niemandem.",
+          "expr": "angry",
+          "gap": 0.3
+        }
+      ]
+    },
+    {
+      "set": "wohnzimmer",
+      "zoom": 1.7,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "punch": [
+          1.6
+        ]
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "mitte",
+          "arms": "cross",
+          "expr": "suspicious",
+          "look": -0.4
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Äh... und warum?",
+          "emotion": "surprised"
+        },
+        {
+          "speaker": "okan",
+          "text": "Fragen Sie lieber nicht.",
+          "expr": "suspicious"
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 1.7,
+      "lens": 0.08,
+      "music": "cozy",
+      "camera": {
+        "move": "pan_right",
+        "strength": 0.5
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "hold",
+          "prop": "cake",
+          "expr": "happy"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "creak",
+          "at": 0.0,
+          "gain": 0.6
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Ach, der Neue aus 4B! Ich bin Frau Brandt. Ich hab Ihnen Kuchen gebacken.",
+          "expr": "happy",
+          "delay": 0.2
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 2.4,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "push_in"
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "hold",
+          "prop": "cake",
+          "expr": "sad"
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Und noch etwas. Wenn nachts jemand klopft und sagt: Ich bin's ...",
+          "expr": "sad"
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "variant": "open",
+      "zoom": 3.0,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "punch": [
+          0.25
+        ]
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "hold",
+          "prop": "cake",
+          "expr": "scared"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.2
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "... dann bin das nicht ich.",
+          "expr": "scared",
+          "delay": 0.1
+        }
+      ],
+      "pad_end": 0.8
+    },
+    {
+      "set": "schlafzimmer",
+      "time": "night",
+      "music": "mystery",
+      "pov": {
+        "mode": "phone",
+        "contact": "Lina",
+        "avatar": "#c4473a",
+        "messages": [
+          {
+            "from": "du",
+            "text": "Hausmeister UND Nachbarin sind total komisch",
+            "at": 0.3
+          },
+          {
+            "from": "lina",
+            "text": "Hahaha, willkommen im Gruselhaus!",
+            "at": 1.9
+          },
+          {
+            "from": "lina",
+            "text": "Schlaf gut",
+            "at": 2.8
+          }
+        ]
+      },
+      "sfx": [
+        {
+          "name": "ping",
+          "at": 0.3
+        },
+        {
+          "name": "ping",
+          "at": 1.9
+        },
+        {
+          "name": "ping",
+          "at": 2.8
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Lina hält das für einen Witz. Ich nicht.",
+          "emotion": "neutral",
+          "fx": "inner",
+          "delay": 3.0
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "variant": "feet",
+      "zoom": 1.15,
+      "lens": 0.1,
+      "music": "tension",
+      "caption": "03:07 UHR",
+      "caption_dur": 1.4,
+      "camera": {
+        "move": "push_in",
+        "strength": 0.8
+      },
+      "pov": {
+        "mode": "door",
+        "target": [
+          615,
+          965
+        ],
+        "reach": 0.55
+      },
+      "sfx": [
+        {
+          "name": "knock_hard",
+          "at": 0.15
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Hallo? Ich bin's, Frau Brandt! Bitte machen Sie auf!",
+          "emotion": "neutral",
+          "fx": "door",
+          "delay": 1.0
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "night",
+      "variant": "flicker",
+      "peephole": true,
+      "zoom": 1.5,
+      "lens": 0.35,
+      "music": "tension",
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "nah",
+          "expr": "creepy",
+          "arms": "down"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "heartbeat",
+          "at": 0.0,
+          "gain": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Aber sie hat gesagt ... das ist nicht sie.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.5
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "night",
+      "variant": "flicker",
+      "peephole": true,
+      "zoom": 2.0,
+      "lens": 0.4,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "shake": [
+          0.0
+        ]
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "nah",
+          "expr": "creepy",
+          "arms": "down",
+          "approach": 0.5
+        }
+      ],
+      "sfx": [
+        {
+          "name": "lights_out",
+          "at": 2.2
+        },
+        {
+          "name": "sting",
+          "at": 2.4
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Ich weiß, dass Sie da sind.",
+          "expr": "creepy",
+          "fx": "door",
+          "delay": 0.2
+        }
+      ],
+      "blackout_at": 2.45,
+      "dur": 3.3
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "music": "tension",
+      "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {
+          "A": "TÜR ÖFFNEN",
+          "B": "NICHT ÖFFNEN"
+        },
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 2 FOLGT"
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Tür öffnen. Oder B: nicht öffnen? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.6,
+          "no_sub": true
+        }
+      ]
+    }
+  ]
+}
