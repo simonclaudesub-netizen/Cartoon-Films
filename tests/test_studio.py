@@ -97,7 +97,7 @@ def test_publish_gate_and_slot():
     cfg = release.config()
     tz = ZoneInfo("Europe/Berlin")
     assert release.publish_slot(cfg, dt.datetime(2026, 11, 17, 14, 0, tzinfo=tz)) == "2026-11-17T17:00:00Z"
-    assert release.publish_slot(cfg, dt.datetime(2026, 11, 17, 17, 50, tzinfo=tz)) is None
+    assert release.publish_slot(cfg, dt.datetime(2026, 11, 17, 17, 50, tzinfo=tz)) == "2026-11-18T17:00:00Z"
     yt = youtube.build_metadata({"title": "t", "description": "d"}, "public", "2026-11-17T17:00:00Z")
     assert yt["status"]["privacyStatus"] == "private" and yt["status"]["publishAt"]
     # abgelehnte Episoden dürfen nie veröffentlicht werden

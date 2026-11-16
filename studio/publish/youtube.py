@@ -127,7 +127,7 @@ def upload(video_path, meta, privacy="private", publish_at=None):
         if up.status_code in (200, 201):
             v = up.json()
             return {"platform": "youtube", "id": v["id"], "url": f"https://youtube.com/shorts/{v['id']}",
-                    "privacy": privacy, **({"publish_at": publish_at} if publish_at else {})}
+                    "privacy": body["status"]["privacyStatus"], **({"publish_at": publish_at} if publish_at else {})}
         if up.status_code >= 500:
             time.sleep(2 ** attempt * 5)
             continue

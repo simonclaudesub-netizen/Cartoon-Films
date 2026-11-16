@@ -9,9 +9,9 @@ from . import db, selfcheck
 OUT = db.ROOT / "dashboard" / "index.html"
 
 STATE_LABEL = {"neu": "Neu", "in_produktion": "In Produktion", "freigabe_ausstehend": "Wartet auf Freigabe",
-               "freigegeben": "Freigegeben", "veröffentlicht": "Veröffentlicht", "abgelehnt": "Abgelehnt (QC)",
+               "freigegeben": "Freigegeben", "veröffentlicht": "Veröffentlicht", "geplant": "Geplant (18:00)", "abgelehnt": "Abgelehnt (QC)",
                "fehler": "Fehler"}
-STATE_TONE = {"freigabe_ausstehend": "warn", "freigegeben": "ok", "veröffentlicht": "ok", "abgelehnt": "bad",
+STATE_TONE = {"freigabe_ausstehend": "warn", "freigegeben": "ok", "veröffentlicht": "ok", "geplant": "ok", "abgelehnt": "bad",
               "fehler": "bad"}
 
 

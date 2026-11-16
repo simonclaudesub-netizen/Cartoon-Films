@@ -35,7 +35,8 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
 8. **Veröffentlichen**:
    - YouTube automatisch: `python -m studio publish <id> --platform youtube`. Das Video wird sofort
      hochgeladen und von YouTube um **18:00 Uhr (Europe/Berlin)** freigeschaltet (`publishAt`);
-     ist es später als 17:40, geht es sofort öffentlich online.
+     ist es später als 17:40, wird es für 18:00 Uhr am Folgetag eingeplant (nie sofort).
+   - Neue Folge nur produzieren, wenn die vorige Folge bereits öffentlich ist (sonst gibt es noch keine Abstimmung) – dann nur Kurzbericht „wartet auf Abstimmung“.
    - TikTok halbautomatisch: `python -m studio tiktok-paket <id>`, dann `final.mp4` und die
      Beschreibung per Datei-Versand (Push) aufs Handy des Menschen schicken; der Mensch lädt in der
      TikTok-App hoch und schaltet „KI-generierte Inhalte“ ein. Danach

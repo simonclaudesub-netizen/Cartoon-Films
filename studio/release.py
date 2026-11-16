@@ -37,8 +37,8 @@ def _meta(ep_id):
 
 
 def publish_slot(cfg, now=None, min_lead_min=20):
-    """Nächster Veröffentlichungstermin heute (z. B. 18:00 Europe/Berlin) als UTC-ISO-String.
-    None = sofort veröffentlichen (Termin schon vorbei oder zu knapp)."""
+    """Nächster Veröffentlichungstermin (z. B. 18:00 Europe/Berlin) als UTC-ISO-String:
+    heute, wenn noch mind. 20 Minuten Vorlauf, sonst morgen. None = kein Termin konfiguriert."""
     sch = cfg.get("schedule", {})
     if not sch.get("publish_time"):
         return None
@@ -47,7 +47,7 @@ def publish_slot(cfg, now=None, min_lead_min=20):
     h, m = map(int, sch["publish_time"].split(":"))
     slot = now.astimezone(tz).replace(hour=h, minute=m, second=0, microsecond=0)
     if slot - now < dt.timedelta(minutes=min_lead_min):
-        return None
+        slot += dt.timedelta(days=1)  # Termin heute verpasst -> morgen zur selben Zeit (nie sofort)
     return slot.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
@@ -66,7 +66,7 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
     if dry_run:
         return {"dry_run": True, "plan": plan}
     # Harte Sperre unabhängig von der Konfiguration: nur bestandene QC + Freigabe (manuell oder QC-Automatik)
-    if st.get("state") not in ("freigegeben", "veröffentlicht"):
+    if st.get("state") not in ("freigegeben", "veröffentlicht", "geplant"):
         raise SystemExit(f"Keine Veröffentlichung: Episode ist nicht freigegeben (Status '{st.get('state')}').")
     if (st.get("score") or 0) < 90:
         raise SystemExit(f"Keine Veröffentlichung: QC-Wert {st.get('score')} unter 90.")
@@ -94,8 +94,10 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
     if not results.get("errors"):
         results.pop("errors", None)
     state = "veröffentlicht" if any(k in results for k in ("youtube", "tiktok")) else st.get("state")
+    if state == "veröffentlicht" and all(r.get("publish_at") for k, r in results.items() if k in ("youtube", "tiktok")):
+        state = "geplant"
     db.set_status(ep_id, state, published=results)
-    if state == "veröffentlicht" and sc.get("series"):
+    if state in ("veröffentlicht", "geplant") and sc.get("series"):
         s = db.series(sc["series"])
         if ep_id not in [e["id"] for e in s.get("episodes", [])]:
             s.setdefault("episodes", []).append({"id": ep_id, "n": sc["episode"], "title": sc["title"]})

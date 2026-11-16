@@ -137,3 +137,5 @@ IndexError: list index out of range
 2026-11-16 18:26:05 [INFO] [wohnung-4b-e02] QC Versuch 1: 96.0 Punkte – bestanden
 2026-11-16 18:26:05 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 96.0 >= 90)
 2026-11-16 18:26:19 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'ehgI-k-milA', 'url': 'https://youtube.com/shorts/ehgI-k-milA', 'privacy': 'public'}
+2026-11-16 18:34:02 [WARN] [wohnung-4b-e02] Video ehgI-k-milA war versehentlich sofort öffentlich und ist nicht mehr auf dem Kanal – neu einplanen für 17.11. 18:00
+2026-11-16 18:34:12 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'LR2S_nm4mjU', 'url': 'https://youtube.com/shorts/LR2S_nm4mjU', 'privacy': 'public', 'publish_at': '2026-11-17T17:00:00Z'}
