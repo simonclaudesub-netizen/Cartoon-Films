@@ -90,6 +90,12 @@ def test_episode_scripts_validate():
         assert validate.script(ep["id"]) == [], ep["id"]
 
 
+def test_repeated_words_detected():
+    assert qc.trailing_extra("Guten Morgen, Frau Brandt.", "Guten Morgen, Frau Prandt-Prandt.")
+    assert qc.trailing_extra("Ja.", "Ja, tschüss tschüss!")
+    assert qc.trailing_extra("Niemandem. Niemandem.", "Niemandem, niemandem.") == []
+
+
 def test_publish_gate_and_slot():
     import datetime as dt
     from zoneinfo import ZoneInfo

@@ -39,7 +39,7 @@ def fixes_for(res, tl, ov):
     for t in res["line_tests"]:
         if not t["ok"]:
             lo = lines_ov.setdefault(t["key"], {})
-            if db.character(t["speaker"])["voice"].get("engine") == "chatterbox":
+            if db.character(t["speaker"])["voice"].get("engine") in ("chatterbox", "zonos"):
                 lo["seed"] = lo.get("seed", 1) + 1  # neue Aufnahme ("Take") statt Tempo-Änderung
                 actions.append(f"Zeile {t['key']} neu einsprechen, Take {lo['seed']} (Ähnlichkeit {t['similarity']})")
             else:
@@ -96,7 +96,7 @@ def recording_session(sc, chars, ov, ep_id):
         bad = []
         for s in tl["shots"]:
             for ln in s.get("lines", []):
-                if chars[ln["speaker"]]["voice"].get("engine") != "chatterbox":
+                if chars[ln["speaker"]]["voice"].get("engine") not in ("chatterbox", "zonos"):
                     continue
                 key = ln["_key"]
                 seed = lines_ov.get(key, {}).get("seed", 1)
@@ -106,7 +106,7 @@ def recording_session(sc, chars, ov, ep_id):
                 score = sim - (0.3 if extra else 0)
                 if key not in best or score > best[key][0]:
                     best[key] = (score, seed)
-                if sim < qc.LINE_MIN or extra:
+                if sim < qc.line_min(ln["text"]) or extra:
                     bad.append((key, round(sim, 2), heard))
         if not bad:
             db.log(f"[{ep_id}] Sprachaufnahme: alle Zeilen sauber (Runde {take})")

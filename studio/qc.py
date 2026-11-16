@@ -18,6 +18,12 @@ from .modelsheet import look_hash
 
 PASS_SCORE = 90
 LINE_MIN = 0.85  # Mindest-Ähnlichkeit je Zeile; schlechtere Zeilen blockieren die Veröffentlichung
+
+
+def line_min(text):
+    """Lange Sätze strenger prüfen: dort verändert ein einzelnes falsches Wort die Ähnlichkeit kaum."""
+    n = len(text.split())
+    return LINE_MIN if n < 8 else min(0.94, LINE_MIN + 0.0075 * (n - 8))
 _whisper = None
 
 
@@ -77,7 +83,25 @@ def trailing_extra(expected, got):
     if not blocks:
         return []
     last = blocks[-1]
-    return g[last.b + last.size:] if last.a + last.size >= len(e) - 1 else []
+    tail = g[last.b + last.size:] if last.a + last.size >= len(e) - 1 else []
+    return tail + repeated_words(expected, got)
+
+
+def repeated_words(expected, got):
+    """Doppelt gesprochene Wörter/Silben ('Brandt-Brandt', 'tschüss tschüss'), die nicht im Text stehen."""
+    raw = [w for w in re.split(r"[\s,.!?;:…\"„“]+", got.lower()) if w]
+    e = _norm(tts.tts_text(expected)).split()
+    exp_pairs = {(a, b) for a, b in zip(e, e[1:])}
+    out = []
+    for w in raw:
+        parts = [x for x in w.split("-") if x]
+        if len(parts) >= 2 and len(set(parts)) == 1 and len(parts[0]) >= 3:
+            out.append(w)
+    g = _norm(got).split()
+    for a, b in zip(g, g[1:]):
+        if a == b and len(a) >= 3 and (a, b) not in exp_pairs:
+            out.append(f"{a} {b}")
+    return out
 
 
 def similarity(expected, got):
@@ -168,12 +192,12 @@ def run(ep_id, video, tl, script, render_report, max_chars=subtitles.MAX_CHARS):
             sims.append(sim)
             res["line_tests"].append({"key": ln["_key"], "speaker": ln["speaker"], "text": ln["text"], "heard": got,
                                       "similarity": round(sim, 3), "extra": extra,
-                                      "ok": sim >= LINE_MIN and not extra})
+                                      "ok": sim >= line_min(ln["text"]) and not extra})
     avg = float(np.mean(sims)) if sims else 0
     bad = [t for t in res["line_tests"] if not t["ok"]]
     pts = 20 * max(0.0, min(1.0, (avg - 0.6) / 0.3)) - 3 * len(bad)
     check("stimmen", "Sprachverständlichkeit (Whisper-Abgleich)", avg >= 0.85 and not bad, max(0, pts), 20,
-          f"Ø {avg:.2f}, {len(bad)} Zeile(n) unter {LINE_MIN} oder mit Nachlaut")
+          f"Ø {avg:.2f}, {len(bad)} Zeile(n) unter Mindestwert ({LINE_MIN}, lange Sätze strenger) oder mit Nachlaut/Wiederholung")
     for t in bad:
         res.setdefault("blocking", []).append(f"Zeile {t['key']} ({t['speaker']}): gehört '{t['heard']}'")
 

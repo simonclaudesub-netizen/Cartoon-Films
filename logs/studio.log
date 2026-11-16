@@ -149,3 +149,38 @@ IndexError: list index out of range
 2026-11-16 19:17:55 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 97.0 >= 90)
 2026-11-16 19:20:04 [INFO] [wohnung-4b-e02] alte geplante Fassung LR2S_nm4mjU gelöscht (Ersetzen durch Fassung mit neuen Stimmen, vom Kanalinhaber freigegeben)
 2026-11-16 19:20:08 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'AI2AUZReYSg', 'url': 'https://youtube.com/shorts/AI2AUZReYSg', 'privacy': 'private', 'publish_at': '2026-11-17T17:00:00Z'}
+2026-11-16 19:40:14 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 19:43:07 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 1: neue Takes für [('1.0', 0.81, 'Nach 30 Minuten ununterbrochenem Köpfen ging sie endlich.'), ('2.0', 0.83, 'doch schlafen konnte ich diese nachten'), ('6.1', 0.63, 'Ja. Ja.')]
+2026-11-16 19:44:06 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 2: neue Takes für [('1.0', 0.72, 'Nach 30 Minuten ununterbrochenen Klopfen ging sie Ende.'), ('2.0', 0.0, '')]
+2026-11-16 19:44:54 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 3: neue Takes für [('1.0', 0.81, 'Nach 30 Minuten ununterbrochenen Klopfen ging sie endlich.'), ('2.0', 0.89, 'Doch schlafen konnte ich diese Nacht nie.')]
+2026-11-16 19:45:41 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 4)
+2026-11-16 19:45:41 [INFO] [wohnung-4b-e02] Laufzeit 57.5 s, 10 Einstellungen – rendere Video
+2026-11-16 19:46:33 [INFO] [wohnung-4b-e02] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | aus Cache: []
+2026-11-16 19:47:08 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 19:47:44 [INFO] [wohnung-4b-e02] QC Versuch 1: 95.0 Punkte – bestanden
+2026-11-16 19:47:44 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 95.0 >= 90)
+2026-11-16 19:50:17 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 19:50:41 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 1: neue Takes für [('5.0', 0.89, 'Guten Morgen, Frau Prandt-Prandt. Haben Sie heute Nacht bei mir geklopft?')]
+2026-11-16 19:51:14 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 2)
+2026-11-16 19:51:14 [INFO] [wohnung-4b-e02] Laufzeit 56.8 s, 10 Einstellungen – rendere Video
+2026-11-16 19:51:28 [INFO] [wohnung-4b-e02] gerendert: [5] | aus Cache: [0, 1, 2, 3, 4, 6, 7, 8, 9]
+2026-11-16 19:52:02 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 19:52:40 [INFO] [wohnung-4b-e02] QC Versuch 1: 97.0 Punkte – bestanden
+2026-11-16 19:52:40 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 97.0 >= 90)
+2026-11-16 19:54:35 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-16 19:55:00 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 1: neue Takes für [('9.0', 0.86, 'Was soll ich tun? A. Heute Nacht durch den Tischspiel und Schauen. Oder B. Okanhan nicht folgen? Schreib es in die Kommentare.')]
+2026-11-16 19:55:22 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 2: neue Takes für [('9.0', 0.94, 'Was soll ich tun? A. Heute Nacht durch den Tischbionenschau. Oder B. Okan heimlich folgen? Schreib es in die Kommentare.')]
+2026-11-16 19:55:58 [INFO] [wohnung-4b-e02] Sprachaufnahme Runde 3: neue Takes für [('9.0', 0.89, 'Was soll ich tun? A. Heute Nacht durch den Türspiel schauen. Oder B. Okaan heimlich folgen. Bleib es in die Kommentare.')]
+2026-11-16 19:56:34 [WARN] [wohnung-4b-e02] Sprachaufnahme: beste Takes übernommen, offen: ['9.0']
+2026-11-16 19:56:34 [INFO] [wohnung-4b-e02] Laufzeit 56.8 s, 10 Einstellungen – rendere Video
+2026-11-16 19:56:48 [INFO] [wohnung-4b-e02] gerendert: [9] | aus Cache: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+2026-11-16 19:57:24 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 19:58:02 [INFO] [wohnung-4b-e02] QC Versuch 1: 94.0 Punkte – nicht bestanden
+2026-11-16 19:58:02 [WARN] [wohnung-4b-e02] Korrekturen: ['Zeile 9.0 neu einsprechen, Take 3 (Ähnlichkeit 0.935)', "Zu schnelle Zeilen ['4.0'] langsamer sprechen", 'Untertitel neu aufteilen']
+2026-11-16 19:58:02 [INFO] [wohnung-4b-e02] Versuch 2: Zeitleiste + Stimmen
+2026-11-16 19:58:35 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-16 19:58:35 [INFO] [wohnung-4b-e02] Laufzeit 57.4 s, 10 Einstellungen – rendere Video
+2026-11-16 19:58:50 [INFO] [wohnung-4b-e02] gerendert: [4, 9] | aus Cache: [0, 1, 2, 3, 5, 6, 7, 8]
+2026-11-16 19:59:26 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-16 20:00:05 [INFO] [wohnung-4b-e02] QC Versuch 2: 99.0 Punkte – bestanden
+2026-11-16 20:00:05 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 99.0 >= 90)

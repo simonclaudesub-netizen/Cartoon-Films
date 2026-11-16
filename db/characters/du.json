@@ -15,12 +15,19 @@
     "build": 1.0
   },
   "voice": {
-    "engine": "chatterbox",
+    "engine": "zonos",
     "ref": "assets/voices/ref/du.wav",
-    "cfg": 0.5,
-    "temperature": 0.8,
-    "pitch": 0.0,
     "ref_source": "Thorsten-Voice TV-2022.10-Neutral, echte Studioaufnahme (CC0)",
+    "controls": {},
+    "fallback_chatterbox": {
+      "engine": "chatterbox",
+      "ref": "assets/voices/ref/du.wav",
+      "cfg": 0.5,
+      "temperature": 0.8,
+      "pitch": 0.0,
+      "ref_source": "Thorsten-Voice TV-2022.10-Neutral, echte Studioaufnahme (CC0)",
+      "ref_previous": "assets/voices/ref/alt/du_piper.wav"
+    },
     "fallback": {
       "model": "de_DE-thorsten_emotional-medium",
       "speaker": 4,
@@ -34,8 +41,7 @@
       },
       "length_scale": 1.0,
       "pitch": 0.0
-    },
-    "ref_previous": "assets/voices/ref/alt/du_piper.wav"
+    }
   },
   "id": "du",
   "locked": true

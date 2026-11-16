@@ -19,12 +19,21 @@
     "necklace": true
   },
   "voice": {
-    "engine": "chatterbox",
+    "engine": "zonos",
     "ref": "assets/voices/ref/helga.wav",
-    "cfg": 0.5,
-    "temperature": 0.8,
-    "pitch": 0.0,
     "ref_source": "CML-TTS Deutsch, Sprecherin 8470 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+    "controls": {
+      "identity.age": 1.0
+    },
+    "fallback_chatterbox": {
+      "engine": "chatterbox",
+      "ref": "assets/voices/ref/helga.wav",
+      "cfg": 0.5,
+      "temperature": 0.8,
+      "pitch": 0.0,
+      "ref_source": "CML-TTS Deutsch, Sprecherin 8470 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+      "ref_previous": "assets/voices/ref/alt/helga_piper.wav"
+    },
     "fallback": {
       "model": "de_DE-eva_k-x_low",
       "speaker": 0,
@@ -35,8 +44,7 @@
         "whisper_aehnlichkeit": 0.948,
         "f0_hz": 169
       }
-    },
-    "ref_previous": "assets/voices/ref/alt/helga_piper.wav"
+    }
   },
   "id": "helga",
   "locked": true

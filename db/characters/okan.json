@@ -18,12 +18,19 @@
     "name_tag": true
   },
   "voice": {
-    "engine": "chatterbox",
+    "engine": "zonos",
     "ref": "assets/voices/ref/okan.wav",
-    "cfg": 0.5,
-    "temperature": 0.8,
-    "pitch": 0.0,
     "ref_source": "CML-TTS Deutsch, Sprecher 3503 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+    "controls": {},
+    "fallback_chatterbox": {
+      "engine": "chatterbox",
+      "ref": "assets/voices/ref/okan.wav",
+      "cfg": 0.5,
+      "temperature": 0.8,
+      "pitch": 0.0,
+      "ref_source": "CML-TTS Deutsch, Sprecher 3503 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+      "ref_previous": "assets/voices/ref/alt/okan_piper.wav"
+    },
     "fallback": {
       "model": "de_DE-karlsson-low",
       "speaker": 0,
@@ -34,8 +41,7 @@
         "whisper_aehnlichkeit": 0.945,
         "f0_hz": 97
       }
-    },
-    "ref_previous": "assets/voices/ref/alt/okan_piper.wav"
+    }
   },
   "id": "okan",
   "locked": true

@@ -30,6 +30,18 @@ if [ ! -x .venv-tts/bin/python ] || ! .venv-tts/bin/python -c "import chatterbox
   .venv-tts/bin/pip install --quiet chatterbox-tts
 fi
 
+# Hauptstimmen: ZONOS3-Mini (Zyphra, Apache-2.0) – C++/ggml-Server für die CPU, Stimmklon + Emotions-Regler
+Z=vendor/ZONOS3-Mini
+if [ ! -x $Z/servers/ggml/build/zonos3-server ]; then
+  [ -d $Z ] || git clone -q --depth 1 https://github.com/Zyphra/ZONOS3-Mini.git $Z
+  (cd $Z && git submodule update --init --depth 1 servers/ggml/ggml third_party/zyphra-textnorm)
+  (cd $Z/servers/ggml && cmake -B build -DCMAKE_BUILD_TYPE=Release >/dev/null && cmake --build build -j"$(nproc)" >/dev/null)
+fi
+mkdir -p $Z/servers/ggml/gguf
+for f in backbone-ptq.gguf zac-keep2.gguf spk-encoder.gguf steer.gguf; do
+  [ -s "$Z/servers/ggml/gguf/$f" ] || curl -sSL --fail -o "$Z/servers/ggml/gguf/$f" "https://huggingface.co/Zyphra/ZONOS3-Mini/resolve/main/gguf/$f"
+done
+
 # Whisper-Modell für die Sprach-QC (wird beim ersten Aufruf geladen)
 python3 -c "from faster_whisper import WhisperModel; WhisperModel('small', device='cpu', compute_type='int8', download_root='assets/whisper')" 2>/dev/null
 

@@ -72,6 +72,11 @@ def _ref_hash(ref):
 
 
 def _key(text, voice, emotion, fx, length_mul, noise, seed):
+    if voice.get("engine") == "zonos":
+        from . import zonos
+        k = ["zn", text, _ref_hash(voice["ref"]), zonos.controls_for(emotion, voice), seed,
+             fx, FX.get(fx), length_mul, voice.get("pitch", 0.0), CLARITY, POST_VERSION]
+        return hashlib.sha1(json.dumps(k, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:16], None
     if voice.get("engine") == "chatterbox":
         ex = voice.get("exaggeration", {}).get(emotion) if isinstance(voice.get("exaggeration"), dict) else None
         ex = ex if ex is not None else EXAGGERATION.get(emotion, 0.5)
@@ -87,9 +92,19 @@ def _key(text, voice, emotion, fx, length_mul, noise, seed):
 def prepare(requests):
     """Erzeugt alle noch fehlenden Chatterbox-Zeilen in EINEM Worker-Lauf (Modell lädt nur einmal).
     requests: Liste von dicts mit text, voice, emotion, fx, length_mul, seed."""
-    jobs = []
+    jobs, n_zonos = [], 0
     for r in requests:
         v = r["voice"]
+        if v.get("engine") == "zonos":
+            from . import zonos
+            emo = r.get("emotion", "neutral")
+            h, _ = _key(r["text"], v, emo, r.get("fx"), r.get("length_mul", 1.0), None, r.get("seed", 1))
+            raw = CACHE / f"{h}.raw.wav"
+            if not (CACHE / f"{h}.wav").exists() and not raw.exists():
+                CACHE.mkdir(parents=True, exist_ok=True)
+                zonos.generate(tts_text(r["text"]), ROOT / v["ref"], raw, zonos.controls_for(emo, v), r.get("seed", 1))
+                n_zonos += 1
+            continue
         if v.get("engine") != "chatterbox":
             continue
         h, ex = _key(r["text"], v, r.get("emotion", "neutral"), r.get("fx"), r.get("length_mul", 1.0), None,
@@ -100,12 +115,12 @@ def prepare(requests):
                      "cfg": v.get("cfg", 0.5), "temperature": v.get("temperature", 0.8),
                      "seed": r.get("seed", 1), "out": str(CACHE / f"{h}.raw.wav")})
     if not jobs:
-        return 0
+        return n_zonos
     CACHE.mkdir(parents=True, exist_ok=True)
     p = subprocess.run([str(VENV_PY), str(WORKER)], input=json.dumps(jobs), capture_output=True, text=True)
     if p.returncode != 0:
         raise RuntimeError(f"Chatterbox-Worker fehlgeschlagen: {p.stderr[-800:]}")
-    return len(jobs)
+    return len(jobs) + n_zonos
 
 
 def _post(raw, out, pitch, fx, tempo=1.0):
@@ -131,7 +146,7 @@ def synth(text, voice, emotion="neutral", fx=None, length_mul=1.0, noise=None, s
     if out.exists():
         return out, read_wav(out)
     CACHE.mkdir(parents=True, exist_ok=True)
-    if voice.get("engine") == "chatterbox":
+    if voice.get("engine") in ("chatterbox", "zonos"):
         raw = CACHE / f"{h}.raw.wav"
         if not raw.exists():
             prepare([{"text": text, "voice": voice, "emotion": emotion, "fx": fx, "length_mul": length_mul,

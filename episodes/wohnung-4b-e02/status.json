@@ -1,6 +1,6 @@
 {
   "id": "wohnung-4b-e02",
-  "state": "geplant",
+  "state": "freigegeben",
   "history": [
     {
       "t": "2026-11-16 18:05:33",
@@ -89,31 +89,86 @@
     {
       "t": "2026-11-16 19:20:08",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-16 19:40:14",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 19:47:44",
+      "state": "freigabe_ausstehend",
+      "score": 95.0,
+      "duration": 57.466667,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 19:47:44",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 19:50:17",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 19:52:40",
+      "state": "freigabe_ausstehend",
+      "score": 97.0,
+      "duration": 56.833,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 19:52:40",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-16 19:54:35",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-16 20:00:05",
+      "state": "freigabe_ausstehend",
+      "score": 99.0,
+      "duration": 57.4,
+      "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4"
+    },
+    {
+      "t": "2026-11-16 20:00:05",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
     }
   ],
-  "score": 97.0,
+  "score": 99.0,
   "attempts": [
     {
       "attempt": 1,
-      "score": 97.0,
+      "score": 94.0,
+      "passed": false,
+      "critical": [],
+      "seconds": 206.9,
+      "rendered_shots": [
+        9
+      ],
+      "fixes": [
+        "Zeile 9.0 neu einsprechen, Take 3 (Ähnlichkeit 0.935)",
+        "Zu schnelle Zeilen ['4.0'] langsamer sprechen",
+        "Untertitel neu aufteilen"
+      ]
+    },
+    {
+      "attempt": 2,
+      "score": 99.0,
       "passed": true,
       "critical": [],
-      "seconds": 469.4,
+      "seconds": 123.7,
       "rendered_shots": [
-        0,
-        1,
-        2,
-        3,
         4,
-        5,
-        6,
-        7,
-        8,
         9
       ]
     }
   ],
-  "duration": 52.166667,
+  "duration": 57.4,
   "final": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/final.mp4",
   "approved_by": "qc-automatik",
   "published": {

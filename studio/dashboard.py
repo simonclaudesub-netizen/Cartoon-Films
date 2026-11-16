@@ -34,6 +34,8 @@ def _rel(p):
 
 
 def _voice_label(v):
+    if v.get("engine") == "zonos":
+        return f"ZONOS3 mit Emotions-Reglern (Vorlage: {v.get('ref_source', v['ref'])})"
     if v.get("engine") == "chatterbox":
         return f"Chatterbox (Referenz: {v.get('ref_source', v['ref'])})"
     return f"Piper {v.get('model')}"
