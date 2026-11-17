@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-python3 -m pip install --quiet piper-tts pycairo faster-whisper opencv-python-headless numpy pillow requests
+python3 -m pip install --quiet piper-tts pycairo faster-whisper opencv-python-headless numpy pillow requests cryptography
 
 # Comic-Schriften (SIL Open Font License, aus dem Google-Fonts-Repository)
 mkdir -p assets/fonts ~/.fonts

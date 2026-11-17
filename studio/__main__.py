@@ -12,7 +12,9 @@
   manuell-gepostet <episode> <plattform> [url]   manuellen Upload vermerken
   dashboard                  Dashboard erzeugen (dashboard/index.html)
   auth-youtube <client_id> <client_secret> [code]
-  auth-tiktok <client_key> <client_secret> <refresh_token>
+  auth-tiktok <client_key> <client_secret> <redirect_uri> [code|weiterleitungs-url]
+  tiktok-entwurf <episode>   Video als Entwurf ins TikTok-Postfach schicken (Mensch postet in der App)
+  tiktok-test                TikTok-Zugang prüfen (Token erneuern)
 """
 import argparse
 import json
@@ -100,10 +102,21 @@ def main(argv=None):
         print(youtube.channel())
     elif a.cmd == "auth-tiktok":
         from .publish import tiktok
-        tiktok.SECRETS.parent.mkdir(parents=True, exist_ok=True)
-        tiktok.SECRETS.write_text(json.dumps({"client_key": a.args[0], "client_secret": a.args[1],
-                                              "refresh_token": a.args[2]}, indent=2))
-        print("TikTok-Zugang gespeichert.")
+        if len(a.args) < 4:
+            print("1. Diese Adresse im Browser öffnen und mit dem TikTok-Konto zustimmen:\n")
+            print(tiktok.auth_url(a.args[0], a.args[2]))
+            print("\n2. Die komplette Adresse, auf der der Browser danach landet, hier übergeben:\n"
+                  "   python -m studio auth-tiktok <client_key> <client_secret> <redirect_uri> '<adresse>'")
+        else:
+            scope, _ = tiktok.exchange_code(*a.args[:4])
+            print("TikTok-Zugang gespeichert. Rechte:", scope)
+    elif a.cmd == "tiktok-test":
+        from .publish import tiktok
+        tiktok._token()
+        print("TikTok-Zugang OK.")
+    elif a.cmd == "tiktok-entwurf":
+        from . import release
+        print(release.publish(a.args[0], platforms=["tiktok"], dry_run=a.dry_run))
     else:
         ap.print_help()
         sys.exit(1)

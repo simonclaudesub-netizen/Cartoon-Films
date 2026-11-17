@@ -62,8 +62,11 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
     slot = publish_slot(cfg, now)
     for p in plats:
         priv = cfg["publishing"]["platforms"][p]["privacy"]
+        tmode = cfg["publishing"]["platforms"][p].get("mode", "entwurf")
         plan[p] = youtube.build_metadata(meta, priv, slot) if p == "youtube" else \
-            {"post_info": tiktok.build_post_info(meta, priv), "source": "FILE_UPLOAD"}
+            ({"mode": "entwurf", "endpoint": "/v2/post/publish/inbox/video/init/",
+              "caption": tiktok.build_post_info(meta, priv)["title"]} if tmode == "entwurf" else
+             {"post_info": tiktok.build_post_info(meta, priv), "source": "FILE_UPLOAD"})
     if dry_run:
         return {"dry_run": True, "plan": plan}
     # Harte Sperre unabhängig von der Konfiguration: nur bestandene QC + Freigabe (manuell oder QC-Automatik)
@@ -86,7 +89,10 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
             elif p == "tiktok":
                 if not tiktok.configured():
                     raise RuntimeError("TikTok-Zugangsdaten fehlen (python -m studio auth-tiktok)")
-                results[p] = tiktok.publish(video, meta, priv)
+                if cfg["publishing"]["platforms"][p].get("mode", "entwurf") == "entwurf":
+                    results[p] = tiktok.upload_draft(video, meta)  # Mensch postet in der App
+                else:
+                    results[p] = tiktok.publish(video, meta, priv)
             results.get("errors", {}).pop(p, None)
             db.log(f"[{ep_id}] veröffentlicht auf {p}: {results[p]}")
         except Exception as e:
@@ -95,7 +101,8 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
     if not results.get("errors"):
         results.pop("errors", None)
     state = "veröffentlicht" if any(k in results for k in ("youtube", "tiktok")) else st.get("state")
-    if state == "veröffentlicht" and all(r.get("publish_at") for k, r in results.items() if k in ("youtube", "tiktok")):
+    if state == "veröffentlicht" and (results.get("youtube") or {}).get("publish_at") and \
+            all(r.get("publish_at") or r.get("mode") == "entwurf" for k, r in results.items() if k in ("youtube", "tiktok")):
         state = "geplant"
     db.set_status(ep_id, state, published=results)
     if state in ("veröffentlicht", "geplant") and sc.get("series"):

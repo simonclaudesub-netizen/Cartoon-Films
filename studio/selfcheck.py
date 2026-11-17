@@ -46,7 +46,7 @@ def run():
     add("Schrift Comic Neue", "Comic Neue" in fl)
     add("Whisper-Modell 'small'", any((db.ROOT / "assets" / "whisper").glob("**/model.bin")))
     add("YouTube-Zugang", youtube.configured(), "config/secrets/youtube.json oder YT_*-Variablen", kind="zugang")
-    add("TikTok-Zugang", tiktok.configured(), "config/secrets/tiktok.json", kind="zugang")
+    add("TikTok-Zugang", tiktok.configured(), "config/secrets/tiktok.json oder TT_*-Variablen", kind="zugang")
     return out
 
 

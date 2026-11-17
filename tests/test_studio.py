@@ -118,6 +118,89 @@ def test_publish_gate_and_slot():
         db.status = orig
 
 
+class _Patch:
+    """Mini-Ersatz für pytest.monkeypatch (Tests laufen ohne pytest)."""
+
+    def __init__(self):
+        self.undo = []
+
+    def setattr(self, obj, name, val):
+        self.undo.append((obj, name, getattr(obj, name)))
+        setattr(obj, name, val)
+
+    def setenv(self, k, v):
+        import os
+        self.undo.append((os.environ, k, os.environ.get(k)))
+        os.environ[k] = v
+
+    def restore(self):
+        import os
+        for obj, name, old in reversed(self.undo):
+            if obj is os.environ:
+                os.environ.pop(name, None) if old is None else os.environ.__setitem__(name, old)
+            else:
+                setattr(obj, name, old)
+
+
+def test_tiktok_draft_flow():
+    import tempfile
+    monkeypatch = _Patch()
+    tmp_path = Path(tempfile.mkdtemp())
+    try:
+        _tiktok_draft_flow(tmp_path, monkeypatch)
+    finally:
+        monkeypatch.restore()
+
+
+def _tiktok_draft_flow(tmp_path, monkeypatch):
+    """Entwurfs-Upload: init im Postfach-Endpunkt, Stück-Upload, Status SEND_TO_USER_INBOX; Token-Rotation verschlüsselt."""
+    from cryptography.fernet import Fernet
+    from studio.publish import tiktok
+    key = Fernet.generate_key().decode()
+    monkeypatch.setenv("TT_TOKEN_KEY", key)
+    monkeypatch.setenv("TT_CLIENT_KEY", "ck")
+    monkeypatch.setenv("TT_CLIENT_SECRET", "cs")
+    monkeypatch.setenv("TT_REFRESH_TOKEN", "rt-alt")
+    monkeypatch.setattr(tiktok, "SECRETS", tmp_path / "none.json")
+    monkeypatch.setattr(tiktok, "ENC", tmp_path / "tok.enc")
+    monkeypatch.setattr(tiktok.time, "sleep", lambda s: None)
+    tiktok._ACCESS.clear()
+    calls = []
+
+    class R:
+        def __init__(self, j, code=200):
+            self._j, self.status_code, self.text = j, code, ""
+
+        def json(self):
+            return self._j
+
+    def post(url, headers=None, data=None, timeout=None):
+        calls.append(url)
+        if url.endswith("/oauth/token/"):
+            assert data["refresh_token"] == "rt-alt"
+            return R({"access_token": "at", "refresh_token": "rt-neu", "expires_in": 86400})
+        if url.endswith("/inbox/video/init/"):
+            body = json.loads(data)
+            assert "post_info" not in body and body["source_info"]["source"] == "FILE_UPLOAD"
+            return R({"data": {"publish_id": "p1", "upload_url": "https://up/x"}, "error": {"code": "ok"}})
+        if url.endswith("/status/fetch/"):
+            return R({"data": {"status": "SEND_TO_USER_INBOX"}, "error": {"code": "ok"}})
+        raise AssertionError(url)
+
+    puts = []
+    monkeypatch.setattr(tiktok.requests, "post", post)
+    monkeypatch.setattr(tiktok.requests, "put", lambda url, data=None, headers=None, timeout=None:
+                        puts.append(headers["Content-Range"]) or R({}, 201))
+    v = tmp_path / "v.mp4"
+    v.write_bytes(b"x" * 1000)
+    assert tiktok.configured()
+    res = tiktok.upload_draft(v, {"title": "T", "hashtags": ["#a", "#shorts"]})
+    assert res["status"] == "SEND_TO_USER_INBOX" and res["mode"] == "entwurf" and res["caption"] == "T #a"
+    assert puts == ["bytes 0-999/1000"]
+    assert Fernet(key.encode()).decrypt((tmp_path / "tok.enc").read_bytes()).decode() == "rt-neu"
+    assert tiktok._secrets()["refresh_token"] == "rt-neu"
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):
