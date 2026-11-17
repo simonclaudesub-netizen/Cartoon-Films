@@ -17,7 +17,9 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
 3. **Serienbibel lesen**: `db/series/<serie>.json` – Logline, Weltregeln, Geheimnisse, `next_plans`,
    bisherige Abstimmungen. Gewinner-Option der Abstimmung bestimmt die Handlung.
    Bei Gleichstand/keinen Stimmen: die spannendere Option wählen und im Log begründen.
-4. **Drehbuch schreiben**: `episodes/<serie>-eNN/script.json` nach `docs/DREHBUCH_FORMAT.md`.
+4. **Entwurf vorhanden?** Liegen `episodes/<id>/entwurf_A.json` / `entwurf_B.json` vor, wird der Entwurf
+   der Gewinner-Option übernommen: `python -m studio entwurf <id> <A|B>` (dann weiter mit Schritt 5).
+   Sonst: **Drehbuch schreiben**: `episodes/<serie>-eNN/script.json` nach `docs/DREHBUCH_FORMAT.md`.
    - Eigene, originelle Handlung; keine realen Personen, Marken oder fremden Figuren.
    - Hook in Sekunde 1, 30–60 s, Cliffhanger + A/B-Abstimmung.
    - Neue Figuren: zuerst in `db/characters/<id>.json` anlegen, Stimme mit

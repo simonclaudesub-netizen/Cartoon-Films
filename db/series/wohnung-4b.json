@@ -65,8 +65,8 @@
     }
   ],
   "next_plans": {
-    "A": "Teil 3: 03:07 Uhr, du schaust durch den Türspion. Im Treppenhaus steht niemand – aber das Licht flackert, und vor 4A steht ein Paar Hausschuhe. Dann klopft es von INNEN an der Wohnungstür von Frau Brandt.",
-    "B": "Teil 3: Du folgst Okan in den Keller. Ein Kellerabteil trägt die Nummer 4B und ein neues Schloss. Okan spricht leise mit jemandem hinter der Tür: 'Er hat nicht geöffnet. Er hat nicht geöffnet.'"
+    "A": "Teil 3 'Der Türspion' – fertiger Entwurf: episodes/wohnung-4b-e03/entwurf_A.json",
+    "B": "Teil 3 'Der Keller' – fertiger Entwurf: episodes/wohnung-4b-e03/entwurf_B.json"
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",
@@ -78,5 +78,14 @@
     "okan": "fa55286f01de4ae5",
     "helga": "52bddf345ba6560c",
     "lina": "4dffd529f17fa11c"
+  },
+  "staffel_bogen": {
+    "nachhall": "Etwas im Haus ('der Nachhall') kopiert Stimmen – jeden gehörten Satz, aber nur EINMAL. Deshalb sagt Okan Wichtiges immer zweimal (Echtheits-Beweis).",
+    "o": "'O.' = Oskar, Vormieter von 4B (1983), hat damals geöffnet und ist verschwunden; seine Stimme ist noch im Haus.",
+    "plan": [
+      "Teil 4: Okan erklärt die Regel: 'Was er hört, kann er sagen. Aber nur einmal. Nur einmal.'",
+      "Teil 5: Frau Brandts altes Foto: Oskar 1983 vor 4B, Rückseite 'Nicht öffnen. Nicht öffnen.'",
+      "Teil 6: Publikum entscheidet zum ersten Mal, welche von zwei Stimmen echt ist."
+    ]
   }
 }

@@ -2,7 +2,8 @@
 
   check                      Systemprüfung (Werkzeuge, Stimmen, Zugänge)
   sheets                     Model-Sheets (Referenzbilder) aller Figuren erzeugen
-  validate <episode>         Drehbuch prüfen (Figuren, Kulissen, Felder)
+  validate <episode|datei.json>   Drehbuch oder Entwurf prüfen (Figuren, Kulissen, Felder)
+  entwurf <episode> <A|B>    Entwurf der Gewinner-Option zum Drehbuch machen (nach der Abstimmung)
   produce <episode>          Episode produzieren inkl. QC + automatischer Korrektur (max. 3 Versuche)
   approve <episode>          Freigabe erteilen (nur nach bestandener QC)
   publish <episode> [--dry-run] [--platform youtube|tiktok]
@@ -44,6 +45,15 @@ def main(argv=None):
         errs = validate.script(a.args[0])
         print("\n".join(errs) or "Drehbuch OK")
         sys.exit(1 if errs else 0)
+    elif a.cmd == "entwurf":
+        import shutil
+        d = db.episode_dir(a.args[0])
+        src = d / f"entwurf_{a.args[1].upper()}.json"
+        if not src.exists():
+            raise SystemExit(f"{src} fehlt")
+        shutil.copy(src, d / "script.json")
+        db.log(f"[{a.args[0]}] Entwurf {a.args[1].upper()} als Drehbuch übernommen (Abstimmungsgewinner)")
+        print(f"Drehbuch = Entwurf {a.args[1].upper()}")
     elif a.cmd == "produce":
         from . import pipeline, validate
         errs = validate.script(a.args[0])

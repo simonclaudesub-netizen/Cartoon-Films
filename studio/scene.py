@@ -127,7 +127,7 @@ class ShotRenderer:
             s = C.scale_for(cam, z, look)
             C.draw(ctx, look, sx, sy, s, pose=ch.get("pose", "stand"), expr=expr, mouth=mouth, blink=blink,
                    t=t + seed, arms=(line or {}).get("arms") or ch.get("arms", "down"), prop=ch.get("prop"),
-                   look_dir=ch.get("look", 0.0), silhouette=ch.get("silhouette", False),
+                   look_dir=ch.get("look", 0.0), silhouette=ch.get("silhouette", False), back=ch.get("back", False),
                    talking=line is not None and mouth > 0.05)
 
     # ------------------------------------------------------------ Licht

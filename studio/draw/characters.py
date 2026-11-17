@@ -41,7 +41,7 @@ def scale_for(cam, z, look):
 
 def draw(ctx, look, x, y, s, pose="stand", expr="neutral", mouth=0.0, blink=0.0, t=0.0,
          arms="down", prop=None, look_dir=0.0, silhouette=False, talking=False, lit=1.0,
-         head_tilt=0.0):
+         head_tilt=0.0, back=False):
     """Figur zeichnen. (x, y) = Fußpunkt auf dem Bildschirm, s = Skalierung."""
     L = dict(look)
     if silhouette:
@@ -70,7 +70,7 @@ def draw(ctx, look, x, y, s, pose="stand", expr="neutral", mouth=0.0, blink=0.0,
     ctx.translate(0, sh_y - 26)
     ctx.rotate(nod)
     ctx.translate(look_dir * 6, 0)
-    _head(ctx, L, expr, mouth, blink, look_dir, silhouette, t)
+    _head(ctx, L, expr, mouth, blink, look_dir, silhouette, t, back)
     ctx.restore()
     _arms(ctx, L, sh_y, sw, arms, prop, t, talking)
     ctx.restore()
@@ -234,7 +234,7 @@ HX, HY = 64, 78  # Kopf-Halbachsen
 HC = -78        # Kopfmitte relativ zum Kopf-Ursprung (Halsansatz)
 
 
-def _head(ctx, L, expr, mouth, blink, look_dir, silhouette, t):
+def _head(ctx, L, expr, mouth, blink, look_dir, silhouette, t, back=False):
     skin, hair = L["skin"], L["hair"]
     style = L.get("hair_style", "short")
     c = HC
@@ -254,6 +254,13 @@ def _head(ctx, L, expr, mouth, blink, look_dir, silhouette, t):
             P.ellipse(ctx, side * (HX - 2), c + 30, 5, 5, "#e8c547", 3)
     # Kopfform
     P.ellipse(ctx, 0, c, HX, HY, skin)
+    if back:
+        # Rückenansicht: Hinterkopf (Haare), kein Gesicht
+        if style != "bald":
+            P.ellipse(ctx, 0, c - 4, HX, HY * 0.92, hair)
+        if style in ("cap", "beanie"):
+            _hair_front(ctx, L, style, hair, c)
+        return
     if not silhouette:
         # Wangenschatten
         ctx.save()

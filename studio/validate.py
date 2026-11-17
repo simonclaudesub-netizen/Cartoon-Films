@@ -13,7 +13,9 @@ FX = {None, "door", "phone", "inner", "radio"}
 
 
 def script(ep_id):
-    p = db.episode_dir(ep_id) / "script.json"
+    """ep_id = Episoden-ID oder Pfad zu einem Drehbuch-Entwurf (*.json)."""
+    from pathlib import Path
+    p = Path(ep_id) if str(ep_id).endswith(".json") else db.episode_dir(ep_id) / "script.json"
     if not p.exists():
         return [f"{p} fehlt"]
     sc = json.loads(p.read_text(encoding="utf-8"))

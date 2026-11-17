@@ -100,6 +100,10 @@ class Set:
         self.variant = variant
         self.cam = Cam()
 
+    def has(self, v):
+        """Varianten lassen sich kombinieren, z. B. "flicker+slippers"."""
+        return v in (self.variant or "").split("+")
+
     def back(self, ctx):
         pass
 
@@ -162,7 +166,7 @@ class Flur(Set):
         a = c.p(0, yc, 2.0)
         P.line(ctx, [a, (a[0], a[1] + 40)], 3)
         P.ellipse(ctx, a[0], a[1] + 55, 34, 22, "#f2f0e6")
-        if self.variant == "note":
+        if self.has("note"):
             # Zettel, unter der Tür durchgeschoben (liegt auf dem Boden)
             pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
             P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
@@ -189,7 +193,7 @@ class Flur(Set):
         ctx.rectangle(a[0], a[1] - 3, b[0] - a[0], b[1] - a[1] + 4)
         P.set_col(ctx, "#ffd77a")
         ctx.fill()
-        if self.variant == "feet":
+        if self.has("feet"):
             # Schatten von zwei Füßen im Lichtspalt
             sway = math.sin(t * 1.7) * 6
             for dx in (-38, 30):
@@ -300,7 +304,7 @@ class Treppenhaus(Set):
         P.stains(ctx, -200, 300, W + 200, 1500, "#5d5a50", 30, 11, alpha=0.1)
         # Tür 4A
         door(ctx, c, -0.48, 0.48, -0.55, yf, zb - 0.001, "#f1eee4", number="4A", frame="#d8d3c4")
-        if self.variant == "open":
+        if self.has("open"):
             wall_rect(ctx, c, -0.48, 0.48, -0.55, yf, zb - 0.002, "#d9a865")
             wall_rect(ctx, c, -0.3, 0.1, -0.2, 0.3, zb - 0.003, "#b77a4a", 3)  # Bild im Flur
             P.poly(ctx, [c.p(-0.48, -0.55, zb), c.p(-0.75, -0.6, zb - 0.6), c.p(-0.75, yf, zb - 0.6),
@@ -316,6 +320,14 @@ class Treppenhaus(Set):
         for i in range(1, 4):
             z = zb - 0.6 + i * 0.14
             P.line(ctx, [c.p(-0.35, yf, z), c.p(0.35, yf, z)], 3, "#6d4329")
+        if self.has("slippers"):
+            # Frau Brandts Hausschuhe, ordentlich nebeneinander auf der Matte
+            for x0 in (-0.2, 0.04):
+                pts = [c.p(x, yf, z) for x, z in ((x0, zb - 0.42), (x0 + 0.14, zb - 0.42), (x0 + 0.13, zb - 0.12),
+                                                  (x0 + 0.01, zb - 0.12))]
+                P.blob(ctx, pts, "#c25b7a", 4)
+                a1, b1 = c.p(x0 + 0.01, yf - 0.03, zb - 0.38), c.p(x0 + 0.13, yf - 0.03, zb - 0.38)
+                P.blob(ctx, [a1, ((a1[0] + b1[0]) / 2, a1[1] - 14), b1, ((a1[0] + b1[0]) / 2, a1[1] + 8)], "#f2e3ea", 3)
         # Pflanze links neben der Tür
         c.box(ctx, -1.0, -0.75, 1.3, 1.6, 3.2, 3.45, "#b7653e")
         base = c.p(-0.875, 1.3, 3.3)
@@ -345,7 +357,7 @@ class Treppenhaus(Set):
     lights = [((140, 640), 520, (1.0, 0.85, 0.55), 0.45), ((540, 700), 700, (0.9, 0.85, 0.6), 0.2)]
 
     def light_level(self, t):
-        if self.variant == "flicker":
+        if self.has("flicker"):
             f = 1.0
             for k, (t0, d) in enumerate(((1.1, 0.12), (2.4, 0.08), (2.6, 0.2))):
                 if t0 <= t % 4.0 < t0 + d:
@@ -388,7 +400,73 @@ class Schlafzimmer(Set):
     lights = [((620, 600), 380, (0.7, 0.8, 1.0), 0.3)]
 
 
-SETS = {"flur": Flur, "wohnzimmer": Wohnzimmer, "treppenhaus": Treppenhaus, "schlafzimmer": Schlafzimmer}
+# ---------------------------------------------------------------------------
+class Keller(Set):
+    """Kellergang mit Holzlatten-Abteilen; am Ende Abteil 4B mit neuem Schloss.
+    Variante "flashlight": nur der Lichtkegel der Handy-Taschenlampe."""
+    name = "keller"
+    tint = (0.16, 0.17, 0.26)
+    spots = {"abteil": (0.0, 3.55), "mitte": (0.0, 2.5), "nah": (0.0, 1.45), "links": (-0.55, 2.7)}
+
+    def back(self, ctx):
+        c = self.cam
+        xl, xr, yc, yf, zb = -0.95, 0.95, -0.85, 1.6, 4.2
+        room(ctx, c, xl, xr, yc, yf, zb, "#9a978e", "#7d7a72", "#a9a69d", side="#8f8c83")
+        floor_tiles(ctx, c, xl, xr, yf, zb, 0.6, alpha=0.18)
+        P.stains(ctx, -100, 200, W + 100, 1700, "#4b4840", 40, 21, alpha=0.16)
+        # Stromkabel an der Decke (dünn, perspektivisch)
+        P.line(ctx, [c.p(-0.7, yc + 0.03, 1.6), c.p(-0.7, yc + 0.03, zb)], 3, "#3a3a3a")
+        P.line(ctx, [c.p(0.72, yc + 0.03, 1.6), c.p(0.72, yc + 0.03, zb)], 3, "#3a3a3a")
+        # Seitliche Abteile (Holzlatten)
+        for side in (-1, 1):
+            x = xl + 0.001 if side < 0 else xr - 0.001
+            for i, (z0, z1) in enumerate(((0.9, 1.7), (1.85, 2.65), (2.8, 3.6))):
+                side_rect(ctx, c, x, z0, z1, -0.6, yf - 0.05, "#8a6a47", 4)
+                for k in range(1, 7):
+                    z = z0 + (z1 - z0) * k / 7
+                    P.line(ctx, [c.p(x, -0.6, z), c.p(x, yf - 0.05, z)], 3, "#4a3727")
+                num = ["2A", "3B", "1A", "2B", "3A", "1B"][i * 2 + (side > 0)]
+                a = c.p(x, -0.45, (z0 + z1) / 2)
+                P.rrect(ctx, a[0] - 26, a[1] - 18, 52, 34, 4, "#e9e2c8", 3)
+                P.text(ctx, num, a[0], a[1] + 9, 24, family="Comic Neue", color="#333333")
+        # Abteil 4B am Ende: Lattentür mit Nummer und glänzendem neuem Vorhängeschloss
+        wall_rect(ctx, c, -0.5, 0.5, -0.6, yf, zb - 0.001, "#8a6a47")
+        for k in range(1, 9):
+            x = -0.5 + k / 9
+            P.line(ctx, [c.p(x, -0.6, zb), c.p(x, yf, zb)], 4, "#4a3727")
+        wall_rect(ctx, c, -0.5, 0.5, 0.35, 0.45, zb - 0.002, "#6d5236", 3)
+        a = c.p(0.0, -0.4, zb)
+        P.rrect(ctx, a[0] - 44, a[1] - 26, 88, 50, 6, "#f3ecd2", 4)
+        P.text(ctx, "4B", a[0], a[1] + 14, 38, family="Comic Neue", color="#7a1f1f")
+        lk = c.p(0.3, 0.32, zb)
+        m = c.scale(zb)  # Pixel pro Meter in der Tiefe der Abteiltür
+        ctx.save()
+        ctx.translate(*lk)
+        ctx.arc(0, -0.035 * m, 0.028 * m, math.pi, 0)
+        P.ink(ctx, max(3, 0.012 * m))
+        ctx.stroke()
+        P.rrect(ctx, -0.04 * m, -0.035 * m, 0.08 * m, 0.07 * m, 4, "#e8c95a", 3)
+        P.ellipse(ctx, 0, -0.005 * m, 0.008 * m, 0.012 * m, "#3a3020", 0)
+        P.line(ctx, [(-0.028 * m, -0.025 * m), (-0.008 * m, -0.03 * m)], 2.5, "#fff7cf")
+        ctx.restore()
+        # Glühbirne
+        a = c.p(0, yc, 2.2)
+        P.line(ctx, [a, (a[0], a[1] + 50)], 3)
+        P.ellipse(ctx, a[0], a[1] + 66, 18, 22, "#f4efd6", 3)
+
+    def light_level(self, t):
+        return 1.0
+
+    lights = [((540, 980), 480, (1.0, 0.93, 0.75), 0.38), ((540, 1000), 220, (1.0, 0.96, 0.85), 0.2)]
+
+    def emissive(self, ctx, t):
+        if self.night and not self.has("flashlight"):
+            c = self.cam
+            a = c.p(0, -0.85, 2.2)
+            P.ellipse(ctx, a[0], a[1] + 66, 18, 22, "#fff3c0", 0, alpha=0.85)
+
+
+SETS = {"flur": Flur, "wohnzimmer": Wohnzimmer, "treppenhaus": Treppenhaus, "schlafzimmer": Schlafzimmer, "keller": Keller}
 
 
 def make(name, time="day", variant=None):

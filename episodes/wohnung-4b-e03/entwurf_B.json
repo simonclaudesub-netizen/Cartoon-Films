@@ -1,0 +1,299 @@
+{
+  "id": "wohnung-4b-e03",
+  "series": "wohnung-4b",
+  "episode": 3,
+  "variant": "B",
+  "title": "Der Keller",
+  "label": "WOHNUNG 4B · TEIL 3",
+  "summary": "Die Zuschauer wählten B: Okan heimlich folgen. Er geht nachts in den Keller zum Abteil 4B mit neuem Schloss und flüstert zweimal: 'Er hat nicht geöffnet.' Hinter der Tür antwortet eine Stimme – deine eigene: 'Dann bin ich jetzt dran.' Okan dreht sich um.",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Wegrennen",
+      "B": "Okan zur Rede stellen"
+    }
+  },
+  "cover_shot": 4,
+  "publish": {
+    "title": "Ich bin ihm in den Keller gefolgt… 😳 | Wohnung 4B – Teil 3",
+    "description": "Ihr habt entschieden: B – Okan heimlich folgen. Er ging mitten in der Nacht in den Keller, zu Abteil 4B… und hinter der Tür hat jemand mit MEINER Stimme geantwortet. Was soll ich tun? Schreib A (wegrennen) oder B (Okan zur Rede stellen) in die Kommentare! Die Mehrheit entscheidet Teil 4.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
+  },
+  "shots": [
+    {
+      "set": "treppenhaus",
+      "time": "night",
+      "variant": "flicker",
+      "zoom": 1.4,
+      "lens": 0.08,
+      "music": "tension",
+      "caption": "IHR HABT B GEWÄHLT",
+      "caption_dur": 1.6,
+      "camera": {
+        "move": "pan_left",
+        "strength": 0.5
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "links",
+          "arms": "keys",
+          "prop": "keys",
+          "expr": "suspicious",
+          "enter": "right"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "steps",
+          "at": 0.0,
+          "gain": 0.7
+        },
+        {
+          "name": "keys",
+          "at": 1.8,
+          "gain": 0.6
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Ihr wolltet, dass ich Okan folge. Also gut.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.7
+        }
+      ]
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "zoom": 1.2,
+      "lens": 0.08,
+      "music": "tension",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.0
+      },
+      "sfx": [
+        {
+          "name": "creak",
+          "at": 0.1,
+          "gain": 0.7
+        },
+        {
+          "name": "steps",
+          "at": 0.8,
+          "gain": 0.5
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Er ging in den Keller. Mitten in der Nacht.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.6
+        }
+      ]
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "zoom": 2.2,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "static"
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "abteil",
+          "arms": "down",
+          "expr": "neutral",
+          "back": true
+        }
+      ],
+      "sfx": [
+        {
+          "name": "keys",
+          "at": 0.2,
+          "gain": 0.7
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "okan",
+          "text": "Er hat nicht geöffnet.",
+          "emotion": "whisper",
+          "delay": 0.9
+        },
+        {
+          "speaker": "okan",
+          "text": "Er hat nicht geöffnet.",
+          "emotion": "whisper",
+          "gap": 0.4
+        }
+      ]
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "zoom": 3.0,
+      "lens": 0.06,
+      "music": "tension",
+      "camera": {
+        "move": "push_in",
+        "strength": 0.6
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Ein neues Schloss. An Abteil vier Be. Meinem Abteil.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.4
+        }
+      ]
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "zoom": 2.6,
+      "lens": 0.06,
+      "music": "silence",
+      "camera": {
+        "move": "static",
+        "punch": [
+          1.6
+        ]
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "abteil",
+          "arms": "down",
+          "expr": "neutral",
+          "back": true
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 1.5
+        },
+        {
+          "name": "heartbeat",
+          "at": 1.8,
+          "gain": 1.0
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Dann bin ich jetzt dran.",
+          "emotion": "creepy",
+          "fx": "door",
+          "delay": 0.6
+        },
+        {
+          "speaker": "du",
+          "text": "Das ... war meine Stimme.",
+          "emotion": "panic",
+          "fx": "inner",
+          "gap": 0.6
+        }
+      ]
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "zoom": 2.4,
+      "lens": 0.08,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "shake": [
+          0.1
+        ],
+        "punch": [
+          0.1
+        ]
+      },
+      "characters": [
+        {
+          "id": "okan",
+          "spot": "abteil",
+          "arms": "raise",
+          "expr": "angry"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0
+        },
+        {
+          "name": "sting",
+          "at": 0.1
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "okan",
+          "text": "Wer ist da?",
+          "emotion": "angry",
+          "delay": 0.3
+        },
+        {
+          "speaker": "okan",
+          "text": "Wer ist da?",
+          "emotion": "angry",
+          "gap": 0.3
+        }
+      ],
+      "blackout_at": 2.8
+    },
+    {
+      "set": "keller",
+      "time": "night",
+      "variant": "flashlight",
+      "music": "tension",
+      "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {
+          "A": "WEGRENNEN",
+          "B": "OKAN ZUR REDE STELLEN"
+        },
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 4 FOLGT"
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Wegrennen. Oder B: Okan zur Rede stellen? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.5,
+          "no_sub": true
+        }
+      ]
+    }
+  ]
+}
