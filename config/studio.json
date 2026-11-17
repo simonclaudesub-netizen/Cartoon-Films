@@ -27,9 +27,9 @@
       },
       "tiktok": {
         "enabled": true,
-        "mode": "buffer",
+        "mode": "entwurf",
         "privacy": "SELF_ONLY",
-        "grund": "Vollautomatisch über Buffer (Gratis-Tarif, von TikTok zugelassener Partner, offizielle API): Video wird auf den Branch tiktok-media gelegt, Buffer postet zum Termin 18:00 mit KI-Kennzeichnung (isAiGenerated). Eigene TikTok-App (Sandbox) darf laut TikTok-Richtlinien nicht direkt posten; sie bleibt nur Ersatzweg (Entwurf ins Postfach), falls Buffer ausfällt. Test 17.11.2026: Teil 1 über Buffer gepostet."
+        "grund": "Entwurf ins TikTok-Postfach (eigene App, Scope video.upload); der Kanalinhaber postet um 18:00 in der App mit 'KI-generierte Inhalte'. Umgestellt am 17.11.2026: Teil 1 über Buffer war öffentlich, bekam aber 0 Aufrufe, ein Upload direkt in der App 127 Aufrufe in 38 Minuten. Buffer bleibt eingerichtet (mode 'buffer' schaltet zurück)."
       }
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",

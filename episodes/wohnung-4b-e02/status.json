@@ -253,14 +253,23 @@
     },
     "tiktok": {
       "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7709129668116563990",
+      "status": "SEND_TO_USER_INBOX",
+      "caption": "Ich habe NICHT geöffnet… 😳 | Wohnung 4B – Teil 2 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime",
+      "ai_label": "beim Posten in der App einschalten"
+    },
+    "tiktok_buffer_abgebrochen": {
+      "platform": "tiktok",
       "mode": "buffer",
       "buffer_post_id": "6afc3976df7b9f28f78ce2a3",
       "channel": "duentscheidest20",
       "publish_at": "2026-11-17T17:00:00Z",
-      "status": "scheduled",
+      "status": "gelöscht",
       "media_url": "https://raw.githubusercontent.com/simonclaudesub-netizen/Cartoon-Films/tiktok-media/wohnung-4b-e02.mp4",
       "caption": "Ich habe NICHT geöffnet… 😳 | Wohnung 4B – Teil 2 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime",
-      "ai_label": true
+      "ai_label": true,
+      "grund": "Buffer-Post Teil 1 bekam 0 Aufrufe (öffentlich), Umstellung auf Posteingang 17.11."
     }
   },
   "ersetzt": [

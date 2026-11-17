@@ -43,14 +43,13 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
      hochgeladen und von YouTube um **18:00 Uhr (Europe/Berlin)** freigeschaltet (`publishAt`);
      ist es später als 17:40, wird es für 18:00 Uhr am Folgetag eingeplant (nie sofort).
    - Neue Folge nur produzieren, wenn die vorige Folge bereits öffentlich ist (sonst gibt es noch keine Abstimmung) – dann nur Kurzbericht „wartet auf Abstimmung“.
-   - TikTok **vollautomatisch über Buffer**: `python -m studio publish <id> --platform tiktok`
-     (nach YouTube). Das Video wird auf den Branch `tiktok-media` gelegt (öffentlicher Link, ohne Verlauf),
-     Buffer postet es um 18:00 Uhr mit KI-Kennzeichnung. Der Buffer-Schlüssel liegt als Netzwerk-Geheimnis
-     der Umgebung (der Proxy setzt ihn ein, keine Variable nötig). `python -m studio check` muss
-     „OK TikTok automatisch (Buffer)“ zeigen. Im Kurzbericht `published.tiktok.buffer_post_id` nennen.
-     Fällt Buffer aus, schickt das Studio automatisch einen Entwurf ins TikTok-Postfach (Ersatzweg,
-     braucht `TT_*`-Variablen) – dann im Kurzbericht den Menschen ans Posten mit „KI-generierte Inhalte“
-     erinnern. Geht beides nicht: `python -m studio tiktok-paket <id>` und `final.mp4` + `tiktok_upload.txt`
+   - TikTok **als Entwurf ins Postfach** (`config/studio.json` → `tiktok.mode = "entwurf"`):
+     `python -m studio publish <id> --platform tiktok` (nach YouTube). Der Mensch postet um 18:00 Uhr in der
+     TikTok-App (Posteingang → Systembenachrichtigungen) mit „KI-generierte Inhalte“. Im Kurzbericht den
+     fertigen Text aus `published.tiktok.caption` zum Kopieren angeben und ans Posten um 18 Uhr erinnern.
+     Grund (17.11.2026): Über Buffer gepostete Videos waren öffentlich, bekamen aber 0 Aufrufe. Buffer
+     nicht wieder einschalten, außer der Kanalinhaber verlangt es (`mode = "buffer"`).
+     Geht der Entwurf nicht: `python -m studio tiktok-paket <id>` und `final.mp4` + `tiktok_upload.txt`
      per Datei-Versand schicken; nach dem Posten `python -m studio manuell-gepostet <id> tiktok <url>`.
      (Eigene TikTok-App darf laut TikTok-Richtlinien nicht direkt posten – nicht versuchen.)
 9. **Dashboard** aktualisieren: `python -m studio dashboard`; Änderungen committen und pushen

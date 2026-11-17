@@ -23,7 +23,7 @@ python -m studio dashboard             # dashboard/index.html
 | Untertitel | ASS, häppchenweise im Kurzvideo-Stil, farbig je Figur |
 | Schnitt & Export | ffmpeg (H.264 High, AAC, −14 LUFS, faststart) |
 | Qualitätskontrolle | `studio/qc.py`: 7 Kategorien, 0–100 Punkte, Whisper hört jede Zeile ab |
-| Veröffentlichung | YouTube Data API v3; TikTok vollautomatisch über die Buffer-API (Gratis-Tarif), Ersatzweg TikTok Content Posting API (Entwurf) |
+| Veröffentlichung | YouTube Data API v3; TikTok Content Posting API (Entwurf ins Postfach, gepostet wird in der App); Buffer-API eingerichtet, aber abgeschaltet (0 Aufrufe) |
 | Abstimmungen | YouTube-Kommentare automatisch; TikTok manuell (siehe Grenzen) |
 | Dashboard | `dashboard/index.html` |
 
