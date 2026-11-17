@@ -201,6 +201,10 @@
     {
       "t": "2026-11-17 08:51:08",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-17 10:59:49",
+      "state": "geplant"
     }
   ],
   "score": 99.0,
@@ -235,6 +239,13 @@
       "url": "https://youtube.com/shorts/Hh8oCa1hbtA",
       "privacy": "private",
       "publish_at": "2026-11-17T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7709092171215374358",
+      "status": "PROCESSING_UPLOAD",
+      "caption": "Ich habe NICHT geöffnet… 😳 | Wohnung 4B – Teil 2 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime"
     }
   },
   "ersetzt": [

@@ -26,10 +26,10 @@
         "privacy": "public"
       },
       "tiktok": {
-        "enabled": false,
+        "enabled": true,
         "mode": "entwurf",
         "privacy": "SELF_ONLY",
-        "grund": "TikTok-Richtlinien (Direct Post): 'Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages'; ungeprüfte Apps nur SELF_ONLY. Daher Entwurfs-Modus (Scope video.upload): Video landet im TikTok-Postfach, der Mensch schaltet 'KI-generierte Inhalte' ein und postet. enabled=true, sobald die TikTok-App freigeschaltet und angemeldet ist."
+        "grund": "TikTok-Richtlinien (Direct Post): 'Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages'. Daher Entwurfs-Modus (Scope video.upload): Video landet im TikTok-Postfach, der Mensch schaltet 'KI-generierte Inhalte' ein und postet. Angemeldet am 17.11.2026 über die Sandbox-App 'DuEntscheidest Uploader' (Konto Duentscheidest)."
       }
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",
