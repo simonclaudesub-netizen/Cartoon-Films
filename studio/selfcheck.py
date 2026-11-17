@@ -11,7 +11,7 @@ def _required_voices():
     out = set()
     for c in db.characters().values():
         v = c["voice"]
-        if v.get("engine") in ("chatterbox", "zonos"):
+        if v.get("engine") in ("chatterbox", "zonos", "qwen3"):
             out.add(("ref", v["ref"]))
             v = v.get("fallback", {})
         if v.get("model"):
@@ -36,8 +36,10 @@ def run():
     venv = db.ROOT / ".venv-tts" / "bin" / "python"
     ok = venv.exists() and subprocess.run([str(venv), "-c", "import chatterbox"], capture_output=True).returncode == 0
     add("Chatterbox Multilingual (.venv-tts)", ok, "Rückfall-Stimmen, MIT-Lizenz", kind="optional")
-    from .audio import zonos
-    add("ZONOS3-Mini (vendor/ZONOS3-Mini)", zonos.available(), "Hauptstimmen mit Emotions-Reglern, Apache-2.0")
+    from .audio import qwen, zonos
+    add("Qwen3-TTS (.venv-qwen, assets/qwen)", qwen.available(), "Hauptstimmen mit Stimmklon, Apache-2.0")
+    add("ZONOS3-Mini (vendor/ZONOS3-Mini)", zonos.available(), "Rückfall-Stimmen mit Emotions-Reglern, Apache-2.0",
+        kind="optional")
     for kind, v in _required_voices():
         p = db.ROOT / v if kind == "ref" else db.ROOT / "assets" / "voices" / f"{v}.onnx"
         add(f"{'Referenzstimme' if kind == 'ref' else 'Piper-Stimme'} {Path(v).stem}", p.exists())

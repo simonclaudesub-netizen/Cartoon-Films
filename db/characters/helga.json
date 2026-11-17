@@ -19,11 +19,18 @@
     "necklace": true
   },
   "voice": {
-    "engine": "zonos",
+    "engine": "qwen3",
     "ref": "assets/voices/ref/helga.wav",
+    "ref_text": "Niemals wird es dieser frostigen Scheinlogik aufgehen, dass Menschheit nicht nur eine abstrakte Idee bedeutet, sondern einen positiven Gefühlswert. Die Menschheit leugnen heißt",
     "ref_source": "CML-TTS Deutsch, Sprecherin 8470 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
-    "controls": {
-      "identity.age": 1.0
+    "gewaehlt": "Blindtest 17.11.2026: Qwen3-TTS klar vor ZONOS3",
+    "fallback_zonos": {
+      "engine": "zonos",
+      "ref": "assets/voices/ref/helga.wav",
+      "ref_source": "CML-TTS Deutsch, Sprecherin 8470 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+      "controls": {
+        "identity.age": 1.0
+      }
     },
     "fallback_chatterbox": {
       "engine": "chatterbox",

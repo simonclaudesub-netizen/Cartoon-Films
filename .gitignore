@@ -3,6 +3,7 @@ cache/
 episodes/*/work/
 assets/voices/*.onnx
 assets/whisper/
+assets/qwen/
 __pycache__/
 *.pyc
 logs/run_*.txt

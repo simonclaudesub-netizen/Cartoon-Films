@@ -201,6 +201,24 @@ def _tiktok_draft_flow(tmp_path, monkeypatch):
     assert tiktok._secrets()["refresh_token"] == "rt-neu"
 
 
+def test_voice_fallback_chain():
+    """Qwen3 → ZONOS3 → Piper, je nachdem, welches Werkzeug installiert ist."""
+    from studio.audio import qwen, tts, zonos
+    v = db.character("du")["voice"]
+    assert v["engine"] == "qwen3" and v.get("ref_text")
+    mp = _Patch()
+    try:
+        mp.setattr(qwen, "available", lambda: False)
+        mp.setattr(zonos, "available", lambda: True)
+        assert tts.resolve(v)["engine"] == "zonos"
+        mp.setattr(zonos, "available", lambda: False)
+        assert tts.resolve(v)["model"] == v["fallback"]["model"]
+        mp.setattr(qwen, "available", lambda: True)
+        assert tts.resolve(v)["engine"] == "qwen3"
+    finally:
+        mp.restore()
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

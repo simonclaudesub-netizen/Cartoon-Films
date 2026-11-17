@@ -33,7 +33,7 @@
       }
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",
-    "credits": "Stimmvorlagen: Thorsten-Voice (CC0) und CML-TTS Deutsch (CC BY 4.0, LibriVox-Sprecher)."
+    "credits": "Stimmen: Qwen3-TTS (Apache-2.0), lokal erzeugt. Stimmvorlagen: Thorsten-Voice (CC0) und CML-TTS Deutsch (CC BY 4.0, LibriVox-Sprecher)."
   },
   "brand": {
     "name": "Du entscheidest",

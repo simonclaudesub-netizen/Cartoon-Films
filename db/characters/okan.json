@@ -18,10 +18,17 @@
     "name_tag": true
   },
   "voice": {
-    "engine": "zonos",
+    "engine": "qwen3",
     "ref": "assets/voices/ref/okan.wav",
+    "ref_text": "Ich weiß freilich, die allerschönste, sagte eine der Ameisen, aber ich fürchte, es geht nicht, denn sie ist eine Königin, wäre Gott euer Vater, so liebte die.",
     "ref_source": "CML-TTS Deutsch, Sprecher 3503 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
-    "controls": {},
+    "gewaehlt": "Blindtest 17.11.2026: Qwen3-TTS klar vor ZONOS3",
+    "fallback_zonos": {
+      "engine": "zonos",
+      "ref": "assets/voices/ref/okan.wav",
+      "ref_source": "CML-TTS Deutsch, Sprecher 3503 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+      "controls": {}
+    },
     "fallback_chatterbox": {
       "engine": "chatterbox",
       "ref": "assets/voices/ref/okan.wav",

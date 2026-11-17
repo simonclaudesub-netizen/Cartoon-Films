@@ -7,7 +7,8 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
 ## Ablauf (jeden Tag, Start ca. 14:20 Uhr deutscher Zeit)
 
 0. **Arbeitsplatz**: Repository klonen (falls nicht vorhanden), `bash setup.sh` ausführen
-   (installiert Werkzeuge, Stimmen, Chatterbox, Whisper – ca. 10 Minuten).
+   (installiert Werkzeuge, Qwen3-TTS samt Modell, ZONOS3, Whisper – beim ersten Mal ca. 15 Minuten;
+   bricht nie ab, sondern meldet WARNUNG-Zeilen; `python -m studio check` zeigt, was fehlt).
    YouTube-Zugang kommt aus den Umgebungsvariablen `YT_CLIENT_ID`, `YT_CLIENT_SECRET`,
    `YT_REFRESH_TOKEN` der Cloud-Umgebung (nie ins Repository schreiben).
    TikTok-Zugang (falls eingerichtet) aus `TT_CLIENT_KEY`, `TT_CLIENT_SECRET`, `TT_REFRESH_TOKEN`,

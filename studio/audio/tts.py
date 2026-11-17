@@ -1,4 +1,4 @@
-"""Lokale Sprachsynthese mit Piper (Open Source, läuft offline auf der CPU).
+"""Lokale Sprachsynthese: Qwen3-TTS (Hauptstimmen), ZONOS3-Mini und Piper als Rückfall – alles offline auf der CPU.
 
 Jede Figur hat eine feste Stimme (Modell, Sprecher-ID, Tempo, Tonhöhe).
 Emotionen wählen bei mehrstimmigen Modellen (thorsten_emotional) die
@@ -71,7 +71,30 @@ def _ref_hash(ref):
     return _REF_HASH[ref]
 
 
+def resolve(voice):
+    """Hauptstimme oder – falls deren Werkzeug fehlt – die nächste Rückfall-Stimme (Qwen3 → ZONOS3 → Piper)."""
+    if voice.get("engine") == "qwen3":
+        from . import qwen
+        if qwen.available():
+            return voice
+        voice = {**voice.get("fallback_zonos", {}), "fallback": voice.get("fallback")}
+    if voice.get("engine") == "zonos":
+        from . import zonos
+        if zonos.available():
+            return voice
+        voice = voice.get("fallback") or {}
+    if not voice.get("model") and not voice.get("engine"):
+        raise RuntimeError("Keine Stimme verfügbar (bash setup.sh)")
+    return voice
+
+
 def _key(text, voice, emotion, fx, length_mul, noise, seed):
+    voice = resolve(voice)
+    if voice.get("engine") == "qwen3":
+        from . import qwen
+        k = ["qw", text, _ref_hash(voice["ref"]), voice.get("ref_text", ""), qwen.MODEL, seed,
+             fx, FX.get(fx), length_mul, voice.get("pitch", 0.0), CLARITY, POST_VERSION]
+        return hashlib.sha1(json.dumps(k, ensure_ascii=False).encode()).hexdigest()[:16], None
     if voice.get("engine") == "zonos":
         from . import zonos
         k = ["zn", text, _ref_hash(voice["ref"]), zonos.controls_for(emotion, voice), seed,
@@ -90,11 +113,19 @@ def _key(text, voice, emotion, fx, length_mul, noise, seed):
 
 
 def prepare(requests):
-    """Erzeugt alle noch fehlenden Chatterbox-Zeilen in EINEM Worker-Lauf (Modell lädt nur einmal).
+    """Erzeugt alle noch fehlenden Qwen3-/ZONOS3-/Chatterbox-Zeilen in EINEM Worker-Lauf (Modell lädt nur einmal).
     requests: Liste von dicts mit text, voice, emotion, fx, length_mul, seed."""
-    jobs, n_zonos = [], 0
+    jobs, qjobs, n_zonos = [], [], 0
     for r in requests:
-        v = r["voice"]
+        v = resolve(r["voice"])
+        if v.get("engine") == "qwen3":
+            h, _ = _key(r["text"], v, r.get("emotion", "neutral"), r.get("fx"), r.get("length_mul", 1.0), None,
+                        r.get("seed", 1))
+            raw = CACHE / f"{h}.raw.wav"
+            if not (CACHE / f"{h}.wav").exists() and not raw.exists() and str(raw) not in {j["out"] for j in qjobs}:
+                qjobs.append({"text": tts_text(r["text"]), "ref": str(ROOT / v["ref"]), "ref_text": v.get("ref_text", ""),
+                              "seed": r.get("seed", 1), "out": str(raw)})
+            continue
         if v.get("engine") == "zonos":
             from . import zonos
             emo = r.get("emotion", "neutral")
@@ -114,6 +145,10 @@ def prepare(requests):
         jobs.append({"text": tts_text(r["text"]), "ref": str(ROOT / v["ref"]), "exaggeration": ex,
                      "cfg": v.get("cfg", 0.5), "temperature": v.get("temperature", 0.8),
                      "seed": r.get("seed", 1), "out": str(CACHE / f"{h}.raw.wav")})
+    if qjobs:
+        from . import qwen
+        CACHE.mkdir(parents=True, exist_ok=True)
+        n_zonos += qwen.run(qjobs)
     if not jobs:
         return n_zonos
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -141,12 +176,13 @@ def _post(raw, out, pitch, fx, tempo=1.0):
 
 def synth(text, voice, emotion="neutral", fx=None, length_mul=1.0, noise=None, seed=1):
     """Erzeugt eine Sprachzeile -> (Pfad zur 48-kHz-WAV, Samples float32 mono)."""
+    voice = resolve(voice)
     h, _ = _key(text, voice, emotion, fx, length_mul, noise, seed)
     out = CACHE / f"{h}.wav"
     if out.exists():
         return out, read_wav(out)
     CACHE.mkdir(parents=True, exist_ok=True)
-    if voice.get("engine") in ("chatterbox", "zonos"):
+    if voice.get("engine") in ("chatterbox", "zonos", "qwen3"):
         raw = CACHE / f"{h}.raw.wav"
         if not raw.exists():
             prepare([{"text": text, "voice": voice, "emotion": emotion, "fx": fx, "length_mul": length_mul,

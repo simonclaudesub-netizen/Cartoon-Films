@@ -15,10 +15,17 @@
     "build": 1.0
   },
   "voice": {
-    "engine": "zonos",
+    "engine": "qwen3",
     "ref": "assets/voices/ref/du.wav",
+    "ref_text": "Darüber wird im Augenblick mit der Europäischen Kommission geredet. Wie können wir es transparenter machen? Wir haben die Jahre 2018 und 2019 als Hitzejahre in Erinnerung. Beim Pflegeprogramm",
     "ref_source": "Thorsten-Voice TV-2022.10-Neutral, echte Studioaufnahme (CC0)",
-    "controls": {},
+    "gewaehlt": "Blindtest 17.11.2026: Qwen3-TTS klar vor ZONOS3",
+    "fallback_zonos": {
+      "engine": "zonos",
+      "ref": "assets/voices/ref/du.wav",
+      "ref_source": "Thorsten-Voice TV-2022.10-Neutral, echte Studioaufnahme (CC0)",
+      "controls": {}
+    },
     "fallback_chatterbox": {
       "engine": "chatterbox",
       "ref": "assets/voices/ref/du.wav",

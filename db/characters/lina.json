@@ -15,10 +15,17 @@
     "build": 0.95
   },
   "voice": {
-    "engine": "zonos",
+    "engine": "qwen3",
     "ref": "assets/voices/ref/lina.wav",
+    "ref_text": "Da war es kein Wunder, wenn der Nikolaus vorher fertig war, da war es die Frauenzimmer. Hat der Reichskanzler kein Interesse daran, Licht in die Sache zu bringen. Wenn wir nicht in Deutschland liebten, würden wir sagen, es ist die Pflicht des Parlamentärs.",
     "ref_source": "CML-TTS Deutsch, Sprecherin 3885 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
-    "controls": {},
+    "gewaehlt": "Blindtest 17.11.2026: Qwen3-TTS klar vor ZONOS3",
+    "fallback_zonos": {
+      "engine": "zonos",
+      "ref": "assets/voices/ref/lina.wav",
+      "ref_source": "CML-TTS Deutsch, Sprecherin 3885 (LibriVox-Aufnahme; Datensatz CC BY 4.0)",
+      "controls": {}
+    },
     "fallback_chatterbox": {
       "engine": "chatterbox",
       "ref": "assets/voices/ref/lina.wav",

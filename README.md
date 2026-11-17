@@ -18,7 +18,7 @@ python -m studio dashboard             # dashboard/index.html
 |---|---|
 | Geschichten, Dialoge, Regie, neue Figuren | Claude (tägliche geplante Sitzung, siehe `docs/AUTOPILOT.md`) |
 | Zeichnungen & Animation | eigene Vektor-Engine (Cairo): Zentralperspektive-Kulissen, parametrische Figuren, POV-Hände, Lippensynchronität aus der Lautstärke, Blinzeln, Gesten, Kamerafahrten, Weitwinkel-/Türspion-Linse (OpenCV) |
-| Stimmen | Chatterbox Multilingual (lokal, MIT, Stimmklon aus freien Referenzen, Emotionsstärke je Zeile) – Piper als Rückfallebene; Effekte per ffmpeg |
+| Stimmen | Qwen3-TTS 1.7B Base (lokal, Apache-2.0, Stimmklon aus freien Referenzen; Sieger im Blindtest) – Rückfall automatisch auf ZONOS3-Mini (Emotions-Regler), dann Piper; Effekte per ffmpeg |
 | Musik & Geräusche | algorithmisch erzeugt (NumPy) – keine Fremd-Samples, lizenzfrei |
 | Untertitel | ASS, häppchenweise im Kurzvideo-Stil, farbig je Figur |
 | Schnitt & Export | ffmpeg (H.264 High, AAC, −14 LUFS, faststart) |
@@ -32,7 +32,7 @@ python -m studio dashboard             # dashboard/index.html
 ```
 studio/
   draw/       prims, persp (3D->2D), characters, sets, pov, overlays
-  audio/      tts (Piper), sfx, music
+  audio/      tts (Qwen3 → ZONOS3 → Piper), qwen_worker, sfx, music
   scene.py    Frame-Compositor     timeline.py  Drehbuch -> Zeitleiste
   render.py   Video/Ton/Endschnitt subtitles.py ASS-Untertitel
   qc.py       Qualitätskontrolle   pipeline.py  Produktion mit Korrekturschleife
