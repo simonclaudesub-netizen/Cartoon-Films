@@ -14,3 +14,4 @@ vendor/
 docs/vergleich/
 logs/zonos_server.log
 docs/hoervergleich.mp4
+logs/produce_*.log
