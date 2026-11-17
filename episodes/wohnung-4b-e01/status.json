@@ -116,12 +116,22 @@
       "url": "https://youtube.com/shorts/ITDHPKi_O-Y",
       "privacy": "public"
     },
-    "tiktok": {
+    "tiktok_entwurf_test": {
       "platform": "tiktok",
       "mode": "entwurf",
       "publish_id": "v_inbox_file~v2.7709093777105750038",
       "status": "PROCESSING_UPLOAD",
       "caption": "Öffne nachts NIEMALS diese Tür 🚪 | Wohnung 4B – Teil 1 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "buffer",
+      "buffer_post_id": "6afc3894f19f7840903d2c91",
+      "channel": "duentscheidest20",
+      "publish_at": "2026-11-17T11:20:52Z",
+      "status": "sent",
+      "ai_label": true,
+      "url": "https://tiktok.com/@duentscheidest20/video/7709098911348051232"
     }
   },
   "votes": {

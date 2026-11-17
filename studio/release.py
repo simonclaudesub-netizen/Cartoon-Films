@@ -10,7 +10,7 @@ import json
 from zoneinfo import ZoneInfo
 
 from . import db
-from .publish import tiktok, votes, youtube
+from .publish import buffer, tiktok, votes, youtube
 
 CONFIG = db.ROOT / "config" / "studio.json"
 
@@ -70,7 +70,9 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
         priv = cfg["publishing"]["platforms"][p]["privacy"]
         tmode = cfg["publishing"]["platforms"][p].get("mode", "entwurf")
         plan[p] = youtube.build_metadata(meta, priv, slot) if p == "youtube" else \
-            ({"mode": "entwurf", "endpoint": "/v2/post/publish/inbox/video/init/",
+            ({"mode": "buffer", "publish_at": slot, "ai_label": True,
+              "caption": tiktok.build_post_info(meta, priv)["title"]} if tmode == "buffer" else
+             {"mode": "entwurf", "endpoint": "/v2/post/publish/inbox/video/init/",
               "caption": tiktok.build_post_info(meta, priv)["title"]} if tmode == "entwurf" else
              {"post_info": tiktok.build_post_info(meta, priv), "source": "FILE_UPLOAD"})
     if dry_run:
@@ -92,6 +94,15 @@ def publish(ep_id, platforms=None, dry_run=False, now=None):
                 if not youtube.configured():
                     raise RuntimeError("YouTube-Zugangsdaten fehlen (python -m studio auth-youtube)")
                 results[p] = youtube.upload(video, meta, priv, slot)
+            elif p == "tiktok" and cfg["publishing"]["platforms"][p].get("mode") == "buffer":
+                caption = tiktok.build_post_info(meta, priv)["title"]
+                try:  # vollautomatisch: Buffer postet zum Termin (KI-Kennzeichnung gesetzt)
+                    results[p] = buffer.schedule(video, caption, f"{ep_id}.mp4", slot)
+                except Exception as e:
+                    if not tiktok.configured():
+                        raise
+                    db.log(f"[{ep_id}] Buffer fehlgeschlagen ({e}) – Ersatz: Entwurf ins TikTok-Postfach", "ERROR")
+                    results[p] = {**tiktok.upload_draft(video, meta), "buffer_fehler": str(e)}
             elif p == "tiktok":
                 if not tiktok.configured():
                     raise RuntimeError("TikTok-Zugangsdaten fehlen (python -m studio auth-tiktok)")

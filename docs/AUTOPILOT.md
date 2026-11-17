@@ -43,13 +43,16 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
      hochgeladen und von YouTube um **18:00 Uhr (Europe/Berlin)** freigeschaltet (`publishAt`);
      ist es später als 17:40, wird es für 18:00 Uhr am Folgetag eingeplant (nie sofort).
    - Neue Folge nur produzieren, wenn die vorige Folge bereits öffentlich ist (sonst gibt es noch keine Abstimmung) – dann nur Kurzbericht „wartet auf Abstimmung“.
-   - TikTok als Entwurf (wenn `python -m studio check` „OK TikTok-Zugang“ zeigt):
-     `python -m studio tiktok-entwurf <id>` – das Video landet im TikTok-Postfach des Kanalinhabers;
-     er schaltet „KI-generierte Inhalte“ ein und postet um 18:00 Uhr. Im Kurzbericht daran erinnern.
-     (Vollautomatisches öffentliches Posten erlaubt TikTok für eigene Konten nicht – nicht versuchen.)
-     Fehlt der TikTok-Zugang oder schlägt der Entwurf fehl: `python -m studio tiktok-paket <id>`
-     und `final.mp4` + `tiktok_upload.txt` per Datei-Versand (Push) schicken; nach dem Posten
-     `python -m studio manuell-gepostet <id> tiktok <url>`.
+   - TikTok **vollautomatisch über Buffer**: `python -m studio publish <id> --platform tiktok`
+     (nach YouTube). Das Video wird auf den Branch `tiktok-media` gelegt (öffentlicher Link, ohne Verlauf),
+     Buffer postet es um 18:00 Uhr mit KI-Kennzeichnung. Der Buffer-Schlüssel liegt als Netzwerk-Geheimnis
+     der Umgebung (der Proxy setzt ihn ein, keine Variable nötig). `python -m studio check` muss
+     „OK TikTok automatisch (Buffer)“ zeigen. Im Kurzbericht `published.tiktok.buffer_post_id` nennen.
+     Fällt Buffer aus, schickt das Studio automatisch einen Entwurf ins TikTok-Postfach (Ersatzweg,
+     braucht `TT_*`-Variablen) – dann im Kurzbericht den Menschen ans Posten mit „KI-generierte Inhalte“
+     erinnern. Geht beides nicht: `python -m studio tiktok-paket <id>` und `final.mp4` + `tiktok_upload.txt`
+     per Datei-Versand schicken; nach dem Posten `python -m studio manuell-gepostet <id> tiktok <url>`.
+     (Eigene TikTok-App darf laut TikTok-Richtlinien nicht direkt posten – nicht versuchen.)
 9. **Dashboard** aktualisieren: `python -m studio dashboard`; Änderungen committen und pushen
    (`final.mp4` ist absichtlich nicht im Git).
 10. **Kurzbericht** als letzte Nachricht: Folge, QC-Wert, YouTube-Link, Abstimmungsergebnis der

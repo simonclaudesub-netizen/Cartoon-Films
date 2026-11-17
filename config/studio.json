@@ -27,9 +27,9 @@
       },
       "tiktok": {
         "enabled": true,
-        "mode": "entwurf",
+        "mode": "buffer",
         "privacy": "SELF_ONLY",
-        "grund": "TikTok-Richtlinien (Direct Post): 'Not acceptable: A utility tool to help upload contents to the account(s) you or your team manages'. Daher Entwurfs-Modus (Scope video.upload): Video landet im TikTok-Postfach, der Mensch schaltet 'KI-generierte Inhalte' ein und postet. Angemeldet am 17.11.2026 über die Sandbox-App 'DuEntscheidest Uploader' (Konto Duentscheidest)."
+        "grund": "Vollautomatisch über Buffer (Gratis-Tarif, von TikTok zugelassener Partner, offizielle API): Video wird auf den Branch tiktok-media gelegt, Buffer postet zum Termin 18:00 mit KI-Kennzeichnung (isAiGenerated). Eigene TikTok-App (Sandbox) darf laut TikTok-Richtlinien nicht direkt posten; sie bleibt nur Ersatzweg (Entwurf ins Postfach), falls Buffer ausfällt. Test 17.11.2026: Teil 1 über Buffer gepostet."
       }
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",

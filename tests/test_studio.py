@@ -219,6 +219,34 @@ def test_voice_fallback_chain():
         mp.restore()
 
 
+def test_buffer_schedule():
+    """Buffer: Termin -> customScheduled + dueAt, KI-Kennzeichnung immer an, Video per öffentlichem Link."""
+    from studio.publish import buffer
+    sent = []
+
+    def fake_q(query, variables=None, timeout=60):
+        if "organizations" in query:
+            return {"account": {"organizations": [{"id": "o1"}]}}
+        if "channels" in query:
+            return {"channels": [{"id": "c0", "name": "yt", "service": "youtube", "isQueuePaused": False},
+                                 {"id": "c1", "name": "tt", "service": "tiktok", "isQueuePaused": False}]}
+        sent.append(variables["input"])
+        return {"createPost": {"post": {"id": "p1", "dueAt": "2026-11-18T17:00:00.000Z", "status": "scheduled"}}}
+    mp = _Patch()
+    try:
+        mp.setattr(buffer, "_q", fake_q)
+        mp.setattr(buffer, "stage_media", lambda v, n: f"https://example.invalid/{n}")
+        r = buffer.schedule("x.mp4", "Titel #duentscheidest", "ep.mp4", "2026-11-18T17:00:00Z")
+        i = sent[-1]
+        assert i["channelId"] == "c1" and i["mode"] == "customScheduled" and i["dueAt"] == "2026-11-18T17:00:00Z"
+        assert i["schedulingType"] == "automatic" and i["metadata"]["tiktok"]["isAiGenerated"] is True
+        assert i["assets"][0]["video"]["url"].endswith("/ep.mp4") and r["buffer_post_id"] == "p1"
+        buffer.schedule("x.mp4", "T", "ep.mp4", None)
+        assert sent[-1]["mode"] == "shareNow" and "dueAt" not in sent[-1]
+    finally:
+        mp.restore()
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):

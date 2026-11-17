@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 
 from . import db
-from .publish import tiktok, youtube
+from .publish import buffer, tiktok, youtube
 
 def _required_voices():
     out = set()
@@ -48,7 +48,9 @@ def run():
     add("Schrift Comic Neue", "Comic Neue" in fl)
     add("Whisper-Modell 'small'", any((db.ROOT / "assets" / "whisper").glob("**/model.bin")))
     add("YouTube-Zugang", youtube.configured(), "config/secrets/youtube.json oder YT_*-Variablen", kind="zugang")
-    add("TikTok-Zugang", tiktok.configured(), "config/secrets/tiktok.json oder TT_*-Variablen", kind="zugang")
+    bok, btxt = buffer.check()
+    add("TikTok automatisch (Buffer)", bok, btxt, kind="zugang")
+    add("TikTok-Entwurf (Ersatzweg)", tiktok.configured(), "config/secrets/tiktok.json oder TT_*-Variablen", kind="zugang")
     return out
 
 
