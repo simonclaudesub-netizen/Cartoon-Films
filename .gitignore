@@ -12,3 +12,4 @@ vendor/
 .venv-*/
 docs/vergleich/
 logs/zonos_server.log
+docs/hoervergleich.mp4
