@@ -9,3 +9,5 @@ logs/run_*.txt
 .venv-tts/
 episodes/*/final.mp4
 vendor/
+.venv-*/
+docs/vergleich/
