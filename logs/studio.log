@@ -203,3 +203,9 @@ IndexError: list index out of range
 2026-11-17 08:48:29 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
 2026-11-17 08:48:35 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
 2026-11-17 08:48:35 [INFO] [wohnung-4b-e02] Laufzeit 52.3 s, 10 Einstellungen – rendere Video
+2026-11-17 08:49:32 [INFO] [wohnung-4b-e02] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | aus Cache: []
+2026-11-17 08:50:05 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-17 08:50:41 [INFO] [wohnung-4b-e02] QC Versuch 1: 99.0 Punkte – bestanden
+2026-11-17 08:50:41 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 99.0 >= 90)
+2026-11-17 08:51:08 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'Hh8oCa1hbtA', 'url': 'https://youtube.com/shorts/Hh8oCa1hbtA', 'privacy': 'private', 'publish_at': '2026-11-17T17:00:00Z'}
+2026-11-17 08:52:06 [INFO] [wohnung-4b-e02] geplante Fassung qg1kr6WXInY gelöscht – Ersatz durch Qwen3-Fassung Hh8oCa1hbtA (vom Kanalinhaber angewiesen)
