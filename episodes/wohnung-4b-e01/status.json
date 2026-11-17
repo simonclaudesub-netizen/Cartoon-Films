@@ -85,6 +85,10 @@
     {
       "t": "2026-11-16 18:05:42",
       "state": "veröffentlicht"
+    },
+    {
+      "t": "2026-11-17 11:05:52",
+      "state": "veröffentlicht"
     }
   ],
   "score": 98.0,
@@ -111,6 +115,13 @@
       "id": "ITDHPKi_O-Y",
       "url": "https://youtube.com/shorts/ITDHPKi_O-Y",
       "privacy": "public"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7709093777105750038",
+      "status": "PROCESSING_UPLOAD",
+      "caption": "Öffne nachts NIEMALS diese Tür 🚪 | Wohnung 4B – Teil 1 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime"
     }
   },
   "votes": {
