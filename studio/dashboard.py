@@ -97,7 +97,7 @@ def build(artifact=False):
                          for c in chars.values())
     chk = "".join(f"<li class='{'ok' if c['ok'] else ('warn' if c['kind'] == 'zugang' else 'bad')}'>{'✓' if c['ok'] else '✗'} {e(c['name'])} <span class=muted>{e(c['detail'])}</span></li>" for c in checks)
     pub = cfg["publishing"]
-    head = """<title>Lindenweg Studio-Kontrollraum</title>
+    head = """<title>Du entscheidest – Studio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap">
 <style>
@@ -136,7 +136,7 @@ details summary{cursor:pointer;font-weight:600;margin-top:12px}
 @media (max-width:700px){.epgrid{grid-template-columns:1fr}ul.checks{columns:1}h1{font-size:36px}}
 </style>"""
     body = f"""<main>
-<header><h1>Lindenweg <span>Studio</span></h1><p class=muted>Veröffentlichung: <b>{'AKTIV' if pub['enabled'] else 'AUS (Testbetrieb)'}</b> · manuelle Freigabe: {'ja' if pub['require_manual_approval'] else 'nein'} · Mindest-QC: {cfg['quality']['min_score']} Punkte · Stand {e(log[-1][:16] if log else '')}</p></header>
+<header><h1>Du entscheidest <span>Studio</span></h1><p class=muted>Veröffentlichung: <b>{'AKTIV' if pub['enabled'] else 'AUS (Testbetrieb)'}</b> · manuelle Freigabe: {'ja' if pub['require_manual_approval'] else 'nein'} · Mindest-QC: {cfg['quality']['min_score']} Punkte · Stand {e(log[-1][:16] if log else '')}</p></header>
 <section class=card><h2>Episoden</h2><div class=scroll><table><tr><th>Episode</th><th>Status</th><th>QC</th><th>Länge</th><th>Plattformen</th></tr>{''.join(ep_rows)}</table></div></section>
 {''.join(details)}
 <section><h2>Serien</h2><div class=grid>{ser_cards}</div></section>

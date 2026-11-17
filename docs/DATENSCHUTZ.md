@@ -1,4 +1,4 @@
-# Datenschutzerklärung – Cartoon-Studio „Mr Crust“
+# Datenschutzerklärung – Cartoon-Studio „Du entscheidest“
 
 Dieses Programm ist ein privates Werkzeug des Kanalinhabers. Es lädt ausschließlich eigene,
 selbst erstellte Animationsvideos auf die eigenen Konten des Kanalinhabers hoch.

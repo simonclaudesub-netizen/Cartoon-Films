@@ -1,4 +1,4 @@
-# Lindenweg Cartoon-Studio
+# „Du entscheidest“ – Cartoon-Studio
 
 Ein lokales, weitgehend autonomes Studio für animierte 2D-Cartoon-Kurzserien
 (TikTok / YouTube Shorts, 1080 × 1920, 30 fps, 30–60 s). Es nutzt keine externen

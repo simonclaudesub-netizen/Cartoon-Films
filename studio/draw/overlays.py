@@ -38,10 +38,23 @@ def caption(ctx, txt, t, dur, y=440):
     ctx.restore()
 
 
+def _badge():
+    try:
+        import json
+        from ..db import ROOT
+        return json.loads((ROOT / "config" / "studio.json").read_text(encoding="utf-8")).get("brand", {}).get("badge", "")
+    except Exception:
+        return ""
+
+
 def endcard(ctx, data, t):
     ctx.set_source_rgba(0.05, 0.05, 0.08, min(0.78, t * 2.5))
     ctx.paint()
     x = (SAFE[0] + SAFE[2]) / 2
+    badge = data.get("brand", _badge())
+    if badge:  # Kanal-Marke über der Frage
+        P.rrect(ctx, x - 260, 290, 520, 96, 48, "#ffd23f", 6)
+        P.text(ctx, badge, x, 358, 64, family="Bangers", bold=False, color="#1a1a2e")
     q = data.get("question", "WAS SOLL ICH TUN?")
     lines = P.wrap(ctx, q, 100, 840, family="Bangers", bold=False)
     for i, l in enumerate(lines):

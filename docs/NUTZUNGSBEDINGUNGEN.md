@@ -1,4 +1,4 @@
-# Nutzungsbedingungen – Cartoon-Studio „Mr Crust“
+# Nutzungsbedingungen – Cartoon-Studio „Du entscheidest“
 
 Das Cartoon-Studio ist ein nicht-kommerzielles, privates Werkzeug. Es erzeugt original animierte
 Kurzvideos und lädt sie auf die Konten des Kanalinhabers hoch. Es gibt keine weiteren Nutzer.

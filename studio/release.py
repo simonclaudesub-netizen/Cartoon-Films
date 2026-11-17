@@ -30,7 +30,13 @@ def approve(ep_id, by="mensch"):
 def _meta(ep_id):
     sc = json.loads((db.episode_dir(ep_id) / "script.json").read_text(encoding="utf-8"))
     meta = dict(sc["publish"])
-    meta.setdefault("credits", config()["publishing"].get("credits", ""))
+    cfg = config()
+    meta.setdefault("credits", cfg["publishing"].get("credits", ""))
+    brand = cfg.get("brand", {})
+    if brand.get("hashtag") and brand["hashtag"].lower() not in [h.lower() for h in meta.get("hashtags", [])]:
+        meta["hashtags"] = [brand["hashtag"]] + list(meta.get("hashtags", []))
+    if brand.get("tagline") and brand["tagline"] not in meta.get("description", ""):
+        meta["description"] = meta.get("description", "").rstrip() + "\n\n" + brand["tagline"]
     tl_p = db.episode_dir(ep_id) / "timeline.json"
     if tl_p.exists():
         meta["cover_ms"] = int(json.loads(tl_p.read_text()).get("cover_t", 1.0) * 1000)

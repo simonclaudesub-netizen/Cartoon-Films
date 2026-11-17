@@ -1,5 +1,5 @@
 {
-  "studio": "Lindenweg Cartoon-Studio",
+  "studio": "Du entscheidest",
   "language": "de",
   "format": {
     "width": 1080,
@@ -34,5 +34,11 @@
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",
     "credits": "Stimmvorlagen: Thorsten-Voice (CC0) und CML-TTS Deutsch (CC BY 4.0, LibriVox-Sprecher)."
+  },
+  "brand": {
+    "name": "Du entscheidest",
+    "hashtag": "#duentscheidest",
+    "badge": "DU ENTSCHEIDEST",
+    "tagline": "Jeden Tag um 18 Uhr ein neuer Teil – und du entscheidest, wie es weitergeht."
   }
 }
