@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Installiert alle lokalen Open-Source-Werkzeuge des Studios (idempotent).
 set -euo pipefail
+export HF_HUB_DISABLE_XET=1  # Xet-Server von Hugging Face ist im Netz der Umgebung gesperrt; normale Downloads gehen
 cd "$(dirname "$0")"
 
 python3 -m pip install --quiet piper-tts pycairo faster-whisper opencv-python-headless numpy pillow requests cryptography
