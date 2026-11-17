@@ -22,8 +22,8 @@ for v in thorsten/medium/de_DE-thorsten-medium thorsten_emotional/medium/de_DE-t
   [ -s "assets/voices/$n.onnx" ] || { curl -sSL -o "assets/voices/$n.onnx" "$B/$v.onnx"; curl -sSL -o "assets/voices/$n.onnx.json" "$B/$v.onnx.json"; }
 done
 
-# Hauptstimmen: Chatterbox Multilingual (Resemble AI, MIT-Lizenz) in eigener Umgebung, CPU-Version von PyTorch
-if [ ! -x .venv-tts/bin/python ] || ! .venv-tts/bin/python -c "import chatterbox" 2>/dev/null; then
+# Rückfall-Stimmen: Chatterbox Multilingual (Resemble AI, MIT) – nur mit STUDIO_CHATTERBOX=1 (spart ~5 Min./Tag)
+if [ "${STUDIO_CHATTERBOX:-0}" = "1" ] && { [ ! -x .venv-tts/bin/python ] || ! .venv-tts/bin/python -c "import chatterbox" 2>/dev/null; }; then
   python3 -m venv .venv-tts
   .venv-tts/bin/pip install --quiet --upgrade pip
   .venv-tts/bin/pip install --quiet torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
