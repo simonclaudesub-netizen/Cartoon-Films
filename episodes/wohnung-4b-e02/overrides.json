@@ -1,5 +1,9 @@
 {
-  "lines": {},
+  "lines": {
+    "2.0": {
+      "length_mul": 1.1
+    }
+  },
   "global": {
     "max_chars": 32
   }

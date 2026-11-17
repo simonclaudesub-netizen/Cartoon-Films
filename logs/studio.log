@@ -187,3 +187,10 @@ IndexError: list index out of range
 2026-11-17 07:06:51 [INFO] [wohnung-4b-e02] geplante Fassung AI2AUZReYSg gelöscht – Ersatz durch ZONOS3-Fassung (vom Kanalinhaber angewiesen)
 2026-11-17 07:06:55 [INFO] [wohnung-4b-e02] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'qg1kr6WXInY', 'url': 'https://youtube.com/shorts/qg1kr6WXInY', 'privacy': 'private', 'publish_at': '2026-11-17T17:00:00Z'}
 2026-11-17 08:37:14 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-17 08:41:59 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-17 08:41:59 [INFO] [wohnung-4b-e02] Laufzeit 52.1 s, 10 Einstellungen – rendere Video
+2026-11-17 08:42:48 [INFO] [wohnung-4b-e02] gerendert: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] | aus Cache: []
+2026-11-17 08:43:18 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-17 08:44:00 [INFO] [wohnung-4b-e02] QC Versuch 1: 97.0 Punkte – bestanden
+2026-11-17 08:44:00 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 97.0 >= 90)
+2026-11-17 08:45:55 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
