@@ -52,14 +52,14 @@ def endcard(ctx, data, t):
     ctx.paint()
     x = (SAFE[0] + SAFE[2]) / 2
     badge = data.get("brand", _badge())
-    if badge:  # Kanal-Marke über der Frage
-        P.rrect(ctx, x - 260, 290, 520, 96, 48, "#ffd23f", 6)
-        P.text(ctx, badge, x, 358, 64, family="Bangers", bold=False, color="#1a1a2e")
+    if badge:  # Kanal-Marke über der Frage, unter der Serien-Plakette (y 250–322)
+        P.rrect(ctx, x - 240, 350, 480, 84, 42, "#ffd23f", 6)
+        P.text(ctx, badge, x, 411, 58, family="Bangers", bold=False, color="#1a1a2e")
     q = data.get("question", "WAS SOLL ICH TUN?")
     lines = P.wrap(ctx, q, 100, 840, family="Bangers", bold=False)
     for i, l in enumerate(lines):
-        P.text(ctx, l, x, 520 + i * 110, 100, family="Bangers", bold=False, color="#ffffff", outline=14)
-    y0 = 560 + len(lines) * 110
+        P.text(ctx, l, x, 580 + i * 110, 100, family="Bangers", bold=False, color="#ffffff", outline=14)
+    y0 = 620 + len(lines) * 110
     for i, (key, col) in enumerate((("A", "#3fa34d"), ("B", "#d6453d"))):
         k = max(0.0, min(1.0, (t - 0.3 - i * 0.25) / 0.2))
         if k <= 0:

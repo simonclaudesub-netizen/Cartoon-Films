@@ -194,3 +194,12 @@ IndexError: list index out of range
 2026-11-17 08:44:00 [INFO] [wohnung-4b-e02] QC Versuch 1: 97.0 Punkte – bestanden
 2026-11-17 08:44:00 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 97.0 >= 90)
 2026-11-17 08:45:55 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-17 08:46:28 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-17 08:46:28 [INFO] [wohnung-4b-e02] Laufzeit 52.3 s, 10 Einstellungen – rendere Video
+2026-11-17 08:46:41 [INFO] [wohnung-4b-e02] gerendert: [2] | aus Cache: [0, 1, 3, 4, 5, 6, 7, 8, 9]
+2026-11-17 08:47:14 [INFO] [wohnung-4b-e02] Qualitätskontrolle läuft
+2026-11-17 08:47:53 [INFO] [wohnung-4b-e02] QC Versuch 1: 99.0 Punkte – bestanden
+2026-11-17 08:47:53 [INFO] [wohnung-4b-e02] automatisch freigegeben (QC 99.0 >= 90)
+2026-11-17 08:48:29 [INFO] [wohnung-4b-e02] Versuch 1: Zeitleiste + Stimmen
+2026-11-17 08:48:35 [INFO] [wohnung-4b-e02] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-17 08:48:35 [INFO] [wohnung-4b-e02] Laufzeit 52.3 s, 10 Einstellungen – rendere Video

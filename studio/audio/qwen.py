@@ -22,13 +22,24 @@ def _env(**extra):
     return dict(os.environ, HF_HUB_CACHE=str(HUB), HF_HUB_DISABLE_XET="1", **extra)
 
 
+NEEDED = ("config.json", "model.safetensors", "vocab.json", "merges.txt",
+          "speech_tokenizer/config.json", "speech_tokenizer/model.safetensors")
+
+
+def model_complete():
+    """Alle Modelldateien vollständig vorhanden? (abgebrochene Downloads liegen als *.incomplete in blobs/)"""
+    d = HUB / ("models--" + MODEL.replace("/", "--"))
+    snaps = sorted((d / "snapshots").glob("*")) if d.exists() else []
+    if not snaps or any((d / "blobs").glob("*.incomplete")):
+        return False
+    return all((snaps[-1] / f).is_file() for f in NEEDED)
+
+
 def available():
     global _OK
     if _OK is None:
-        _OK = VENV_PY.exists() and subprocess.run(
-            [str(VENV_PY), "-c", "import qwen_tts, huggingface_hub as h; "
-             f"h.snapshot_download('{MODEL}', local_files_only=True)"],
-            capture_output=True, env=_env(HF_HUB_OFFLINE="1")).returncode == 0
+        _OK = VENV_PY.exists() and model_complete() and subprocess.run(
+            [str(VENV_PY), "-c", "import qwen_tts"], capture_output=True).returncode == 0
     return _OK
 
 

@@ -43,9 +43,16 @@ if ! .venv-qwen/bin/python -c "import qwen_tts" 2>/dev/null; then
     && .venv-qwen/bin/pip install --quiet torch torchaudio --index-url https://download.pytorch.org/whl/cpu \
     && .venv-qwen/bin/pip install --quiet qwen-tts==0.1.1 soundfile; } || warn "Qwen3-TTS nicht installiert"
 fi
-[ -x .venv-qwen/bin/python ] && { HF_HUB_CACHE=assets/qwen .venv-qwen/bin/python -c \
-  "import huggingface_hub as h; h.snapshot_download('Qwen/Qwen3-TTS-12Hz-1.7B-Base')" >/dev/null \
-  || warn "Qwen3-Modell nicht geladen"; }
+# Modell (~4,3 GB); abgebrochene Downloads werden fortgesetzt, bis zu 4 Versuche
+if [ -x .venv-qwen/bin/python ]; then
+  ok=0
+  for i in 1 2 3 4; do
+    HF_HUB_CACHE=assets/qwen .venv-qwen/bin/python -c \
+      "import huggingface_hub as h; h.snapshot_download('Qwen/Qwen3-TTS-12Hz-1.7B-Base')" >/dev/null 2>&1 && { ok=1; break; }
+    sleep $((i * 10))
+  done
+  [ $ok = 1 ] || warn "Qwen3-Modell nicht vollständig geladen (Stimmen fallen auf ZONOS3 zurück)"
+fi
 
 # Rückfall-Stimmen: ZONOS3-Mini (Zyphra, Apache-2.0) – C++/ggml-Server für die CPU, Stimmklon + Emotions-Regler
 Z=vendor/ZONOS3-Mini

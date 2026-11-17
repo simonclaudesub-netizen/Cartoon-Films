@@ -22,7 +22,7 @@
       "ok": true,
       "points": 4,
       "max": 4,
-      "detail": "52.1 s"
+      "detail": "52.3 s"
     },
     {
       "cat": "technik",
@@ -54,7 +54,7 @@
       "ok": true,
       "points": 4,
       "max": 4,
-      "detail": "-1.3 dBTP"
+      "detail": "-1.2 dBTP"
     },
     {
       "cat": "ton",
@@ -155,10 +155,10 @@
     {
       "cat": "story",
       "name": "Sprechtempo ≤ 4 Wörter/s",
-      "ok": false,
-      "points": 0,
+      "ok": true,
+      "points": 2,
       "max": 2,
-      "detail": "['Doch schlafen konnte ich diese Nacht nicht.']"
+      "detail": "[]"
     },
     {
       "cat": "story",
@@ -232,7 +232,7 @@
       "max": 10
     },
     "story": {
-      "points": 13,
+      "points": 15,
       "max": 15
     },
     "untertitel": {
@@ -359,12 +359,10 @@
       "ok": true
     }
   ],
-  "fast_lines": [
-    "2.0"
-  ],
-  "score": 97.0,
+  "fast_lines": [],
+  "score": 99.0,
   "blocking": [],
   "passed": true,
-  "duration": 52.1,
+  "duration": 52.266667,
   "contact_sheet": "/home/user/cartoon-studio/episodes/wohnung-4b-e02/qc_contact.png"
 }
