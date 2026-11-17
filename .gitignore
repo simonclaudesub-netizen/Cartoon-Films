@@ -11,3 +11,4 @@ episodes/*/final.mp4
 vendor/
 .venv-*/
 docs/vergleich/
+logs/zonos_server.log
