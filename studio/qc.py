@@ -49,8 +49,42 @@ def detect(path, flt, key):
     return r.stderr
 
 
-NUM = {"null": "0", "eins": "1", "ein": "1", "zwei": "2", "drei": "3", "vier": "4", "fünf": "5", "sechs": "6",
-       "sieben": "7", "acht": "8", "neun": "9", "zehn": "10", "elf": "11", "zwölf": "12"}
+_UNITS = {"null": 0, "eins": 1, "ein": 1, "zwei": 2, "drei": 3, "vier": 4, "fünf": 5, "sechs": 6, "sieben": 7,
+          "acht": 8, "neun": 9}
+_TEENS = {"zehn": 10, "elf": 11, "zwölf": 12, "dreizehn": 13, "vierzehn": 14, "fünfzehn": 15, "sechzehn": 16,
+          "siebzehn": 17, "achtzehn": 18, "neunzehn": 19}
+_TENS = {"zwanzig": 20, "dreißig": 30, "vierzig": 40, "fünfzig": 50, "sechzig": 60, "siebzig": 70, "achtzig": 80,
+         "neunzig": 90}
+# Whisper schreibt Zahlen und Einheiten meist als Ziffern/Kürzel ("dreihundert Kilometer" -> "300 km")
+ABBR = {"km": "kilometer", "kg": "kilogramm", "std": "stunden", "min": "minuten", "sek": "sekunden",
+        "nr": "nummer", "ca": "circa"}
+
+
+def _num(w):
+    """Deutsches Zahlwort (bis 999 999) -> int, sonst None. 'ein' allein bleibt Wort (Artikel)."""
+    if not w:
+        return None
+    if w in _UNITS or w in _TEENS or w in _TENS:
+        return {**_UNITS, **_TEENS, **_TENS}[w]
+    for word, mul in (("tausend", 1000), ("hundert", 100)):
+        if word in w:
+            head, tail = w.split(word, 1)
+            h = 1 if head in ("", "ein") else _num(head)
+            t = 0 if tail == "" else _num(tail)
+            return None if h is None or t is None else h * mul + t
+    if "und" in w:
+        u, t = w.split("und", 1)
+        if u in _UNITS and t in _TENS:
+            return _UNITS[u] + _TENS[t]
+    return None
+
+
+def _num_token(m):
+    w = m.group(0)
+    if w == "ein":
+        return w
+    n = _num(w)
+    return str(n) if n is not None else w
 
 
 FILLERS = r"\b(äh+m?|öh+m?|hm+|ähm|uh+|ah)\b"
@@ -59,7 +93,9 @@ FILLERS = r"\b(äh+m?|öh+m?|hm+|ähm|uh+|ah)\b"
 def _norm(s):
     s = s.lower()
     s = re.sub(FILLERS, " ", s)  # Whisper schreibt Füllwörter grundsätzlich nicht mit
-    s = re.sub(r"\b(" + "|".join(NUM) + r")\b", lambda m: NUM[m.group(1)] if m.group(1) != "ein" else "ein", s)
+    s = re.sub(r"(\w)['’]s\b", r"\1", s)  # "bin's" / "geht's": angehängtes 's überhört Whisper oft
+    s = re.sub(r"\b[a-zäöüß]+\b", _num_token, s)
+    s = re.sub(r"\b(" + "|".join(ABBR) + r")\b", lambda m: ABBR[m.group(1)], s)
     s = re.sub(r"[^\wäöüß ]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
 

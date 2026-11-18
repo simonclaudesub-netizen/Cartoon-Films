@@ -247,6 +247,16 @@ def test_buffer_schedule():
         mp.restore()
 
 
+def test_similarity_numbers_and_clitics():
+    """Whisper schreibt Zahlen/Einheiten als Ziffern und verschluckt 's – darf nicht blockieren (Teil 3, 18.11.)."""
+    from studio import qc
+    assert qc.similarity("Lina? Die wohnt dreihundert Kilometer weit weg.", "Lina, die wohnt 300 km weit weg.") > 0.95
+    assert qc.similarity("Ich bin's.", "Ich bin...") > 0.95
+    assert qc.similarity("Zweiundzwanzig Mal.", "22 Mal.") > 0.95
+    assert qc._norm("Ein Mann") == "ein mann"
+    assert qc.similarity("Ich gehe nach Hause.", "Ich gehe nicht.") < qc.LINE_MIN
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):
