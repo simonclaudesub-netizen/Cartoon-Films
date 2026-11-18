@@ -209,6 +209,10 @@
     {
       "t": "2026-11-17 11:24:38",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-18 13:27:09",
+      "state": "geplant"
     }
   ],
   "score": 99.0,
@@ -281,5 +285,23 @@
       "publish_at": "2026-11-17T17:00:00Z",
       "grund": "ZONOS3-Fassung ersetzt durch Qwen3-Fassung (Anweisung Kanalinhaber 17.11.)"
     }
-  ]
+  ],
+  "votes": {
+    "counts": {
+      "A": 4,
+      "B": 0
+    },
+    "total": 4,
+    "winner": "A",
+    "sources": {
+      "youtube": {
+        "counts": {
+          "A": 4,
+          "B": 0
+        },
+        "total": 4,
+        "winner": "A"
+      }
+    }
+  }
 }

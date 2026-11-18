@@ -17,7 +17,9 @@
       "Was ist mit dem Vormieter von 4B passiert? (Okan verbietet, darüber zu reden)",
       "Warum spricht Okan ernste Sätze zweimal?",
       "Wer imitiert Frau Brandts Stimme?",
-      "Wer ist 'O.' auf dem Zettel 'Gut gemacht.'? (Okan? Oder jemand anderes mit O?)"
+      "Wer ist 'O.' auf dem Zettel 'Gut gemacht.'? (Okan? Oder jemand anderes mit O?)",
+      "Warum klopft es bei Frau Brandt von innen, wenn ihre Hausschuhe draußen stehen?",
+      "Wie kann eine Nachricht von Lina kommen, die 300 km entfernt wohnt?"
     ]
   },
   "cast": [
@@ -62,11 +64,30 @@
           "winner": "B"
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e02",
+      "counts": {
+        "A": 4,
+        "B": 0
+      },
+      "total": 4,
+      "winner": "A",
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 4,
+            "B": 0
+          },
+          "total": 4,
+          "winner": "A"
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 3 'Der Türspion' – fertiger Entwurf: episodes/wohnung-4b-e03/entwurf_A.json",
-    "B": "Teil 3 'Der Keller' – fertiger Entwurf: episodes/wohnung-4b-e03/entwurf_B.json"
+    "A": "Teil 4 'Der Anruf' – Du rufst Lina an. Sie geht verschlafen ran: Sie liegt zu Hause im Bett, 300 km weit weg, und hat nichts geschrieben. Die Nachricht ist aus ihrem Verlauf verschwunden. Während ihr telefoniert, sagt die Stimme vor der Tür Linas letzten Satz nach – genau einmal. Hinweis auf den Nachhall.",
+    "B": "Teil 4 'Zweimal' – Du weckst Okan (Hausmeister, Erdgeschoss). Er kommt im Bademantel, schaut nicht durch den Spion und sagt: 'Was er hört, kann er sagen. Aber nur einmal. Nur einmal.' Er erklärt die Regel des Nachhalls (Staffelbogen Teil 4)."
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

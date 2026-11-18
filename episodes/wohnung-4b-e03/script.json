@@ -1,0 +1,78 @@
+{
+  "id": "wohnung-4b-e03",
+  "series": "wohnung-4b",
+  "episode": 3,
+  "variant": "A",
+  "title": "Der Türspion",
+  "label": "WOHNUNG 4B · TEIL 3",
+  "summary": "Die Zuschauer wählten A: um 03:07 durch den Türspion schauen. Das Treppenhaus ist leer, vor 4A stehen Frau Brandts Hausschuhe – und jemand klopft von INNEN an ihre Tür. Dann schreibt Lina: 'Bin vor deiner Tür, mach auf!' Doch Lina wohnt 300 km entfernt. Hinter der Tür flüstert ihre Stimme: 'Ich bin's.'",
+  "cliffhanger": {"question": "Was soll ich tun?", "options": {"A": "Lina anrufen", "B": "Okan wecken"}},
+  "cover_shot": 2,
+  "publish": {
+    "title": "Durch den Türspion um 03:07… 😨 | Wohnung 4B – Teil 3",
+    "description": "Ihr habt entschieden: A – durch den Türspion schauen. Das Treppenhaus ist leer… aber bei Frau Brandt klopft es von innen. Und dann schreibt mir Lina, dass sie vor meiner Tür steht. Was soll ich tun? Schreib A (Lina anrufen) oder B (Okan wecken) in die Kommentare! Die Mehrheit entscheidet Teil 4.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+  },
+  "shots": [
+    {
+      "set": "flur", "time": "night", "zoom": 1.3, "lens": 0.08, "music": "tension",
+      "caption": "IHR HABT A GEWÄHLT", "caption_dur": 1.6,
+      "camera": {"move": "push_in", "strength": 1.2},
+      "pov": {"mode": "door", "target": [545, 845], "reach": 0.5},
+      "sfx": [{"name": "heartbeat", "at": 0.0, "gain": 0.8}],
+      "lines": [
+        {"speaker": "du", "text": "Drei Uhr sieben. Diesmal schaue ich nach.", "emotion": "whisper", "fx": "inner", "delay": 0.6}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "night", "variant": "flicker+slippers", "peephole": true, "zoom": 1.5, "lens": 0.35,
+      "music": "tension", "camera": {"move": "pan_right", "strength": 0.3},
+      "lines": [
+        {"speaker": "du", "text": "Leer. Nur Frau Brandts Hausschuhe. Ordentlich nebeneinander.", "emotion": "whisper", "fx": "inner", "delay": 0.5}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "night", "variant": "flicker+slippers", "peephole": true, "zoom": 2.0, "lens": 0.4,
+      "music": "tension", "camera": {"move": "static", "shake": [0.2, 1.0]},
+      "sfx": [{"name": "knock_hard", "at": 0.15}, {"name": "knock_hard", "at": 0.95}],
+      "lines": [
+        {"speaker": "du", "text": "Moment. Da klopft jemand. Von innen. Bei Frau Brandt.", "emotion": "scared", "fx": "inner", "delay": 1.5}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "music": "tension",
+      "pov": {"mode": "phone", "contact": "Lina", "avatar": "#c4473a", "status": "online",
+              "messages": [{"from": "lina", "text": "Bin vor deiner Tür :) mach auf!", "at": 0.4}]},
+      "sfx": [{"name": "buzz", "at": 0.3}, {"name": "ping", "at": 0.4}],
+      "lines": [
+        {"speaker": "du", "text": "Lina? Die wohnt dreihundert Kilometer weit weg.", "emotion": "scared", "fx": "inner", "delay": 1.6}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "night", "variant": "flicker+slippers", "peephole": true, "zoom": 1.6, "lens": 0.38,
+      "music": "silence",
+      "lines": [
+        {"speaker": "du", "text": "Da ist niemand.", "emotion": "whisper", "fx": "inner", "delay": 0.8}
+      ],
+      "pad_end": 0.6
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.9, "lens": 0.08, "music": "tension",
+      "camera": {"move": "push_in", "strength": 1.5, "punch": [1.0]},
+      "sfx": [{"name": "sting", "at": 0.9}],
+      "lines": [
+        {"speaker": "lina", "text": "Ich bin's.", "emotion": "whisper", "fx": "door", "delay": 0.7},
+        {"speaker": "du", "text": "Lina hat noch nie gesagt: Ich bin's.", "emotion": "panic", "fx": "inner", "gap": 0.5}
+      ],
+      "blackout_at": 4.6
+    },
+    {
+      "set": "flur", "time": "night", "music": "tension", "min_dur": 6.0,
+      "endcard": {"question": "WAS SOLL ICH TUN?", "options": {"A": "LINA ANRUFEN", "B": "OKAN WECKEN"},
+                  "cta": "Schreib A oder B in die Kommentare!", "next": "TEIL 4 FOLGT"},
+      "lines": [
+        {"speaker": "du", "text": "Was soll ich tun? A: Lina anrufen. Oder B: Okan wecken? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+      ]
+    }
+  ]
+}
