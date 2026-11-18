@@ -43,6 +43,9 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
      Untertitel und Folgezeilen, die den Wortlaut zitieren, mitändern. `entwurf_*.json` nicht anfassen.
    - Liegt der Fehler in der Prüfung selbst (Stimme korrekt, Whisper schreibt nur anders), den
      Abgleich in `studio/qc.py` korrigieren, Test ergänzen, `python3 tests/test_studio.py`.
+     Nur die Text-Normalisierung darf geändert werden – Grenzwerte (`PASS_SCORE`, `LINE_MIN`,
+     `line_min`) und Prüfungen nie lockern oder entfernen; der Test muss zeigen, dass echte
+     Sprechfehler weiter durchfallen. Die Änderung im Kurzbericht nennen.
    - Erst wenn auch Runde 3 scheitert, nicht veröffentlichen und den Grund im Kurzbericht nennen.
    Die Zeitgrenze (Upload vor 17:40) gilt weiter; sonst Termin am Folgetag.
 7. **Freigabe**: Der Kanalinhaber hat entschieden (16.11.2026): bestandene QC (≥ 90, keine kritischen
