@@ -235,3 +235,12 @@ IndexError: list index out of range
 2026-11-18 13:39:01 [INFO] [wohnung-4b-e03] QC Versuch 3: 94.0 Punkte – nicht bestanden
 2026-11-18 13:39:01 [WARN] [wohnung-4b-e03] Korrekturen: ['Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)', 'Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)']
 2026-11-18 13:39:01 [ERROR] [wohnung-4b-e03] Episode nach 3 Versuchen abgelehnt – wird NICHT veröffentlicht
+2026-11-18 13:59:43 [INFO] [wohnung-4b-e03] Versuch 1: Zeitleiste + Stimmen
+2026-11-18 14:00:50 [INFO] [wohnung-4b-e03] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-18 14:00:50 [INFO] [wohnung-4b-e03] Laufzeit 33.6 s, 7 Einstellungen – rendere Video
+2026-11-18 14:01:07 [INFO] [wohnung-4b-e03] gerendert: [3, 5] | aus Cache: [0, 1, 2, 4, 6]
+2026-11-18 14:01:25 [INFO] [wohnung-4b-e03] Qualitätskontrolle läuft
+2026-11-18 14:01:48 [INFO] [wohnung-4b-e03] QC Versuch 1: 100.0 Punkte – bestanden
+2026-11-18 14:01:48 [INFO] [wohnung-4b-e03] automatisch freigegeben (QC 100.0 >= 90)
+2026-11-18 14:02:01 [INFO] [wohnung-4b-e03] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'tE9sJummfws', 'url': 'https://youtube.com/shorts/tE9sJummfws', 'privacy': 'private', 'publish_at': '2026-11-18T17:00:00Z'}
+2026-11-18 14:02:08 [ERROR] [wohnung-4b-e03] Veröffentlichung auf tiktok fehlgeschlagen: TikTok-Zugangsdaten fehlen (python -m studio auth-tiktok)
