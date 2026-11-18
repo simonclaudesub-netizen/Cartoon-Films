@@ -27,9 +27,9 @@
       },
       "tiktok": {
         "enabled": true,
-        "mode": "entwurf",
+        "mode": "buffer",
         "privacy": "SELF_ONLY",
-        "grund": "Entwurf ins TikTok-Postfach (eigene App, Scope video.upload); der Kanalinhaber postet um 18:00 in der App mit 'KI-generierte Inhalte'. Umgestellt am 17.11.2026: Teil 1 über Buffer war öffentlich, bekam aber 0 Aufrufe, ein Upload direkt in der App 127 Aufrufe in 38 Minuten. Buffer bleibt eingerichtet (mode 'buffer' schaltet zurück)."
+        "grund": "Vollautomatisch über Buffer (Wunsch des Kanalinhabers 18.11.2026: 'komplett automatisch'). Achtung: Teil 1 über Buffer bekam 0 Aufrufe (17.11.), ein Upload in der App 127 in 38 Min. Ab Teil 4 erneut beobachten; fällt Buffer aus, geht automatisch ein Entwurf ins Postfach. Zurück auf Entwurf: mode = 'entwurf'."
       }
     },
     "approval_mode": "QC >= 90 gilt als Freigabe (Entscheidung des Kanalinhabers, 16.11.2026)",
