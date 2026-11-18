@@ -1,0 +1,13 @@
+{
+  "lines": {
+    "3.0": {
+      "length_mul": 1.331,
+      "noise": 0.3
+    },
+    "5.0": {
+      "length_mul": 1.331,
+      "noise": 0.3
+    }
+  },
+  "global": {}
+}

@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "cat": "technik",
+      "name": "Auflösung 1080x1920 (9:16)",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "1080x1920"
+    },
+    {
+      "cat": "technik",
+      "name": "30 fps",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "30.00"
+    },
+    {
+      "cat": "technik",
+      "name": "Dauer 30-60 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "32.8 s"
+    },
+    {
+      "cat": "technik",
+      "name": "H.264/yuv420p + AAC",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "h264/yuv420p"
+    },
+    {
+      "cat": "technik",
+      "name": "Dateigröße < 250 MB",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "4.5 MB"
+    },
+    {
+      "cat": "ton",
+      "name": "Lautheit -14 LUFS ±1,5",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "-14.3 LUFS"
+    },
+    {
+      "cat": "ton",
+      "name": "True Peak ≤ -1 dBTP",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "-1.3 dBTP"
+    },
+    {
+      "cat": "ton",
+      "name": "Keine Übersteuerung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0.000 % Samples"
+    },
+    {
+      "cat": "ton",
+      "name": "Ton hörbar (nicht stumm)",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "-14.3 LUFS"
+    },
+    {
+      "cat": "stimmen",
+      "name": "Sprachverständlichkeit (Whisper-Abgleich)",
+      "ok": false,
+      "points": 14.0,
+      "max": 20,
+      "detail": "Ø 0.92, 2 Zeile(n) unter Mindestwert (0.85, lange Sätze strenger) oder mit Nachlaut/Wiederholung"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine Render-Fehler",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "0 fehlerhafte Bilder"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine ungeplanten Schwarzbilder",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine eingefrorenen Bilder > 2,5 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Bildinhalt vorhanden (kein Leerbild)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0 leere Stichproben"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Alle Figuren in der Datenbank",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Aussehen = gesperrtes Model-Sheet",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "abweichend: [], nicht gesperrt: []"
+    },
+    {
+      "cat": "story",
+      "name": "Hook in der 1. Sekunde",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "0.00 s"
+    },
+    {
+      "cat": "story",
+      "name": "Cliffhanger + A/B-Abstimmung",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": ""
+    },
+    {
+      "cat": "story",
+      "name": "Zeilen ≤ 22 Wörter",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Sprechtempo ≤ 4 Wörter/s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Einstellungslänge 1-8,5 s (Tempo)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Nur Figuren aus dem Serien-Cast",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Jede Dialogzeile untertitelt",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "14 Einblendungen"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Max. 30 Zeichen je Einblendung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Mindest-Lesezeit 0,4 s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Keine Überlappung, innerhalb der Laufzeit",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": ""
+    }
+  ],
+  "critical": [],
+  "categories": {
+    "technik": {
+      "points": 15,
+      "max": 15
+    },
+    "ton": {
+      "points": 15,
+      "max": 15
+    },
+    "stimmen": {
+      "points": 14.0,
+      "max": 20
+    },
+    "bild": {
+      "points": 15,
+      "max": 15
+    },
+    "konsistenz": {
+      "points": 10,
+      "max": 10
+    },
+    "story": {
+      "points": 15,
+      "max": 15
+    },
+    "untertitel": {
+      "points": 10,
+      "max": 10
+    }
+  },
+  "line_tests": [
+    {
+      "key": "0.0",
+      "speaker": "du",
+      "text": "Drei Uhr sieben. Diesmal schaue ich nach.",
+      "heard": "3.07 Uhr. Diesmal schaue ich nach.",
+      "similarity": 0.883,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "1.0",
+      "speaker": "du",
+      "text": "Leer. Nur Frau Brandts Hausschuhe. Ordentlich nebeneinander.",
+      "heard": "Lea, nur Frau Brandts Hausschuhe, ordentlich nebeneinander.",
+      "similarity": 0.904,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.0",
+      "speaker": "du",
+      "text": "Moment. Da klopft jemand. Von innen. Bei Frau Brandt.",
+      "heard": "Moment, da klopft jemand von innen bei Frau Brandt.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.0",
+      "speaker": "du",
+      "text": "Lina? Die wohnt dreihundert Kilometer weit weg.",
+      "heard": "Lina, die wohnt 300 km weit weg.",
+      "similarity": 0.717,
+      "extra": [],
+      "ok": false
+    },
+    {
+      "key": "4.0",
+      "speaker": "du",
+      "text": "Da ist niemand.",
+      "heard": "Da ist niemand.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.0",
+      "speaker": "lina",
+      "text": "Ich bin's.",
+      "heard": "Ich bin...",
+      "similarity": 0.83,
+      "extra": [],
+      "ok": false
+    },
+    {
+      "key": "5.1",
+      "speaker": "du",
+      "text": "Lina hat noch nie gesagt: Ich bin's.",
+      "heard": "Lina hat noch nie gesagt, ich bin's.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "6.0",
+      "speaker": "du",
+      "text": "Was soll ich tun? A: Lina anrufen. Oder B: Okan wecken? Schreib es in die Kommentare!",
+      "heard": "Was soll ich tun? a. Lina anrufen oder b. Okan wecken? Schreib es in die Kommentare",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    }
+  ],
+  "blocking": [
+    "Zeile 3.0 (du): gehört 'Lina, die wohnt 300 km weit weg.'",
+    "Zeile 5.0 (lina): gehört 'Ich bin...'"
+  ],
+  "fast_lines": [],
+  "score": 94.0,
+  "passed": false,
+  "duration": 32.833,
+  "contact_sheet": "/home/user/Cartoon-Films/episodes/wohnung-4b-e03/qc_contact.png"
+}

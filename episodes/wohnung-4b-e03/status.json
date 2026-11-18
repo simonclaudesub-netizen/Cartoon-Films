@@ -1,10 +1,66 @@
 {
   "id": "wohnung-4b-e03",
-  "state": "in_produktion",
+  "state": "abgelehnt",
   "history": [
     {
       "t": "2026-11-18 13:27:24",
       "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-18 13:39:01",
+      "state": "abgelehnt"
+    }
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 94.0,
+      "passed": false,
+      "critical": [],
+      "seconds": 478.2,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fixes": [
+        "Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)",
+        "Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)"
+      ]
+    },
+    {
+      "attempt": 2,
+      "score": 94.0,
+      "passed": false,
+      "critical": [],
+      "seconds": 112.1,
+      "rendered_shots": [
+        3,
+        5
+      ],
+      "fixes": [
+        "Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)",
+        "Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)"
+      ]
+    },
+    {
+      "attempt": 3,
+      "score": 94.0,
+      "passed": false,
+      "critical": [],
+      "seconds": 106.8,
+      "rendered_shots": [
+        3,
+        5
+      ],
+      "fixes": [
+        "Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)",
+        "Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)"
+      ]
     }
   ]
 }

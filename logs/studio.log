@@ -214,3 +214,24 @@ IndexError: list index out of range
 2026-11-17 11:24:38 [INFO] [wohnung-4b-e02] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'buffer', 'buffer_post_id': '6afc3976df7b9f28f78ce2a3', 'channel': 'duentscheidest20', 'publish_at': '2026-11-17T17:00:00Z', 'status': 'scheduled', 'media_url': 'https://raw.githubusercontent.com/simonclaudesub-netizen/Cartoon-Films/tiktok-media/wohnung-4b-e02.mp4', 'caption': 'Ich habe NICHT geöffnet… 😳 | Wohnung 4B – Teil 2 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime', 'ai_label': True}
 2026-11-18 13:27:19 [INFO] [wohnung-4b-e03] Entwurf A als Drehbuch übernommen (Abstimmungsgewinner)
 2026-11-18 13:27:24 [INFO] [wohnung-4b-e03] Versuch 1: Zeitleiste + Stimmen
+2026-11-18 13:33:40 [INFO] [wohnung-4b-e03] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-18 13:33:40 [INFO] [wohnung-4b-e03] Laufzeit 32.5 s, 7 Einstellungen – rendere Video
+2026-11-18 13:34:36 [INFO] [wohnung-4b-e03] gerendert: [0, 1, 2, 3, 4, 5, 6] | aus Cache: []
+2026-11-18 13:34:56 [INFO] [wohnung-4b-e03] Qualitätskontrolle läuft
+2026-11-18 13:35:22 [INFO] [wohnung-4b-e03] QC Versuch 1: 94.0 Punkte – nicht bestanden
+2026-11-18 13:35:22 [WARN] [wohnung-4b-e03] Korrekturen: ['Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)', 'Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)']
+2026-11-18 13:35:22 [INFO] [wohnung-4b-e03] Versuch 2: Zeitleiste + Stimmen
+2026-11-18 13:36:08 [INFO] [wohnung-4b-e03] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-18 13:36:08 [INFO] [wohnung-4b-e03] Laufzeit 32.8 s, 7 Einstellungen – rendere Video
+2026-11-18 13:36:28 [INFO] [wohnung-4b-e03] gerendert: [3, 5] | aus Cache: [0, 1, 2, 4, 6]
+2026-11-18 13:36:50 [INFO] [wohnung-4b-e03] Qualitätskontrolle läuft
+2026-11-18 13:37:14 [INFO] [wohnung-4b-e03] QC Versuch 2: 94.0 Punkte – nicht bestanden
+2026-11-18 13:37:14 [WARN] [wohnung-4b-e03] Korrekturen: ['Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)', 'Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)']
+2026-11-18 13:37:14 [INFO] [wohnung-4b-e03] Versuch 3: Zeitleiste + Stimmen
+2026-11-18 13:37:59 [INFO] [wohnung-4b-e03] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-18 13:37:59 [INFO] [wohnung-4b-e03] Laufzeit 33.2 s, 7 Einstellungen – rendere Video
+2026-11-18 13:38:17 [INFO] [wohnung-4b-e03] gerendert: [3, 5] | aus Cache: [0, 1, 2, 4, 6]
+2026-11-18 13:38:36 [INFO] [wohnung-4b-e03] Qualitätskontrolle läuft
+2026-11-18 13:39:01 [INFO] [wohnung-4b-e03] QC Versuch 3: 94.0 Punkte – nicht bestanden
+2026-11-18 13:39:01 [WARN] [wohnung-4b-e03] Korrekturen: ['Zeile 3.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.717)', 'Zeile 5.0 langsamer & deutlicher neu sprechen (Ähnlichkeit 0.83)']
+2026-11-18 13:39:01 [ERROR] [wohnung-4b-e03] Episode nach 3 Versuchen abgelehnt – wird NICHT veröffentlicht
