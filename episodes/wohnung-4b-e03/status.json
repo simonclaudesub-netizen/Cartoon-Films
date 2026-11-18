@@ -60,8 +60,14 @@
       "privacy": "private",
       "publish_at": "2026-11-18T17:00:00Z"
     },
-    "errors": {
-      "tiktok": "TikTok-Zugangsdaten fehlen (python -m studio auth-tiktok)"
+    "errors": {},
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7709515114541647874",
+      "status": "PROCESSING_UPLOAD",
+      "caption": "Durch den Türspion um 03:07… 😨 | Wohnung 4B – Teil 3 #duentscheidest #wohnung4b #pov #mystery #gruselig #cartoon #animation #serie #storytime",
+      "ai_label": "beim Posten in der App einschalten"
     }
   }
 }
