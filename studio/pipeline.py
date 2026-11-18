@@ -11,9 +11,17 @@ import time
 import traceback
 
 from . import db, qc, render, subtitles, timeline
+from .audio import tts
 from .modelsheet import look_hash
 
 MAX_ATTEMPTS = 3
+# Stimmen, die mit neuem Seed eine echte neue Aufnahme ("Take") liefern; Piper nur über Tempo/Rauschen
+TAKE_ENGINES = ("qwen3", "chatterbox", "zonos")
+
+
+def takes_possible(voice):
+    """True, wenn die tatsächlich benutzte Stimme (nach Rückfallkette) neue Takes erzeugen kann."""
+    return tts.resolve(voice).get("engine") in TAKE_ENGINES
 
 
 def _load(p, default):
@@ -39,7 +47,7 @@ def fixes_for(res, tl, ov):
     for t in res["line_tests"]:
         if not t["ok"]:
             lo = lines_ov.setdefault(t["key"], {})
-            if db.character(t["speaker"])["voice"].get("engine") in ("chatterbox", "zonos"):
+            if takes_possible(db.character(t["speaker"])["voice"]):
                 lo["seed"] = lo.get("seed", 1) + 1  # neue Aufnahme ("Take") statt Tempo-Änderung
                 actions.append(f"Zeile {t['key']} neu einsprechen, Take {lo['seed']} (Ähnlichkeit {t['similarity']})")
             else:
@@ -96,7 +104,7 @@ def recording_session(sc, chars, ov, ep_id):
         bad = []
         for s in tl["shots"]:
             for ln in s.get("lines", []):
-                if chars[ln["speaker"]]["voice"].get("engine") not in ("chatterbox", "zonos"):
+                if not takes_possible(chars[ln["speaker"]]["voice"]):
                     continue
                 key = ln["_key"]
                 seed = lines_ov.get(key, {}).get("seed", 1)

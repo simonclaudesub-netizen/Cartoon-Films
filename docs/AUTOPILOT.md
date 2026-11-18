@@ -34,6 +34,17 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
 6. **Sichtprüfung durch Claude**: `episodes/<id>/qc_contact.png` ansehen und `qc_report.md` lesen.
    Bei sichtbaren Fehlern (Figur abgeschnitten, Text überdeckt, unlogische Szene) Drehbuch
    korrigieren und erneut produzieren (zählt zu den 3 Versuchen).
+   **Selbstheilung ohne Rückfrage** (Kanalinhaber, 18.11.2026: „komplett automatisch“): Wird die
+   Episode abgelehnt, NICHT beim Menschen nachfragen, sondern selbst reparieren und erneut
+   `python -m studio produce <id>` starten – bis zu 2 weitere Runden:
+   - Sprachzeilen (`qc_report.md` → „Muss korrigiert werden“): Zeile im `script.json` umformulieren,
+     gleicher Sinn, aber ohne Ziffern/Zahlwörter, Abkürzungen und verschluckbare Endungen
+     („bin's“ → „bin es“); geflüsterte Ein-Wort-Sätze notfalls `emotion` „scared“ statt „whisper“.
+     Untertitel und Folgezeilen, die den Wortlaut zitieren, mitändern. `entwurf_*.json` nicht anfassen.
+   - Liegt der Fehler in der Prüfung selbst (Stimme korrekt, Whisper schreibt nur anders), den
+     Abgleich in `studio/qc.py` korrigieren, Test ergänzen, `python3 tests/test_studio.py`.
+   - Erst wenn auch Runde 3 scheitert, nicht veröffentlichen und den Grund im Kurzbericht nennen.
+   Die Zeitgrenze (Upload vor 17:40) gilt weiter; sonst Termin am Folgetag.
 7. **Freigabe**: Der Kanalinhaber hat entschieden (16.11.2026): bestandene QC (≥ 90, keine kritischen
    Fehler) gilt als Freigabe (`require_manual_approval = false`, Status „freigegeben“ durch
    „qc-automatik“). Findet die Sichtprüfung in Schritt 6 einen Fehler, wird NICHT veröffentlicht,

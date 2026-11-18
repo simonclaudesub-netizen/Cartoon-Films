@@ -257,6 +257,22 @@ def test_similarity_numbers_and_clitics():
     assert qc.similarity("Ich gehe nach Hause.", "Ich gehe nicht.") < qc.LINE_MIN
 
 
+def test_qwen_lines_get_new_takes():
+    """Unverständliche Qwen3-Zeilen bekommen neue Takes (Seed) statt immer derselben Aufnahme (Teil 3, 18.11.)."""
+    from studio import pipeline
+    from studio.audio import qwen
+    mp = _Patch()
+    try:
+        mp.setattr(qwen, "available", lambda: True)
+        assert pipeline.takes_possible(db.character("lina")["voice"])
+        res = {"line_tests": [{"ok": False, "key": "5.0", "speaker": "lina", "similarity": 0.83}], "checks": []}
+        ov = {}
+        actions = pipeline.fixes_for(res, {"shots": []}, ov)
+        assert ov["lines"]["5.0"]["seed"] == 2 and "Take" in actions[0]
+    finally:
+        mp.restore()
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):
