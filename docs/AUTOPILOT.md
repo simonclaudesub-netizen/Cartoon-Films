@@ -57,14 +57,12 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
      hochgeladen und von YouTube um **18:00 Uhr (Europe/Berlin)** freigeschaltet (`publishAt`);
      ist es später als 17:40, wird es für 18:00 Uhr am Folgetag eingeplant (nie sofort).
    - Neue Folge nur produzieren, wenn die vorige Folge bereits öffentlich ist (sonst gibt es noch keine Abstimmung) – dann nur Kurzbericht „wartet auf Abstimmung“.
-   - TikTok **vollautomatisch über Buffer** (`config/studio.json` → `tiktok.mode = "buffer"`, Wunsch des
-     Kanalinhabers 18.11.2026): `python -m studio publish <id> --platform tiktok` (nach YouTube). Das Video
-     kommt auf den Branch `tiktok-media`, Buffer postet um 18:00 Uhr mit KI-Kennzeichnung. Im Kurzbericht
-     `published.tiktok.buffer_post_id` nennen. Fällt Buffer aus, geht automatisch ein Entwurf ins
-     TikTok-Postfach (`TT_*`-Variablen) – dann den Menschen ans Posten mit „KI-generierte Inhalte“ erinnern.
-     Beobachten: Teil 1 über Buffer bekam 0 Aufrufe. Im Kurzbericht die Aufrufe des letzten Buffer-Posts
-     nennen, falls Buffer sie liefert, und den Menschen bitten, sie in der App zu prüfen.
-     Mit `mode = "entwurf"` geht jede Folge stattdessen als Entwurf ins Postfach.
+   - TikTok **als Entwurf ins Postfach** (`config/studio.json` → `tiktok.mode = "entwurf"`):
+     `python -m studio publish <id> --platform tiktok` (nach YouTube). Der Mensch postet um 18:00 Uhr in der
+     TikTok-App (Posteingang → Systembenachrichtigungen) mit „KI-generierte Inhalte“. Im Kurzbericht den
+     fertigen Text aus `published.tiktok.caption` zum Kopieren angeben und ans Posten um 18 Uhr erinnern.
+     Grund (17.11.2026): Über Buffer gepostete Videos waren öffentlich, bekamen aber 0 Aufrufe. Buffer
+     nicht wieder einschalten, außer der Kanalinhaber verlangt es (`mode = "buffer"`).
      Geht der Entwurf nicht: `python -m studio tiktok-paket <id>` und `final.mp4` + `tiktok_upload.txt`
      per Datei-Versand schicken; nach dem Posten `python -m studio manuell-gepostet <id> tiktok <url>`.
      (Eigene TikTok-App darf laut TikTok-Richtlinien nicht direkt posten – nicht versuchen.)
