@@ -1,0 +1,268 @@
+{
+  "id": "wohnung-4b-e04",
+  "series": "wohnung-4b",
+  "episode": 4,
+  "variant": "A",
+  "title": "Der Anruf",
+  "label": "WOHNUNG 4B · TEIL 4",
+  "summary": "Kaum Stimmen für Teil 3 – gewählt wurde die spannendere Option A: Lina anrufen. Sie liegt 300 km entfernt im Bett und hat nichts geschrieben, die Nachricht ist gelöscht. Dann klopft es, Lina hört es mit – und die Stimme vor der Tür sagt Linas Satz nach, wort-wörtlich, genau einmal.",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Okan wecken",
+      "B": "Frau Brandt wecken"
+    }
+  },
+  "cover_shot": 5,
+  "publish": {
+    "title": "Sie liegt 300 km weit weg im Bett… wer klopft dann an meine Tür? 😨 | Wohnung 4B – Teil 4",
+    "description": "Ich rufe Lina an – sie liegt zu Hause im Bett, 300 km weit weg, und hat mir nie geschrieben. Dann klopft es. Und die Stimme vor meiner Tür sagt Linas Satz nach. Wort für Wort.\nWas soll ich tun? Schreib A (Okan wecken) oder B (Frau Brandt wecken) in die Kommentare! Die Mehrheit entscheidet Teil 5.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#creepy",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
+  },
+  "shots": [
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 1.4,
+      "lens": 0.08,
+      "music": "tension",
+      "caption": "300 KM WEG?!",
+      "caption_dur": 1.8,
+      "camera": {
+        "move": "push_in",
+        "strength": 1.4
+      },
+      "pov": {
+        "mode": "door",
+        "target": [
+          545,
+          845
+        ],
+        "reach": 0.5
+      },
+      "sfx": [
+        {
+          "name": "knock_hard",
+          "at": 0.0
+        },
+        {
+          "name": "heartbeat",
+          "at": 0.3,
+          "gain": 0.8
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Wenn Lina zu Hause im Bett liegt, wer steht dann vor meiner Tür?",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "music": "tension",
+      "pov": {
+        "mode": "phone",
+        "contact": "Lina",
+        "avatar": "#c4473a",
+        "status": "Anruf läuft …",
+        "messages": []
+      },
+      "sfx": [
+        {
+          "name": "buzz",
+          "at": 0.1
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "lina",
+          "text": "Was? Ich liege im Bett. Ich habe dir gar nichts geschrieben.",
+          "fx": "phone",
+          "delay": 0.4
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "music": "mystery",
+      "pov": {
+        "mode": "phone",
+        "contact": "Lina",
+        "avatar": "#c4473a",
+        "status": "Anruf läuft …",
+        "messages": [
+          {
+            "from": "lina",
+            "text": "Diese Nachricht wurde gelöscht.",
+            "at": 0.3
+          }
+        ]
+      },
+      "sfx": [
+        {
+          "name": "ping",
+          "at": 0.3
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Ihre Nachricht ist weg. Einfach gelöscht.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.9
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 1.6,
+      "lens": 0.08,
+      "music": "tension",
+      "camera": {
+        "move": "static",
+        "shake": [
+          0.1,
+          0.8
+        ]
+      },
+      "pov": {
+        "mode": "door",
+        "target": [
+          545,
+          845
+        ],
+        "reach": 0.4
+      },
+      "sfx": [
+        {
+          "name": "knock",
+          "at": 0.1
+        },
+        {
+          "name": "knock",
+          "at": 0.5
+        },
+        {
+          "name": "knock",
+          "at": 0.9
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "lina",
+          "text": "Warte. Hat bei dir gerade jemand geklopft?",
+          "fx": "phone",
+          "delay": 1.2
+        },
+        {
+          "speaker": "du",
+          "text": "Du hast das auch gehört?",
+          "emotion": "whisper",
+          "fx": "inner",
+          "gap": 0.3
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 1.7,
+      "lens": 0.08,
+      "music": "tension",
+      "pov": {
+        "mode": "phone",
+        "contact": "Lina",
+        "avatar": "#c4473a",
+        "status": "Anruf läuft …",
+        "messages": []
+      },
+      "lines": [
+        {
+          "speaker": "lina",
+          "text": "Bleib ganz ruhig. Und mach auf keinen Fall die Tür auf.",
+          "fx": "phone",
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 2.1,
+      "lens": 0.1,
+      "music": "silence",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.6,
+        "punch": [
+          1.0
+        ]
+      },
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.9
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "lina",
+          "text": "Bleib ganz ruhig. Und mach auf keinen Fall die Tür auf.",
+          "emotion": "whisper",
+          "fx": "door",
+          "delay": 0.9
+        },
+        {
+          "speaker": "lina",
+          "text": "Wer hat das gerade gesagt?",
+          "fx": "phone",
+          "gap": 0.6
+        }
+      ],
+      "blackout_at": 7.6
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "music": "tension",
+      "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {
+          "A": "OKAN WECKEN",
+          "B": "FRAU BRANDT WECKEN"
+        },
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 5 FOLGT"
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Okan wecken. Oder B: Frau Brandt wecken? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.5,
+          "no_sub": true
+        }
+      ]
+    }
+  ]
+}

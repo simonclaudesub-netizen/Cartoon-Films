@@ -19,7 +19,8 @@
       "Wer imitiert Frau Brandts Stimme?",
       "Wer ist 'O.' auf dem Zettel 'Gut gemacht.'? (Okan? Oder jemand anderes mit O?)",
       "Warum klopft es bei Frau Brandt von innen, wenn ihre Hausschuhe draußen stehen?",
-      "Wie kann eine Nachricht von Lina kommen, die 300 km entfernt wohnt?"
+      "Wie kann eine Nachricht von Lina kommen, die 300 km entfernt wohnt?",
+      "Wer hat Linas Nachricht gelöscht – und woher kennt die Stimme Linas Satz?"
     ]
   },
   "cast": [
@@ -91,8 +92,8 @@
     }
   ],
   "next_plans": {
-    "A": "Teil 4 'Der Anruf' – Du rufst Lina an. Sie geht verschlafen ran: Sie liegt zu Hause im Bett, 300 km weit weg, und hat nichts geschrieben. Die Nachricht ist aus ihrem Verlauf verschwunden. Während ihr telefoniert, sagt die Stimme vor der Tür Linas letzten Satz nach – genau einmal. Hinweis auf den Nachhall.",
-    "B": "Teil 4 'Zweimal' – Du weckst Okan (Hausmeister, Erdgeschoss). Er kommt im Bademantel, schaut nicht durch den Spion und sagt: 'Was er hört, kann er sagen. Aber nur einmal. Nur einmal.' Er erklärt die Regel des Nachhalls (Staffelbogen Teil 4)."
+    "A": "Teil 5 'Zweimal' – Du legst auf und weckst Okan (Erdgeschoss). Er kommt im Bademantel, schaut nicht durch den Spion und sagt: 'Was er hört, kann er sagen. Aber nur einmal. Nur einmal.' Er erklärt den Nachhall – und dass Lina gerade alles gehört hat, was ER jetzt auch kann.",
+    "B": "Teil 5 'Das Foto' – Du klingelst bei Frau Brandt (4A). Sie öffnet nur einen Spalt, flüstert 'Nicht hier' und schiebt dir ein altes Foto zu: Ein junger Mann 1983 vor Tür 4B, auf der Rückseite 'Nicht öffnen. Nicht öffnen.' – unterschrieben mit O."
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",
