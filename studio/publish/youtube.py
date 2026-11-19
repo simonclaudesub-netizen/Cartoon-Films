@@ -143,8 +143,19 @@ def delete(video_id):
     return True
 
 
+def _own_channel(tok):
+    try:
+        r = requests.get("https://www.googleapis.com/youtube/v3/channels", params={"part": "id", "mine": "true"},
+                         headers={"Authorization": f"Bearer {tok}"}, timeout=30)
+        return r.json()["items"][0]["id"]
+    except Exception:
+        return None
+
+
 def comments(video_id, max_pages=10):
+    """Zuschauer-Kommentare (ohne die eigenen des Kanals, z. B. den Abstimmungs-Kommentar)."""
     tok = _token()
+    me = _own_channel(tok)
     out, page = [], None
     for _ in range(max_pages):
         params = {"part": "snippet", "videoId": video_id, "maxResults": 100, "textFormat": "plainText"}
@@ -156,6 +167,8 @@ def comments(video_id, max_pages=10):
         j = r.json()
         for it in j.get("items", []):
             sn = it["snippet"]["topLevelComment"]["snippet"]
+            if me and (sn.get("authorChannelId") or {}).get("value") == me:
+                continue
             out.append({"author": (sn.get("authorChannelId") or {}).get("value", sn.get("authorDisplayName")),
                         "text": sn.get("textOriginal", ""), "likes": sn.get("likeCount", 0)})
         page = j.get("nextPageToken")

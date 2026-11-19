@@ -2,7 +2,7 @@
 
 Seite: https://claude.ai/artifact/2kYZpzpZNWnx7a5XbqDAts (Artifact-Typ „Data“).
 Die Seite kann YouTube/TikTok nicht selbst abfragen (kein Connector), daher lädt eine geplante Aufgabe
-stündlich neue Zahlen hoch.
+etwa alle 3 Stunden neue Zahlen hoch.
 
 1. `git pull -q origin main` und `python3 -m studio.stats` → schreibt `stats/videos.json`, `stats/kanaele.json`,
    `stats/abstimmungen.json` (nur lesende Abfragen: YouTube Data API, Buffer-API).
@@ -13,4 +13,6 @@ stündlich neue Zahlen hoch.
    (vorher `get`, um `if_version` und die alte Adresse zu kennen).
 4. Die alten Assets löschen (Artifact `action: "delete"`, `url` = Seite, `path` = alte Asset-ID, die 32 Zeichen
    nach `/_blob/`), damit sich nichts ansammelt.
-5. Nichts committen, keine Nachricht ans Handy. Bei Fehlern nur kurz im Bericht nennen.
+5. **YouTube-Kommentare beantworten** nach `docs/KOMMENTARE.md` (Abstimmungs-Kommentar, offene Kommentare,
+   höchstens 20 Antworten pro Lauf).
+6. Nichts committen, keine Nachricht ans Handy. Bei Fehlern nur kurz im Bericht nennen.

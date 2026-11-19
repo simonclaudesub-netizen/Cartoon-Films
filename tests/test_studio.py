@@ -273,6 +273,26 @@ def test_qwen_lines_get_new_takes():
         mp.restore()
 
 
+def test_comment_replies_guarded():
+    """Antworten: nur offene Kommentare, max. 20, keine Links/@/Doppelten (Freigabe 19.11.)."""
+    from studio.publish import comments as c
+    sent_calls = []
+    orig = (c.open_comments, c.reply)
+    c.open_comments = lambda: [{"id": f"k{i}"} for i in range(30)]
+    c.reply = lambda pid, text: sent_calls.append(pid) or f"r{pid}"
+    try:
+        ans = [{"id": f"k{i}", "text": f"Antwort {i} 😬"} for i in range(25)]
+        ans += [{"id": "k25", "text": "Antwort 1 😬"}, {"id": "fremd", "text": "hallo"},
+                {"id": "k26", "text": "schau www.spam.de"}, {"id": "k27", "text": "@jemand hi"}]
+        sent, skipped = c.send(ans)
+        assert len(sent) == c.MAX_PER_RUN == len(sent_calls)
+        gr = " ".join(s["grund"] for s in skipped)
+        assert "Grenze" in gr and "nicht (mehr) offen" in gr and "Link" in gr and "@" in gr
+        assert "Was soll ich tun?" in c.vote_text({"episode": 4, "cliffhanger": {"options": {"A": "X", "B": "Y"}}})
+    finally:
+        c.open_comments, c.reply = orig
+
+
 if __name__ == "__main__":
     fails = 0
     for name, fn in list(globals().items()):
