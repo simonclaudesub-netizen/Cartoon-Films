@@ -89,6 +89,25 @@
           "winner": "A"
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e03",
+      "counts": {
+        "A": 1,
+        "B": 0
+      },
+      "total": 1,
+      "winner": "A",
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 1,
+            "B": 0
+          },
+          "total": 1,
+          "winner": "A"
+        }
+      }
     }
   ],
   "next_plans": {
