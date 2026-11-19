@@ -4,7 +4,7 @@ Freigabe des Kanalinhabers (19.11.2026): Claude antwortet öffentlich im Namen d
 TikTok: keine Schnittstelle für Antworten – nur in der App durch den Menschen.
 
 ## Ablauf (Teil jeder Dashboard-Aktualisierung, siehe docs/DASHBOARD.md)
-1. `python3 -m studio.publish.comments abstimmung` – setzt unter jede neu öffentliche Folge einmal den
+1. `python3 -m studio.publish.comments abstimmung` – setzt unter die neueste öffentliche Folge einmal den
    Abstimmungs-Kommentar („Was soll ich tun? 🅰️ … oder 🅱️ …?“). Anpinnen geht per API nicht.
 2. `python3 -m studio.publish.comments offen` → `stats/kommentare_offen.json` lesen.
 3. Antworten schreiben (Regeln unten) nach `stats/antworten.json` als `[{"id": "<Kommentar-ID>", "text": "…"}]`.

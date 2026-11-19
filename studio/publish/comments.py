@@ -8,7 +8,7 @@ und schickt fertige Antworten ab – mit harten Grenzen, die unabhängig vom Tex
 
   python -m studio.publish.comments offen            -> stats/kommentare_offen.json
   python -m studio.publish.comments antworten <datei> -> [{"id": <Kommentar-ID>, "text": "..."}]
-  python -m studio.publish.comments abstimmung        -> Abstimmungs-Kommentar unter neue öffentliche Folgen
+  python -m studio.publish.comments abstimmung        -> Abstimmungs-Kommentar unter die neueste öffentliche Folge
 
 API (YouTube Data API v3, Scope youtube.force-ssl, je Schreibvorgang 50 Kontingent-Einheiten):
   GET  commentThreads?part=snippet,replies&videoId=...      (offene Kommentare)
@@ -161,7 +161,7 @@ def vote_text(sc):
 
 
 def vote_comments():
-    """Eigener Abstimmungs-Kommentar unter jede öffentliche Folge, die noch keinen hat."""
+    """Eigener Abstimmungs-Kommentar unter die neueste öffentliche Folge, falls sie noch keinen hat."""
     me, done = channel_id(), []
     pubs = _published()
     if not pubs:
@@ -170,9 +170,8 @@ def vote_comments():
                      headers=_h(), timeout=30)
     r.raise_for_status()
     public = {it["id"] for it in r.json().get("items", []) if it["status"]["privacyStatus"] == "public"}
-    for ep, vid, sc in pubs:
-        if vid not in public or not sc.get("cliffhanger"):
-            continue
+    live = [(ep, vid, sc) for ep, vid, sc in pubs if vid in public and sc.get("cliffhanger")]
+    for ep, vid, sc in live[-1:]:  # nur die neueste öffentliche Folge – bei älteren ist die Abstimmung vorbei
         if any(_author(t["snippet"]["topLevelComment"]["snippet"]) == me for t in _threads(vid)):
             continue
         done.append({"episode_id": ep, "kommentar_id": post_top(vid, vote_text(sc))})
