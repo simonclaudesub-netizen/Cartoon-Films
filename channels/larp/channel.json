@@ -1,0 +1,14 @@
+{
+  "name": "VEKTOR · agent ops",
+  "system": "VEKTOR",
+  "version": "vek-2.1.4",
+  "format": {"width": 1080, "height": 1920, "fps": 30, "seconds": "15-25"},
+  "look": "Neon-HUD auf Fast-Schwarz (Pink/Violett/Weiß), Monochrom-Szene als Kontrast, leuchtende Datenstränge, rotierender Strahlenkern, Zahlen zählen live hoch, Schnitte auf dem Beat (Flash + Glitch + Zoom-Punch)",
+  "hashtags": ["#claude", "#ai", "#edit", "#coding", "#larp", "#aiagents"],
+  "sounds": [
+    {"title": "KITTY RALLY TWO - SLOW", "artist": "Sh1ya (Originalton, drexxst)", "start": "0:00", "bpm_hint": "Tempo im Video prüfen"},
+    {"title": "Gorąca Jak San Pedro", "artist": "Cypis", "start": "Refrain", "bpm_hint": "Tempo im Video prüfen"}
+  ],
+  "sound_hinweis": "Beide Lieder sind urheberrechtlich geschützt: Sie kommen NICHT ins gerenderte Video, sondern werden in der TikTok-App aus der Sound-Bibliothek daruntergelegt. Das Video hat einen eigenen, lizenzfreien Platzhalter-Beat im selben Tempo.",
+  "ehrlichkeit": "Alle Zahlen sind ausgedacht – im Bild steht immer 'metrics illustrative / simulated'. Trading-Szene: 'paper trading · not trading advice'. Kein Logo und kein Name einer echten Firma im Bild; das System heißt VEKTOR."
+}

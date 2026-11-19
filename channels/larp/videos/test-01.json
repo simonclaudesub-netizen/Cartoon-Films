@@ -1,0 +1,19 @@
+{
+  "bpm": 128,
+  "drop_beat": 8,
+  "caption": "day 14 of letting my agent run the business 🤖 (fully simulated)",
+  "sound": {"title": "KITTY RALLY TWO - SLOW", "artist": "Sh1ya", "start": "0:00"},
+  "shots": [
+    {"scene": "agent_ops", "beats": 8, "punch": 0, "cam": {"from": [540, 560, 1.45], "to": [540, 960, 1.0]},
+     "text": ["day 14 of letting", "my agent run", "the business"], "text_y": 470},
+    {"scene": "pipeline", "beats": 8, "cam": {"from": [540, 820, 1.0], "to": [540, 900, 1.1]}},
+    {"scene": "mono_field", "beats": 8, "cam": {"from": [420, 560, 1.4], "to": [520, 760, 1.12]}},
+    {"scene": "trading", "beats": 8, "cam": {"from": [560, 620, 1.5], "to": [540, 960, 1.04]}},
+    {"scene": "agent_ops", "beats": 2, "cam": {"from": [540, 1010, 1.9], "to": [540, 1010, 2.2]}},
+    {"scene": "pipeline", "beats": 2, "cam": {"from": [360, 150, 2.4], "to": [380, 160, 2.6]}},
+    {"scene": "mono_field", "beats": 2, "cam": {"from": [330, 1480, 1.8], "to": [330, 1440, 2.0]}},
+    {"scene": "trading", "beats": 2, "cam": {"from": [840, 1480, 2.0], "to": [840, 1440, 2.2]}},
+    {"scene": "core_card", "beats": 6, "cam": {"from": [540, 960, 1.15], "to": [540, 960, 1.0]},
+     "text": ["it doesn't chat.", "it decides."], "text_y": 1620}
+  ]
+}
