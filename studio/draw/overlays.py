@@ -88,6 +88,11 @@ def endcard(ctx, data, t):
         P.text(ctx, data.get("next", "TEIL 2 FOLGT"), 0, 0, 80, family="Bangers", bold=False, color="#ffd23f",
                outline=12)
         ctx.restore()
+    more = data.get("more", "ALLE TEILE AUF MEINEM PROFIL")
+    if more and t > 1.4 and y0 + 725 <= SAFE[3]:  # Verweis auf die Vorfolgen (neue Zuschauer aus dem Feed)
+        a = min(1.0, (t - 1.4) / 0.3)
+        P.rrect(ctx, x - 340, y0 + 670, 680, 72, 36, "#1a1a2e", 4, alpha=a)
+        P.text(ctx, more, x, y0 + 720, 42, color="#ffffff")
 
 
 def peephole(ctx, cx=540, cy=900, r=500):

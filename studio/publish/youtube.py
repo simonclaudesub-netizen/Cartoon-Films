@@ -5,13 +5,15 @@ Offizielle Endpunkte (geprüft am 16.11.2026):
                 -> Location-Header = Upload-URL, dann PUT der Datei (201 Created = fertig)
   Kommentare:   GET  https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=...
   Token:        POST https://oauth2.googleapis.com/token  (Standard-OAuth-2.0 von Google)
-Scopes: youtube.upload (Upload) + youtube.force-ssl (Kommentare lesen)
+Scopes: youtube.upload (Upload) + youtube.force-ssl (Kommentare) + yt-analytics.readonly (Zuschauerbindung)
 Feld status.containsSyntheticMedia = KI-Offenlegung.
 
 Zugangsdaten (nie im Git):
   - lokal: config/secrets/youtube.json  {"client_id": "...", "client_secret": "...", "refresh_token": "..."}
   - im täglichen Cloud-Betrieb: Umgebungsvariablen YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
     (vom Menschen in den Einstellungen der Cloud-Umgebung eingetragen)
+  - ein später neu erteilter Refresh-Token (z. B. mit zusätzlichem Analytics-Scope) liegt VERSCHLÜSSELT
+    (Fernet, Schlüssel = Umgebungsvariable TT_TOKEN_KEY) in config/youtube_token.enc und hat Vorrang
 """
 import json
 import os
@@ -23,12 +25,22 @@ import requests
 from ..db import ROOT
 
 SECRETS = ROOT / "config" / "secrets" / "youtube.json"
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.force-ssl"]
+SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.force-ssl",
+          "https://www.googleapis.com/auth/yt-analytics.readonly"]
+ENC = ROOT / "config" / "youtube_token.enc"
 REDIRECT = "http://localhost:8765/"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 
 
 ENV = {"client_id": "YT_CLIENT_ID", "client_secret": "YT_CLIENT_SECRET", "refresh_token": "YT_REFRESH_TOKEN"}
+
+
+def _fernet():
+    key = os.environ.get("TT_TOKEN_KEY", "").strip()
+    if not key:
+        return None
+    from cryptography.fernet import Fernet
+    return Fernet(key.encode())
 
 
 def _secrets():
@@ -37,6 +49,12 @@ def _secrets():
         if s.get("refresh_token"):
             return s
     s = {k: os.environ.get(v, "").strip() for k, v in ENV.items()}
+    f = _fernet()
+    if f and ENC.exists():  # neuerer Token (mehr Berechtigungen) aus dem Repository hat Vorrang
+        try:
+            s["refresh_token"] = f.decrypt(ENC.read_bytes()).decode()
+        except Exception:
+            pass
     return s if all(s.values()) else None
 
 
@@ -77,6 +95,9 @@ def exchange_code(client_id, client_secret, code):
                                        "redirect_uri": REDIRECT, "grant_type": "authorization_code"}, timeout=30)
     r.raise_for_status()
     tok = r.json()
+    f = _fernet()
+    if f:  # für die tägliche Cloud-Sitzung: verschlüsselt ins Repository (config/youtube_token.enc)
+        ENC.write_bytes(f.encrypt(tok["refresh_token"].encode()))
     SECRETS.parent.mkdir(parents=True, exist_ok=True)
     SECRETS.write_text(json.dumps({"client_id": client_id, "client_secret": client_secret,
                                    "refresh_token": tok["refresh_token"]}, indent=2))

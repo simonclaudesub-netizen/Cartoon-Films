@@ -53,4 +53,20 @@ sich automatisch aus der Länge der gesprochenen Zeilen. Vor der Produktion prü
 - Hook in der ersten Sekunde (Einblendung, Geräusch oder Satz)
 - Gesamtlänge 30–60 s, Einstellungen 1–8,5 s
 - Zeilen höchstens 22 Wörter
-- Letzte Einstellung: A/B-Abstimmung + „Teil X folgt“
+- Letzte Einstellung: A/B-Abstimmung + „Teil X folgt“. Die Frage (`endcard.question`) einzeilig halten
+  (z. B. „WAS SOLL ICH TUN?“) – nur dann passt der Hinweis „ALLE TEILE AUF MEINEM PROFIL“ (`more`, Standard;
+  `"more": ""` schaltet ihn ab) noch in den sicheren Bereich.
+
+## Einstieg für Neue (Kanalinhaber, 20.11.2026)
+Die meisten Zuschauer kommen aus dem Feed und kennen die Vorfolgen nicht. Daten bis Teil 4: Teil 1 und 4
+(Einstieg ohne Vorwissen verständlich) liefen am besten; Teil 2 und 3 begannen mit „Ihr habt B/A gewählt“
+und Teil 3 lief auf YouTube am schwächsten.
+- **Erste Einstellung (≤ 3 s) muss ohne Vorwissen funktionieren:** Ausgangslage + Widerspruch in einem
+  Satz, mit konkretem Detail (Uhrzeit, Zahl, Ort). Beispiel Teil 4: „Wenn Lina zu Hause im Bett liegt,
+  wer steht dann vor meiner Tür?“ + Einblendung „300 KM WEG?!“.
+- **Nicht** mit dem Abstimmungsergebnis, „wie ihr wisst“ oder einer Rückschau anfangen. Das Ergebnis
+  („Ihr habt A gewählt“) kommt kurz in Einstellung 2 oder als kleine Einblendung – nie als Hook.
+- Figuren beim ersten Nennen mit Rolle: „meine Freundin Lina“, „der Nachbar Okan“.
+- Einblendung (`caption`) der ersten Einstellung = das Rätsel in 2–4 Wörtern, nicht „TEIL 5“.
+- **Titel** (`publish.title`): verständlich ohne Vorfolgen – konkrete Situation + offene Frage/Widerspruch
+  + ein Emoji, Serie und Teil am Ende („… | Wohnung 4B – Teil N“). Hook-Satz und Titel dürfen sich ähneln.

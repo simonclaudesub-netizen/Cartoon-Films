@@ -36,11 +36,17 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
    - „Beides“-Kommentare (A und B zugleich) dürfen als Augenzwinkern vorkommen („Beide wecken? Keine Chance.“).
    - Passt keine Idee, keine einbauen. Verwendete Idee in der Serienbibel unter `zuschauer_ideen`
      eintragen (Folge + Idee in eigenen Worten) und im Kurzbericht nennen.
+3c. **Zuschauerbindung lernen**: `python -m studio.publish.analytics` (YouTube Analytics, 1–3 Tage Verzögerung).
+   Zeigt je Folge: Ø gesehener Anteil, wie viele nach 3 s noch da sind, und die Einstellung mit dem größten
+   Abbruch samt Text. Daraus fürs neue Drehbuch ableiten (z. B. „lange Erklärsätze in Einstellung 2–3 kosten
+   Zuschauer → kürzer, schneller zum Rätsel“), im Kurzbericht in einem Satz nennen. Fehlt die Berechtigung
+   (Meldung „keine Berechtigung“), den Schritt überspringen und im Kurzbericht erwähnen – nicht abbrechen.
 4. **Entwurf vorhanden?** Liegen `episodes/<id>/entwurf_A.json` / `entwurf_B.json` vor, wird der Entwurf
    der Gewinner-Option übernommen: `python -m studio entwurf <id> <A|B>` (dann weiter mit Schritt 5).
    Sonst: **Drehbuch schreiben**: `episodes/<serie>-eNN/script.json` nach `docs/DREHBUCH_FORMAT.md`.
    - Eigene, originelle Handlung; keine realen Personen, Marken oder fremden Figuren.
    - Hook in Sekunde 1, 30–60 s, Cliffhanger + A/B-Abstimmung.
+   - **Einstieg für Neue** nach `docs/DREHBUCH_FORMAT.md` (erste Einstellung und Titel ohne Vorwissen verständlich).
    - Neue Figuren: zuerst in `db/characters/<id>.json` anlegen, Stimme mit
      `python -m studio.voicecast <id> --female|--male` casten, `python -m studio sheets`.
    - Serienbibel aktualisieren: neue Geheimnisse, `next_plans` für A und B der neuen Folge.
