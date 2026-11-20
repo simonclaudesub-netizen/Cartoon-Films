@@ -26,6 +26,11 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
    Pro Folge **eine** passende Idee als kleine Anspielung einbauen (Zeile, Requisit, Gag oder Figur-Reaktion),
    bevorzugt die mit den meisten Likes bzw. eine, der der Kanal „schreibe ich mir auf“ geantwortet hat:
    - Die Gewinner-Option bleibt die Handlung – Wünsche ergänzen, entscheiden aber nie gegen die Abstimmung.
+   - **Realismus-Check** (Kanalinhaber, 20.11.2026): Jede Idee vorher abgleichen – würde die Figur das in
+     dieser Situation wirklich tun? Hat sie die Dinge dafür in der Wohnung/zur Hand? Passt es zur Uhrzeit,
+     zum Ort, zum bisherigen Wissen der Figur und zur Stimmung (Grusel/Spannung, kein Klamauk)? Bleibt die
+     Folge logisch mit den Vorfolgen? Wenn nein: abschwächen (nur erwähnen, als Gedanke, als Witz einer
+     anderen Figur) oder weglassen. Im Kurzbericht kurz begründen, warum eine Idee rein- oder rausflog.
    - Familientauglich umdeuten (z. B. „Tretmine“ → harmlose Falle aus Krimskrams), keine Gewalt, keine
      realen Personen/Marken, keine Benutzernamen im Video, nichts, was Weltregeln oder Geheimnisse bricht.
    - „Beides“-Kommentare (A und B zugleich) dürfen als Augenzwinkern vorkommen („Beide wecken? Keine Chance.“).
