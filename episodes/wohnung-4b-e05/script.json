@@ -1,0 +1,97 @@
+{
+  "id": "wohnung-4b-e05",
+  "series": "wohnung-4b",
+  "episode": 5,
+  "title": "Zweimal",
+  "label": "WOHNUNG 4B · TEIL 5",
+  "summary": "Keine gültigen Stimmen für Teil 4 – gewählt wurde die spannendere Option A: Okan wecken (per Anruf, denn nachts wird nicht geöffnet). Der Hausmeister kommt hoch, sagt alles zweimal und erklärt die Regel: Was er hört, kann er sagen – aber nur einmal. Dann sagt 'Okan' einen Satz nur ein einziges Mal: 'Jetzt kannst du aufmachen.'",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Durch den Türspion schauen",
+      "B": "Okan zurückrufen"
+    }
+  },
+  "cover_shot": 4,
+  "publish": {
+    "title": "Vor meiner Tür steht jemand, der JEDE Stimme nachmacht… aber nur einmal 😨 | Wohnung 4B – Teil 5",
+    "description": "Vor meiner Tür steht etwas, das jede Stimme nachmachen kann. Ich rufe den Hausmeister Okan an – er kommt hoch und erklärt mir die Regel: Was er hört, kann er sagen. Aber nur einmal. Dann sagt 'Okan' einen Satz nur ein einziges Mal.\nWas soll ich tun? Schreib A (durch den Türspion schauen) oder B (Okan zurückrufen) in die Kommentare! Die Mehrheit entscheidet Teil 6.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#creepy", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+  },
+  "shots": [
+    {
+      "set": "flur", "time": "night", "zoom": 1.5, "lens": 0.08, "music": "tension",
+      "caption": "JEDE STIMME?!", "caption_dur": 1.8,
+      "camera": {"move": "push_in", "strength": 1.4},
+      "pov": {"mode": "door", "target": [545, 845], "reach": 0.5},
+      "sfx": [{"name": "knock_hard", "at": 0.0}, {"name": "heartbeat", "at": 0.3, "gain": 0.8}],
+      "lines": [
+        {"speaker": "du", "text": "Vor meiner Tür steht jemand, der jede Stimme nachmachen kann.", "emotion": "scared", "fx": "inner", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "music": "tension",
+      "pov": {"mode": "phone", "contact": "Okan (Hausmeister)", "avatar": "#3a6ea5", "status": "Anruf läuft …", "messages": []},
+      "sfx": [{"name": "buzz", "at": 0.1}],
+      "lines": [
+        {"speaker": "du", "text": "Ich rufe den Hausmeister an. Okan.", "emotion": "whisper", "fx": "inner", "delay": 0.3},
+        {"speaker": "okan", "text": "Ich komme hoch. Mach nicht auf. Mach nicht auf.", "fx": "phone", "gap": 0.4}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.3, "lens": 0.08, "music": "mystery",
+      "camera": {"move": "pan_left", "strength": 0.4},
+      "lines": [
+        {"speaker": "du", "text": "Frau Brandt auch wecken? Nein. Bei ihr hat es von innen geklopft.", "emotion": "whisper", "fx": "inner", "delay": 0.4}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.6, "lens": 0.08, "music": "tension",
+      "camera": {"move": "static", "shake": [0.6]},
+      "pov": {"mode": "door", "target": [545, 845], "reach": 0.4},
+      "sfx": [{"name": "steps", "at": 0.0, "gain": 0.8}, {"name": "knock", "at": 1.0}, {"name": "knock", "at": 1.4}],
+      "lines": [
+        {"speaker": "okan", "text": "Okan hier. Okan hier.", "fx": "door", "delay": 1.8},
+        {"speaker": "du", "text": "Er sagt alles zweimal.", "emotion": "whisper", "fx": "inner", "gap": 0.4}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.9, "lens": 0.1, "music": "mystery",
+      "caption": "NUR EINMAL", "caption_dur": 2.2,
+      "camera": {"move": "push_in", "strength": 1.2},
+      "sfx": [{"name": "sting", "at": 0.2, "gain": 0.7}],
+      "lines": [
+        {"speaker": "okan", "text": "Hör zu. Was er hört, kann er sagen. Aber nur einmal. Nur einmal.", "fx": "door", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.7, "lens": 0.08, "music": "tension",
+      "lines": [
+        {"speaker": "okan", "text": "Er hat Lina gehört. Und jetzt hört er mich.", "fx": "door", "delay": 0.3},
+        {"speaker": "du", "text": "Also sagt der echte Okan alles zweimal.", "emotion": "whisper", "fx": "inner", "gap": 0.4}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 2.2, "lens": 0.1, "music": "silence",
+      "camera": {"move": "push_in", "strength": 1.6, "punch": [2.2]},
+      "sfx": [{"name": "sting", "at": 2.2}],
+      "lines": [
+        {"speaker": "okan", "text": "Gut. Jetzt kannst du aufmachen.", "fx": "door", "delay": 1.0},
+        {"speaker": "du", "text": "Das hat er nur einmal gesagt.", "emotion": "scared", "fx": "inner", "gap": 0.9}
+      ],
+      "blackout_at": 5.6
+    },
+    {
+      "set": "flur", "time": "night", "music": "tension", "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {"A": "TÜRSPION", "B": "OKAN ZURÜCKRUFEN"},
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 6 FOLGT"
+      },
+      "lines": [
+        {"speaker": "du", "text": "Was soll ich tun? A: Durch den Türspion schauen. Oder B: Okan zurückrufen? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+      ]
+    }
+  ]
+}

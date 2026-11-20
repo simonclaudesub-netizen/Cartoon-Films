@@ -20,7 +20,8 @@
       "Wer ist 'O.' auf dem Zettel 'Gut gemacht.'? (Okan? Oder jemand anderes mit O?)",
       "Warum klopft es bei Frau Brandt von innen, wenn ihre Hausschuhe draußen stehen?",
       "Wie kann eine Nachricht von Lina kommen, die 300 km entfernt wohnt?",
-      "Wer hat Linas Nachricht gelöscht – und woher kennt die Stimme Linas Satz?"
+      "Wer hat Linas Nachricht gelöscht – und woher kennt die Stimme Linas Satz?",
+      "Wer hat 'Jetzt kannst du aufmachen' gesagt – nur ein einziges Mal?"
     ]
   },
   "cast": [
@@ -113,11 +114,30 @@
           "winner": "A"
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e04",
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "total": 0,
+      "winner": null,
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 0
+          },
+          "total": 0,
+          "winner": null
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 5 'Zweimal' – Du legst auf und weckst Okan (Erdgeschoss). Er kommt im Bademantel, schaut nicht durch den Spion und sagt: 'Was er hört, kann er sagen. Aber nur einmal. Nur einmal.' Er erklärt den Nachhall – und dass Lina gerade alles gehört hat, was ER jetzt auch kann.",
-    "B": "Teil 5 'Das Foto' – Du klingelst bei Frau Brandt (4A). Sie öffnet nur einen Spalt, flüstert 'Nicht hier' und schiebt dir ein altes Foto zu: Ein junger Mann 1983 vor Tür 4B, auf der Rückseite 'Nicht öffnen. Nicht öffnen.' – unterschrieben mit O."
+    "A": "Teil 6 'Zwei Okans' – Du schaust durch den Türspion: Okan steht da, im Bademantel, und lächelt zu ruhig. Dann klingelt dein Handy: Okan ruft an – 'Ich bin noch unten. Ich bin noch unten.' Zum ersten Mal entscheidet das Publikum, welche Stimme echt ist (Staffelbogen Teil 6).",
+    "B": "Teil 6 'Besetzt' – Du rufst Okan zurück. Vor der Tür klingelt kein Handy. Am Telefon flüstert Okan: 'Ich bin im Keller eingeschlossen. Im Keller eingeschlossen.' Vor der Tür sagt die Stimme ruhig: 'Mach auf.' Zum ersten Mal entscheidet das Publikum, welche Stimme echt ist."
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",
@@ -138,5 +158,11 @@
       "Teil 5: Frau Brandts altes Foto: Oskar 1983 vor 4B, Rückseite 'Nicht öffnen. Nicht öffnen.'",
       "Teil 6: Publikum entscheidet zum ersten Mal, welche von zwei Stimmen echt ist."
     ]
-  }
+  },
+  "zuschauer_ideen": [
+    {
+      "folge": "wohnung-4b-e05",
+      "idee": "'Okan und Frau Brandt beide wecken' – als Gedanke eingebaut: Frau Brandt wird bewusst nicht geweckt, weil es bei ihr von innen geklopft hat (Realismus: nachts nicht raus, also Okan per Anruf)."
+    }
+  ]
 }
