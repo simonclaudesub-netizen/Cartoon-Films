@@ -10,6 +10,7 @@
   votes <episode> [--a N --b N]   Abstimmung auswerten (YouTube automatisch, TikTok manuell)
   tiktok-paket <episode>     Beschreibung + Checkliste für den manuellen TikTok-Upload
   manuell-gepostet <episode> <plattform> [url]   manuellen Upload vermerken
+  tiktok-zahlen <episode> <aufrufe> [likes] [kommentare] [teilen]   TikTok-Zahlen eintragen (aus der App abgelesen)
   dashboard                  Dashboard erzeugen (dashboard/index.html)
   auth-youtube <client_id> <client_secret> [code]
   auth-tiktok <client_key> <client_secret> <redirect_uri> [code|weiterleitungs-url]
@@ -85,6 +86,16 @@ def main(argv=None):
         from . import release
         release.mark_published_manually(a.args[0], a.args[1], a.args[2] if len(a.args) > 2 else "")
         print("Als veröffentlicht vermerkt.")
+    elif a.cmd == "tiktok-zahlen":
+        import datetime as dt
+        f = db.ROOT / "episodes" / a.args[0] / "status.json"
+        st = json.loads(f.read_text())
+        tk = st.setdefault("published", {}).setdefault("tiktok", {"platform": "tiktok", "mode": "manuell"})
+        vals = [int(x.replace(".", "")) for x in a.args[1:5]]
+        tk["zahlen"] = {**dict(zip(("aufrufe", "likes", "kommentare", "teilen"), vals)),
+                        "stand": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+        f.write_text(json.dumps(st, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(a.args[0], tk["zahlen"])
     elif a.cmd == "dashboard":
         from . import dashboard
         print(dashboard.build())

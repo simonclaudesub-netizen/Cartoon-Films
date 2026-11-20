@@ -2,7 +2,9 @@
 
 Quellen (nur lesend):
   YouTube Data API v3: channels?part=statistics&mine=true, videos?part=statistics,status&id=...
-  Buffer-API (TikTok): post(input:{id}) { metrics { type value } }  – Buffer liest die Zahlen bei TikTok ab.
+  TikTok: Die eigene TikTok-App hat keinen Lese-Scope für Aufrufe (nur video.upload). Zahlen kommen daher
+    aus `published.tiktok.zahlen` (vom Kanalinhaber abgelesen, `python -m studio tiktok-zahlen …`);
+    nur für alte Buffer-Posts ohne solche Zahlen fragt das Skript Buffer (post.metrics).
   Abstimmungen: db/series/<serie>.json (votes), von `studio votes` aus den Kommentaren gezählt.
 Schreibt drei JSON-Dateien {rows, meta} nach stats/ (für das Hochladen ins Dashboard).
 """
@@ -58,7 +60,16 @@ def collect():
 
     for ep, sc, st in eps:
         tk = st["published"].get("tiktok")
-        if not tk or tk.get("mode") != "buffer":
+        if not tk:
+            continue
+        z = tk.get("zahlen")
+        if z or tk.get("mode") != "buffer":  # Posteingang/manuell: abgelesene Zahlen (oder noch keine)
+            videos.append({"folge": sc.get("episode"), "titel": sc.get("title"), "plattform": "TikTok",
+                           "status": "öffentlich" if z or tk.get("manual") else "Entwurf im Posteingang",
+                           "veroeffentlicht": (z or {}).get("stand") or tk.get("publish_at"),
+                           "aufrufe": (z or {}).get("aufrufe"), "likes": (z or {}).get("likes"),
+                           "kommentare": (z or {}).get("kommentare"), "teilen": (z or {}).get("teilen"),
+                           "link": tk.get("url") or ""})
             continue
         try:
             p = buffer._q("query($id: PostId!) { post(input: {id: $id}) { status dueAt sentAt externalLink "
@@ -83,14 +94,13 @@ def collect():
         kanaele.append({"plattform": "YouTube", "name": ch[0]["snippet"]["title"],
                         "abonnenten": None if s.get("hiddenSubscriberCount") else int(s.get("subscriberCount", 0)),
                         "aufrufe_gesamt": int(s.get("viewCount", 0)), "videos": int(s.get("videoCount", 0))})
-    try:
-        c = buffer.tiktok_channel()
-        tk_rows = [v for v in videos if v["plattform"] == "TikTok"]
-        kanaele.append({"plattform": "TikTok", "name": "@" + c["name"] if c else "?", "abonnenten": None,
-                        "aufrufe_gesamt": sum(v["aufrufe"] for v in tk_rows),
+    tk_rows = [v for v in videos if v["plattform"] == "TikTok"]
+    if tk_rows:
+        names = [st["published"]["tiktok"].get("channel") for _, _, st in eps if st["published"].get("tiktok")]
+        name = next((n for n in names if n), None)
+        kanaele.append({"plattform": "TikTok", "name": "@" + name if name else "TikTok", "abonnenten": None,
+                        "aufrufe_gesamt": sum(v["aufrufe"] or 0 for v in tk_rows),
                         "videos": sum(1 for v in tk_rows if v["status"] == "öffentlich")})
-    except Exception as e:  # noqa: BLE001
-        errors.append(f"TikTok-Kanal: {e}")
 
     abst = []
     for s in db.series_all().values() if isinstance(db.series_all(), dict) else db.series_all():

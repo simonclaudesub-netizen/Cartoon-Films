@@ -5,7 +5,7 @@ Die Seite kann YouTube/TikTok nicht selbst abfragen (kein Connector), daher läd
 etwa alle 3 Stunden neue Zahlen hoch.
 
 1. `git pull -q origin main` und `python3 -m studio.stats` → schreibt `stats/videos.json`, `stats/kanaele.json`,
-   `stats/abstimmungen.json` (nur lesende Abfragen: YouTube Data API, Buffer-API).
+   `stats/abstimmungen.json` (nur lesende Abfragen: YouTube Data API; TikTok-Zahlen aus `published.tiktok.zahlen`, eingetragen mit `python -m studio tiktok-zahlen <folge> <aufrufe> [likes] [kommentare] [teilen]`).
 2. Jede der drei Dateien mit dem Artifact-Werkzeug als Asset hochladen
    (`url` = Seite oben, `asset: true`, `file_path` = Datei) → neue `/_blob/<id>`-Adresse.
 3. Mit ArtifactData die Datensätze `datasets/videos`, `datasets/kanaele`, `datasets/abstimmungen` per `update`
