@@ -255,3 +255,12 @@ IndexError: list index out of range
 2026-11-19 11:48:56 [INFO] [wohnung-4b-e04] automatisch freigegeben (QC 98.0 >= 90)
 2026-11-19 11:49:26 [INFO] [wohnung-4b-e04] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'ha_gicmCgP8', 'url': 'https://youtube.com/shorts/ha_gicmCgP8', 'privacy': 'private', 'publish_at': '2026-11-19T17:00:00Z'}
 2026-11-19 11:49:51 [INFO] [wohnung-4b-e04] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7709848225226098690', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Sie liegt 300 km weit weg im Bett… wer klopft dann an meine Tür? 😨 | Wohnung 4B – Teil 4 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
+2026-11-20 13:28:47 [INFO] [wohnung-4b-e05] Versuch 1: Zeitleiste + Stimmen
+2026-11-20 13:36:31 [INFO] [wohnung-4b-e05] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-20 13:36:31 [INFO] [wohnung-4b-e05] Laufzeit 50.6 s, 8 Einstellungen – rendere Video
+2026-11-20 13:37:50 [INFO] [wohnung-4b-e05] gerendert: [0, 1, 2, 3, 4, 5, 6, 7] | aus Cache: []
+2026-11-20 13:38:25 [INFO] [wohnung-4b-e05] Qualitätskontrolle läuft
+2026-11-20 13:39:00 [INFO] [wohnung-4b-e05] QC Versuch 1: 98.0 Punkte – bestanden
+2026-11-20 13:39:00 [INFO] [wohnung-4b-e05] automatisch freigegeben (QC 98.0 >= 90)
+2026-11-20 13:39:38 [INFO] [wohnung-4b-e05] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'JBigX6DRahc', 'url': 'https://youtube.com/shorts/JBigX6DRahc', 'privacy': 'private', 'publish_at': '2026-11-20T17:00:00Z'}
+2026-11-20 13:40:02 [INFO] [wohnung-4b-e05] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710247688914569239', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Vor meiner Tür steht jemand, der JEDE Stimme nachmacht… aber nur einmal 😨 | Wohnung 4B – Teil 5 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}

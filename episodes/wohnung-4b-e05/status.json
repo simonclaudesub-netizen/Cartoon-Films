@@ -1,0 +1,69 @@
+{
+  "id": "wohnung-4b-e05",
+  "state": "geplant",
+  "history": [
+    {
+      "t": "2026-11-20 13:28:47",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-20 13:39:00",
+      "state": "freigabe_ausstehend",
+      "score": 98.0,
+      "duration": 50.6,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e05/final.mp4"
+    },
+    {
+      "t": "2026-11-20 13:39:00",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-20 13:39:38",
+      "state": "geplant"
+    },
+    {
+      "t": "2026-11-20 13:40:02",
+      "state": "geplant"
+    }
+  ],
+  "score": 98.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 98.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 612.4,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "duration": 50.6,
+  "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e05/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "JBigX6DRahc",
+      "url": "https://youtube.com/shorts/JBigX6DRahc",
+      "privacy": "private",
+      "publish_at": "2026-11-20T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7710247688914569239",
+      "status": "SEND_TO_USER_INBOX",
+      "caption": "Vor meiner Tür steht jemand, der JEDE Stimme nachmacht… aber nur einmal 😨 | Wohnung 4B – Teil 5 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  }
+}
