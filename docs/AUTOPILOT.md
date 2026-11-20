@@ -21,6 +21,16 @@ Regie, Sichtprüfung); alles andere erledigt die lokale Pipeline.
 3. **Serienbibel lesen**: `db/series/<serie>.json` – Logline, Weltregeln, Geheimnisse, `next_plans`,
    bisherige Abstimmungen. Gewinner-Option der Abstimmung bestimmt die Handlung.
    Bei Gleichstand/keinen Stimmen: die spannendere Option wählen und im Log begründen.
+3b. **Zuschauer-Wünsche lesen**: `python -m studio.publish.comments wuensche <letzte-episode>` →
+   `stats/wuensche_<id>.json` (alle Kommentare, auch Ideen, „beides“, „C: …“, Theorien, Antworten des Kanals).
+   Pro Folge **eine** passende Idee als kleine Anspielung einbauen (Zeile, Requisit, Gag oder Figur-Reaktion),
+   bevorzugt die mit den meisten Likes bzw. eine, der der Kanal „schreibe ich mir auf“ geantwortet hat:
+   - Die Gewinner-Option bleibt die Handlung – Wünsche ergänzen, entscheiden aber nie gegen die Abstimmung.
+   - Familientauglich umdeuten (z. B. „Tretmine“ → harmlose Falle aus Krimskrams), keine Gewalt, keine
+     realen Personen/Marken, keine Benutzernamen im Video, nichts, was Weltregeln oder Geheimnisse bricht.
+   - „Beides“-Kommentare (A und B zugleich) dürfen als Augenzwinkern vorkommen („Beide wecken? Keine Chance.“).
+   - Passt keine Idee, keine einbauen. Verwendete Idee in der Serienbibel unter `zuschauer_ideen`
+     eintragen (Folge + Idee in eigenen Worten) und im Kurzbericht nennen.
 4. **Entwurf vorhanden?** Liegen `episodes/<id>/entwurf_A.json` / `entwurf_B.json` vor, wird der Entwurf
    der Gewinner-Option übernommen: `python -m studio entwurf <id> <A|B>` (dann weiter mit Schritt 5).
    Sonst: **Drehbuch schreiben**: `episodes/<serie>-eNN/script.json` nach `docs/DREHBUCH_FORMAT.md`.

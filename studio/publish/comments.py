@@ -9,6 +9,8 @@ und schickt fertige Antworten ab – mit harten Grenzen, die unabhängig vom Tex
   python -m studio.publish.comments offen            -> stats/kommentare_offen.json
   python -m studio.publish.comments antworten <datei> -> [{"id": <Kommentar-ID>, "text": "..."}]
   python -m studio.publish.comments abstimmung        -> Abstimmungs-Kommentar unter die neueste öffentliche Folge
+  python -m studio.publish.comments wuensche <folge>  -> stats/wuensche_<folge>.json (alle Kommentare einer Folge
+                                                         mit A/B-Einordnung und Antworten des Kanals, für Drehbuch-Ideen)
 
 API (YouTube Data API v3, Scope youtube.force-ssl, je Schreibvorgang 50 Kontingent-Einheiten):
   GET  commentThreads?part=snippet,replies&videoId=...      (offene Kommentare)
@@ -178,6 +180,29 @@ def vote_comments():
     return done
 
 
+def wishes(ep_id):
+    """Alle Zuschauer-Kommentare einer Folge – auch die, die keine eindeutige A/B-Stimme sind
+    (Ideen, 'beides', 'C: …', Theorien) – plus was der Kanal darauf geantwortet hat."""
+    from . import votes
+    me = channel_id()
+    hit = [(ep, vid, sc) for ep, vid, sc in _published() if ep == ep_id]
+    if not hit:
+        raise SystemExit(f"{ep_id}: nicht auf YouTube veröffentlicht")
+    _, vid, sc = hit[0]
+    opts = (sc.get("cliffhanger") or {}).get("options")
+    out = []
+    for th in _threads(vid):
+        sn = th["snippet"]["topLevelComment"]["snippet"]
+        if _author(sn) == me:
+            continue
+        reps = (th.get("replies") or {}).get("comments", [])
+        out.append({"text": sn.get("textOriginal", ""), "likes": sn.get("likeCount", 0),
+                    "stimme": votes.classify(sn.get("textOriginal", ""), opts),
+                    "kanal_antwort": [r["snippet"]["textOriginal"] for r in reps if _author(r["snippet"]) == me]})
+    out.sort(key=lambda c: -c["likes"])
+    return {"folge": ep_id, "abstimmung": opts, "kommentare": out}
+
+
 def main(argv):
     cmd = argv[0] if argv else "offen"
     if cmd == "offen":
@@ -191,8 +216,15 @@ def main(argv):
         print(json.dumps({"gesendet": sent, "uebersprungen": skipped}, ensure_ascii=False, indent=1))
     elif cmd == "abstimmung":
         print(json.dumps(vote_comments(), ensure_ascii=False, indent=1))
+    elif cmd == "wuensche":
+        res = wishes(argv[1])
+        out = db.ROOT / "stats"
+        out.mkdir(exist_ok=True)
+        f = out / f"wuensche_{argv[1]}.json"
+        f.write_text(json.dumps(res, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{len(res['kommentare'])} Kommentare -> {f.relative_to(db.ROOT)}")
     else:
-        sys.exit("Befehle: offen | antworten <datei> | abstimmung")
+        sys.exit("Befehle: offen | antworten <datei> | abstimmung | wuensche <folge>")
 
 
 if __name__ == "__main__":

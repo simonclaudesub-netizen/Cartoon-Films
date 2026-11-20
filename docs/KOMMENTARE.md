@@ -27,4 +27,6 @@ TikTok: keine Schnittstelle für Antworten – nur in der App durch den Menschen
 - **Nicht antworten** auf Spam, Werbung, Links, Beleidigungen, Hass, sexuelle Inhalte, persönliche
   Daten oder Kommentare, die offensichtlich von Kindern Persönliches preisgeben – einfach überspringen.
 - Keine Links, keine @-Erwähnungen, keine Bitten um Abos/Likes in jeder Antwort (höchstens selten).
+- **Ideen/Wünsche** („C: …“, „beides“, Vorschläge): freundlich aufgreifen, z. B. „Notiert! 📝“ – ohne zu
+  versprechen, dass oder wann es vorkommt. Sie werden beim nächsten Drehbuch gelesen (AUTOPILOT Schritt 3b).
 - Kritik sachlich und freundlich annehmen („Danke, nehme ich mit!“), nie streiten.
