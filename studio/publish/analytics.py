@@ -93,6 +93,8 @@ def summary(res):
                    f"nach 3 s noch {r['bindung_3s']:.0%} · am Ende {r['bindung_ende']:.0%} · "
                    f"größter Abbruch Einstellung {g['i']} ({g['t0']}–{g['t1']} s, -{g['verlust']:.0%}): „{g['text']}“"
                    if g else f"{r['folge']}: Daten unvollständig")
+    if any(r["hat_daten"] for r in res):
+        out.append("(Werte über 100 % = Zuschauer schauen den Anfang mehrfach, z. B. durch Wiederholen/Loopen.)")
     return "\n".join(out)
 
 
