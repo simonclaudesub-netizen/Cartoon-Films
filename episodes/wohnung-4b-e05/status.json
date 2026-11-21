@@ -25,6 +25,10 @@
     {
       "t": "2026-11-20 13:40:02",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-21 13:26:03",
+      "state": "geplant"
     }
   ],
   "score": 98.0,
@@ -64,6 +68,24 @@
       "publish_id": "v_inbox_file~v2.7710247688914569239",
       "status": "SEND_TO_USER_INBOX",
       "caption": "Vor meiner Tür steht jemand, der JEDE Stimme nachmacht… aber nur einmal 😨 | Wohnung 4B – Teil 5 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  },
+  "votes": {
+    "counts": {
+      "A": 1,
+      "B": 0
+    },
+    "total": 1,
+    "winner": "A",
+    "sources": {
+      "youtube": {
+        "counts": {
+          "A": 1,
+          "B": 0
+        },
+        "total": 1,
+        "winner": "A"
+      }
     }
   }
 }
