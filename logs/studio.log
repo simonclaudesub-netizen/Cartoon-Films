@@ -265,3 +265,11 @@ IndexError: list index out of range
 2026-11-20 13:39:38 [INFO] [wohnung-4b-e05] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'JBigX6DRahc', 'url': 'https://youtube.com/shorts/JBigX6DRahc', 'privacy': 'private', 'publish_at': '2026-11-20T17:00:00Z'}
 2026-11-20 13:40:02 [INFO] [wohnung-4b-e05] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710247688914569239', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Vor meiner Tür steht jemand, der JEDE Stimme nachmacht… aber nur einmal 😨 | Wohnung 4B – Teil 5 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
 2026-11-21 13:27:08 [INFO] [wohnung-4b-e06] Versuch 1: Zeitleiste + Stimmen
+2026-11-21 13:33:46 [INFO] [wohnung-4b-e06] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-21 13:33:46 [INFO] [wohnung-4b-e06] Laufzeit 36.5 s, 7 Einstellungen – rendere Video
+2026-11-21 13:34:48 [INFO] [wohnung-4b-e06] gerendert: [0, 1, 2, 3, 4, 5, 6] | aus Cache: []
+2026-11-21 13:35:11 [INFO] [wohnung-4b-e06] Qualitätskontrolle läuft
+2026-11-21 13:35:39 [INFO] [wohnung-4b-e06] QC Versuch 1: 100.0 Punkte – bestanden
+2026-11-21 13:35:39 [INFO] [wohnung-4b-e06] automatisch freigegeben (QC 100.0 >= 90)
+2026-11-21 13:36:08 [INFO] [wohnung-4b-e06] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'X3-uzeDEOB4', 'url': 'https://youtube.com/shorts/X3-uzeDEOB4', 'privacy': 'private', 'publish_at': '2026-11-21T17:00:00Z'}
+2026-11-21 13:36:33 [INFO] [wohnung-4b-e06] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710617844379437059', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Der Hausmeister steht vor meiner Tür… und ruft mich gleichzeitig an 😨 | Wohnung 4B – Teil 6 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}

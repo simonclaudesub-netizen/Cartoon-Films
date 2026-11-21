@@ -1,10 +1,68 @@
 {
   "id": "wohnung-4b-e06",
-  "state": "in_produktion",
+  "state": "geplant",
   "history": [
     {
       "t": "2026-11-21 13:27:08",
       "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-21 13:35:39",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 36.466667,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e06/final.mp4"
+    },
+    {
+      "t": "2026-11-21 13:35:39",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-21 13:36:08",
+      "state": "geplant"
+    },
+    {
+      "t": "2026-11-21 13:36:33",
+      "state": "geplant"
     }
-  ]
+  ],
+  "score": 100.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 100.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 511.5,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "duration": 36.466667,
+  "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e06/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "X3-uzeDEOB4",
+      "url": "https://youtube.com/shorts/X3-uzeDEOB4",
+      "privacy": "private",
+      "publish_at": "2026-11-21T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7710617844379437059",
+      "status": "SEND_TO_USER_INBOX",
+      "caption": "Der Hausmeister steht vor meiner Tür… und ruft mich gleichzeitig an 😨 | Wohnung 4B – Teil 6 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  }
 }
