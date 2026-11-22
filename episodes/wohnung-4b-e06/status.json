@@ -25,6 +25,10 @@
     {
       "t": "2026-11-21 13:36:33",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-22 13:26:00",
+      "state": "geplant"
     }
   ],
   "score": 100.0,
@@ -63,6 +67,24 @@
       "publish_id": "v_inbox_file~v2.7710617844379437059",
       "status": "SEND_TO_USER_INBOX",
       "caption": "Der Hausmeister steht vor meiner Tür… und ruft mich gleichzeitig an 😨 | Wohnung 4B – Teil 6 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  },
+  "votes": {
+    "counts": {
+      "A": 0,
+      "B": 0
+    },
+    "total": 0,
+    "winner": null,
+    "sources": {
+      "youtube": {
+        "counts": {
+          "A": 0,
+          "B": 0
+        },
+        "total": 0,
+        "winner": null
+      }
     }
   }
 }

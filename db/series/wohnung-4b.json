@@ -23,7 +23,9 @@
       "Wer hat Linas Nachricht gelöscht – und woher kennt die Stimme Linas Satz?",
       "Wer hat 'Jetzt kannst du aufmachen' gesagt – nur ein einziges Mal?",
       "Wer ist der lächelnde Okan vor der Tür – und warum lächelt er?",
-      "Kann der Nachhall einen Satz so oft sagen, wie er ihn gehört hat?"
+      "Kann der Nachhall einen Satz so oft sagen, wie er ihn gehört hat?",
+      "Der Nachhall kennt jetzt die Stimme der Hauptfigur – wen kann er damit täuschen?",
+      "Warum verbietet Okan, über den Vormieter zu reden?"
     ]
   },
   "cast": [
@@ -164,11 +166,30 @@
           "winner": "A"
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e06",
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "total": 0,
+      "winner": null,
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 0
+          },
+          "total": 0,
+          "winner": null
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 7 'Der Lächelnde' – Du vertraust dem Okan vor der Tür und fragst durch die Tür etwas, das nur der echte Okan wissen kann. Er antwortet nicht – er wiederholt deine Frage, einmal. Am Telefon flüstert Okan: 'Jetzt kennt er auch deine Stimme. Deine Stimme.'",
-    "B": "Teil 7 'Unten' – Du vertraust dem Okan am Telefon. Er sagt: 'Geh ins Schlafzimmer. Schließ ab. Schließ ab.' Im Schlafzimmer hörst du durch die Wand Frau Brandt flüstern: 'Ich bin's.' – und am Telefon ist plötzlich nur noch Rauschen."
+    "A": "Teil 8 'Treppe' – Okan kommt am Telefon hoch: Man hört seine Schritte im Treppenhaus näher kommen – und gleichzeitig dieselben Schritte noch einmal, eine Etage tiefer. Durch den Spion: Der lächelnde Okan ist weg. Auf der Fußmatte liegt ein neuer Zettel: 'Nicht öffnen. Nicht öffnen. – O.'",
+    "B": "Teil 8 'Das Foto' – Du klopfst an die Wand zu 4A. Frau Brandt antwortet zweimal: 'Ich bin wach. Ich bin wach.' Sie schiebt am Morgen ein altes Foto unter deiner Tür durch: ein junger Mann 1983 vor Tür 4B, auf der Rückseite 'Nicht öffnen. Nicht öffnen.' – unterschrieben mit O."
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

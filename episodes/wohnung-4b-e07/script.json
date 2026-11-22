@@ -1,0 +1,89 @@
+{
+  "id": "wohnung-4b-e07",
+  "series": "wohnung-4b",
+  "episode": 7,
+  "title": "Meine Stimme",
+  "label": "WOHNUNG 4B · TEIL 7",
+  "summary": "Keine Stimmen für Teil 6 – gewählt wurde die spannendere Option A: den Okan vor der Tür testen. Du fragst nach dem Vormieter von 4B. Die Stimme vor der Tür antwortet nicht – sie wiederholt deine Frage, einmal, mit deiner eigenen Stimme. Am Telefon flüstert Okan: 'Jetzt kennt er auch deine Stimme.' Dann sagt draußen 'du': 'Mach auf. Ich bin's.'",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Okan hochholen",
+      "B": "Frau Brandt fragen"
+    }
+  },
+  "cover_shot": 2,
+  "publish": {
+    "title": "Ich stelle ihm eine Frage… und er antwortet mit MEINER Stimme 😨 | Wohnung 4B – Teil 7",
+    "description": "Vor meiner Tür steht ein Mann, der aussieht wie unser Hausmeister. Ich stelle ihm eine Frage, die nur der echte Okan beantworten kann. Er antwortet nicht. Er wiederholt sie – mit meiner eigenen Stimme.\nWas soll ich tun? Schreib A (Okan hochholen) oder B (Frau Brandt fragen) in die Kommentare! Die Mehrheit entscheidet Teil 8.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#creepy", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+  },
+  "shots": [
+    {
+      "set": "treppenhaus", "time": "night", "variant": "flicker", "peephole": true, "zoom": 1.6, "lens": 0.38,
+      "music": "tension", "caption": "ECHT ODER FALSCH?", "caption_dur": 1.8,
+      "camera": {"move": "push_in", "strength": 1.2},
+      "characters": [{"id": "okan", "spot": "nah", "arms": "down", "expr": "smirk"}],
+      "sfx": [{"name": "heartbeat", "at": 0.0, "gain": 0.8}],
+      "lines": [
+        {"speaker": "du", "text": "Vor meiner Tür steht der Hausmeister. Aber der echte ist noch unten.", "emotion": "scared", "fx": "inner", "delay": 0.2}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.6, "lens": 0.08, "music": "tension",
+      "camera": {"move": "static", "shake": [0.3]},
+      "pov": {"mode": "door", "target": [545, 845], "reach": 0.45},
+      "lines": [
+        {"speaker": "du", "text": "Okan. Wie hieß der Vormieter von Wohnung 4B?", "emotion": "scared", "delay": 0.2}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 2.0, "lens": 0.1, "music": "silence",
+      "caption": "MEINE STIMME?!", "caption_dur": 2.0,
+      "camera": {"move": "push_in", "strength": 1.4, "punch": [0.9]},
+      "sfx": [{"name": "sting", "at": 0.9}],
+      "lines": [
+        {"speaker": "du", "text": "Wie hieß der Vormieter von Wohnung 4B?", "emotion": "whisper", "fx": "door", "delay": 0.9},
+        {"speaker": "du", "text": "Das ist meine Stimme.", "emotion": "scared", "fx": "inner", "gap": 0.5}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "music": "mystery",
+      "pov": {"mode": "phone", "contact": "Okan (Hausmeister)", "avatar": "#3a6ea5", "status": "Anruf läuft …", "messages": []},
+      "sfx": [{"name": "buzz", "at": 0.0}],
+      "lines": [
+        {"speaker": "okan", "text": "Jetzt kennt er auch deine Stimme. Deine Stimme.", "fx": "phone", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 1.4, "lens": 0.08, "music": "tension",
+      "camera": {"move": "pan_left", "strength": 0.4},
+      "lines": [
+        {"speaker": "du", "text": "Er hat Lina gehört. Okan. Und jetzt mich.", "emotion": "whisper", "fx": "inner", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "flur", "time": "night", "zoom": 2.2, "lens": 0.1, "music": "silence",
+      "camera": {"move": "push_in", "strength": 1.6, "punch": [1.4]},
+      "pov": {"mode": "door", "target": [545, 845], "reach": 0.35},
+      "sfx": [{"name": "knock", "at": 0.1}, {"name": "knock", "at": 0.5}, {"name": "sting", "at": 3.2}],
+      "lines": [
+        {"speaker": "du", "text": "Mach auf. Ich bin's.", "emotion": "neutral", "fx": "door", "delay": 1.0},
+        {"speaker": "du", "text": "Aber ich stehe doch hier drinnen.", "emotion": "scared", "fx": "inner", "gap": 0.7}
+      ],
+      "blackout_at": 5.4
+    },
+    {
+      "set": "flur", "time": "night", "music": "tension", "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {"A": "OKAN HOCHHOLEN", "B": "FRAU BRANDT FRAGEN"},
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 8 FOLGT"
+      },
+      "lines": [
+        {"speaker": "du", "text": "Was soll ich tun? A: Okan hochholen. Oder B: Frau Brandt fragen? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+      ]
+    }
+  ]
+}
