@@ -1,10 +1,68 @@
 {
   "id": "wohnung-4b-e07",
-  "state": "in_produktion",
+  "state": "geplant",
   "history": [
     {
       "t": "2026-11-22 13:26:56",
       "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-22 13:37:30",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 34.833,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e07/final.mp4"
+    },
+    {
+      "t": "2026-11-22 13:37:30",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-22 13:37:56",
+      "state": "geplant"
+    },
+    {
+      "t": "2026-11-22 13:38:22",
+      "state": "geplant"
     }
-  ]
+  ],
+  "score": 100.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 100.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 634.2,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "duration": 34.833,
+  "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e07/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "uxjSEqnwjW4",
+      "url": "https://youtube.com/shorts/uxjSEqnwjW4",
+      "privacy": "private",
+      "publish_at": "2026-11-22T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7710989468815493122",
+      "status": "SEND_TO_USER_INBOX",
+      "caption": "Ich stelle ihm eine Frage… und er antwortet mit MEINER Stimme 😨 | Wohnung 4B – Teil 7 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  }
 }

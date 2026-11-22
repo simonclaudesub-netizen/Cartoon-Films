@@ -274,3 +274,14 @@ IndexError: list index out of range
 2026-11-21 13:36:08 [INFO] [wohnung-4b-e06] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'X3-uzeDEOB4', 'url': 'https://youtube.com/shorts/X3-uzeDEOB4', 'privacy': 'private', 'publish_at': '2026-11-21T17:00:00Z'}
 2026-11-21 13:36:33 [INFO] [wohnung-4b-e06] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710617844379437059', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Der Hausmeister steht vor meiner Tür… und ruft mich gleichzeitig an 😨 | Wohnung 4B – Teil 6 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
 2026-11-22 13:26:56 [INFO] [wohnung-4b-e07] Versuch 1: Zeitleiste + Stimmen
+2026-11-22 13:33:27 [INFO] [wohnung-4b-e07] Sprachaufnahme Runde 1: neue Takes für [('1.0', 0.84, 'Okaan. Wie hieß der Vormitter von Wohnung 4B?')]
+2026-11-22 13:34:15 [INFO] [wohnung-4b-e07] Sprachaufnahme Runde 2: neue Takes für [('1.0', 0.74, 'Wie hieß der Vormeter von Wono 4B?')]
+2026-11-22 13:35:04 [INFO] [wohnung-4b-e07] Sprachaufnahme Runde 3: neue Takes für [('1.0', 0.84, 'Okaan. Wie hieß der Vormitter von Wohnung 4B?')]
+2026-11-22 13:35:52 [INFO] [wohnung-4b-e07] Sprachaufnahme: alle Zeilen sauber (Runde 4)
+2026-11-22 13:35:52 [INFO] [wohnung-4b-e07] Laufzeit 34.8 s, 7 Einstellungen – rendere Video
+2026-11-22 13:36:44 [INFO] [wohnung-4b-e07] gerendert: [0, 1, 2, 3, 4, 5, 6] | aus Cache: []
+2026-11-22 13:37:04 [INFO] [wohnung-4b-e07] Qualitätskontrolle läuft
+2026-11-22 13:37:30 [INFO] [wohnung-4b-e07] QC Versuch 1: 100.0 Punkte – bestanden
+2026-11-22 13:37:30 [INFO] [wohnung-4b-e07] automatisch freigegeben (QC 100.0 >= 90)
+2026-11-22 13:37:56 [INFO] [wohnung-4b-e07] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'uxjSEqnwjW4', 'url': 'https://youtube.com/shorts/uxjSEqnwjW4', 'privacy': 'private', 'publish_at': '2026-11-22T17:00:00Z'}
+2026-11-22 13:38:22 [INFO] [wohnung-4b-e07] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710989468815493122', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Ich stelle ihm eine Frage… und er antwortet mit MEINER Stimme 😨 | Wohnung 4B – Teil 7 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
