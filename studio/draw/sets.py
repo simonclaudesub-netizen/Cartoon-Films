@@ -166,19 +166,43 @@ class Flur(Set):
         a = c.p(0, yc, 2.0)
         P.line(ctx, [a, (a[0], a[1] + 40)], 3)
         P.ellipse(ctx, a[0], a[1] + 55, 34, 22, "#f2f0e6")
-        if self.has("note"):
-            # Zettel, unter der Tür durchgeschoben (liegt auf dem Boden)
+        if self.has("note") or self.has("photoback"):
+            # Zettel (bzw. Foto-Rückseite), unter der Tür durchgeschoben (liegt auf dem Boden)
             pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
             P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
-            P.poly(ctx, pts, "#fbf7e8", 4)
+            P.poly(ctx, pts, "#fbf7e8" if self.has("note") else "#efe4c8", 4)
             cx = sum(p[0] for p in pts) / 4
             cy = sum(p[1] for p in pts) / 4
             ctx.save()
             ctx.translate(cx, cy)
             ctx.scale(1.0, 0.42)
             ctx.rotate(0.06)
-            P.text(ctx, "Gut gemacht.", -6, 8, 36, color="#2b2b33")
-            P.text(ctx, "– O.", 60, 62, 36, color="#2b2b33")
+            if self.has("note"):
+                P.text(ctx, "Gut gemacht.", -6, 8, 36, color="#2b2b33")
+                P.text(ctx, "– O.", 60, 62, 36, color="#2b2b33")
+            else:
+                P.text(ctx, "Nicht öffnen.", -6, -30, 34, color="#2b2b33")
+                P.text(ctx, "Nicht öffnen.", -6, 22, 34, color="#2b2b33")
+                P.text(ctx, "– O.", 70, 76, 34, color="#2b2b33")
+            ctx.restore()
+        if self.has("photo"):
+            # Altes Foto (Vorderseite) auf dem Boden: junger Mann vor einer Tür „4B“, sepia
+            pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
+            P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
+            P.poly(ctx, pts, "#f6f1e4", 4)
+            inner = [c.p(x, yf, z) for x, z in ((-0.23, 2.55), (0.23, 2.62), (0.2, 2.98), (-0.25, 2.92))]
+            P.poly(ctx, inner, "#a8875e", 2)
+            cx = sum(p[0] for p in inner) / 4
+            cy = sum(p[1] for p in inner) / 4
+            ctx.save()
+            ctx.translate(cx, cy)
+            ctx.scale(1.0, 0.42)
+            ctx.rotate(0.06)
+            P.rrect(ctx, 30, -120, 120, 230, 6, "#7a5c3c", 3)       # Tür
+            P.text(ctx, "4B", 70, -70, 30, color="#e9d9b4")
+            P.ellipse(ctx, -50, -60, 26, 30, "#4a3624")              # Kopf (Silhouette)
+            P.rrect(ctx, -90, -30, 80, 140, 18, "#4a3624", 0)        # Körper
+            P.text(ctx, "1983", -150, 95, 26, color="#3b2c1c")
             ctx.restore()
 
     def dynamic(self, ctx, t):

@@ -25,7 +25,11 @@
       "Wer ist der lächelnde Okan vor der Tür – und warum lächelt er?",
       "Kann der Nachhall einen Satz so oft sagen, wie er ihn gehört hat?",
       "Der Nachhall kennt jetzt die Stimme der Hauptfigur – wen kann er damit täuschen?",
-      "Warum verbietet Okan, über den Vormieter zu reden?"
+      "Warum verbietet Okan, über den Vormieter zu reden?",
+      "Wer ist der junge Mann auf dem Foto von 1983 vor Tür 4B?",
+      "Wer hat das Foto nachts unter die Tür geschoben?",
+      "Warum sagt Okan 'Wirf das Foto weg' nur einmal – war das der echte Okan?",
+      "Woher weiß Frau Brandt, dass 'er' schon einmal hier war?"
     ]
   },
   "cast": [
@@ -74,6 +78,11 @@
       "id": "wohnung-4b-e07",
       "n": 7,
       "title": "Meine Stimme"
+    },
+    {
+      "id": "wohnung-4b-e08",
+      "n": 8,
+      "title": "Das Foto"
     }
   ],
   "votes": [
@@ -190,11 +199,30 @@
           "winner": null
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e07",
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "total": 0,
+      "winner": null,
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 0
+          },
+          "total": 0,
+          "winner": null
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 8 'Treppe' – Okan kommt am Telefon hoch: Man hört seine Schritte im Treppenhaus näher kommen – und gleichzeitig dieselben Schritte noch einmal, eine Etage tiefer. Durch den Spion: Der lächelnde Okan ist weg. Auf der Fußmatte liegt ein neuer Zettel: 'Nicht öffnen. Nicht öffnen. – O.'",
-    "B": "Teil 8 'Das Foto' – Du klopfst an die Wand zu 4A. Frau Brandt antwortet zweimal: 'Ich bin wach. Ich bin wach.' Sie schiebt am Morgen ein altes Foto unter deiner Tür durch: ein junger Mann 1983 vor Tür 4B, auf der Rückseite 'Nicht öffnen. Nicht öffnen.' – unterschrieben mit O."
+    "A": "Teil 9 'Behalten' – Du legst das Foto in die Schublade. Um 03:07 Uhr klopft es, eine fremde, junge Männerstimme fragt durch die Tür: 'Hast du mein Foto?' – nur einmal. Frau Brandt flüstert durch die Wand: 'Das ist Oskar. Der Vormieter.' Am Morgen ist die Schublade leer.",
+    "B": "Teil 9 'Wieder da' – Du wirfst das Foto unten im Hof in die Mülltonne. Am Morgen liegt es wieder unter deiner Tür – aber jetzt steht auf dem Foto eine zweite Person neben dem jungen Mann: jemand in deinem Pullover. Auf der Rückseite neu: 'Nicht wegwerfen. Nicht wegwerfen. – O.'"
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",
