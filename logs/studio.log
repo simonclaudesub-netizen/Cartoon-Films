@@ -285,3 +285,4 @@ IndexError: list index out of range
 2026-11-22 13:37:30 [INFO] [wohnung-4b-e07] automatisch freigegeben (QC 100.0 >= 90)
 2026-11-22 13:37:56 [INFO] [wohnung-4b-e07] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'uxjSEqnwjW4', 'url': 'https://youtube.com/shorts/uxjSEqnwjW4', 'privacy': 'private', 'publish_at': '2026-11-22T17:00:00Z'}
 2026-11-22 13:38:22 [INFO] [wohnung-4b-e07] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7710989468815493122', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Ich stelle ihm eine Frage… und er antwortet mit MEINER Stimme 😨 | Wohnung 4B – Teil 7 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
+2026-11-23 13:33:55 [INFO] [wohnung-4b-e08] Versuch 1: Zeitleiste + Stimmen
