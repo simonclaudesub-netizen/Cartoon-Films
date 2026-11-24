@@ -199,16 +199,16 @@ class Flur(Set):
             ctx.translate(cx, cy)
             ctx.scale(1.0, 0.42)
             ctx.rotate(0.06)
-            P.rrect(ctx, 30, -120, 120, 230, 6, "#7a5c3c", 3)       # Tür
-            P.text(ctx, "4B", 70, -70, 30, color="#e9d9b4")
-            P.ellipse(ctx, -50, -60, 26, 30, "#4a3624")              # Kopf (Silhouette)
-            P.rrect(ctx, -90, -30, 80, 140, 18, "#4a3624", 0)        # Körper
+            # Inhalt bleibt innerhalb des Fotorands (sichtbarer Bereich ca. x -110…130)
+            P.rrect(ctx, 20, -120, 100, 230, 6, "#7a5c3c", 3)       # Tür
+            P.text(ctx, "4B", 52, -70, 30, color="#e9d9b4")
+            P.ellipse(ctx, -12, -60, 22, 26, "#4a3624")              # Kopf (Silhouette)
+            P.rrect(ctx, -44, -32, 64, 142, 16, "#4a3624", 0)        # Körper
             if self.has("photo2"):
                 # zweite Person: im senfgelben Kapuzenpulli der Hauptfigur
-                P.ellipse(ctx, -150, -55, 24, 28, "#4a3624")
-                P.rrect(ctx, -188, -26, 76, 136, 18, "#c9a23a", 0)
-            P.text(ctx, "1983", -185 if self.has("photo2") else -150, -110 if self.has("photo2") else 95, 26,
-                   color="#3b2c1c")
+                P.ellipse(ctx, -78, -56, 20, 24, "#4a3624")
+                P.rrect(ctx, -104, -30, 52, 138, 16, "#c9a23a", 0)
+            P.text(ctx, "1983", 70, 135, 24, color="#3b2c1c")
             ctx.restore()
 
     def dynamic(self, ctx, t):

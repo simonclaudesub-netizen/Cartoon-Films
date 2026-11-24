@@ -16,79 +16,262 @@
   "publish": {
     "title": "Ich habe dieses Foto weggeworfen… heute lag es wieder vor meiner Tür – MIT MIR drauf 😨 | Wohnung 4B – Teil 9",
     "description": "Gestern habe ich ein altes Foto von 1983 in die Mülltonne geworfen. Heute Morgen lag es wieder unter meiner Tür. Und jetzt steht da noch jemand neben dem jungen Mann – in meinem Pullover.\nWas soll ich tun? Schreib A (Frau Brandt ausfragen) oder B (Okan das Foto zeigen) in die Kommentare! Die Mehrheit entscheidet Teil 10.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
-    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#creepy", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#creepy",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
   },
   "shots": [
     {
-      "set": "flur", "time": "day", "zoom": 2.0, "lens": 0.08, "music": "tension", "variant": "photo2",
-      "caption": "WIEDER DA?!", "caption_dur": 1.8,
-      "camera": {"move": "tilt_down", "strength": 0.8},
-      "sfx": [{"name": "sting", "at": 0.0, "gain": 0.8}, {"name": "heartbeat", "at": 0.4, "gain": 0.8}],
+      "set": "flur",
+      "time": "day",
+      "zoom": 2.0,
+      "lens": 0.08,
+      "music": "tension",
+      "variant": "photo2",
+      "caption": "WIEDER DA?!",
+      "caption_dur": 1.8,
+      "camera": {
+        "move": "tilt_down",
+        "strength": 0.8
+      },
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.0,
+          "gain": 0.8
+        },
+        {
+          "name": "heartbeat",
+          "at": 0.4,
+          "gain": 0.8
+        }
+      ],
       "lines": [
-        {"speaker": "du", "text": "Ich habe dieses Foto gestern weggeworfen. Heute Morgen lag es wieder unter meiner Tür.", "emotion": "scared", "fx": "inner", "delay": 0.2}
+        {
+          "speaker": "du",
+          "text": "Ich habe dieses Foto gestern weggeworfen. Heute Morgen lag es wieder unter meiner Tür.",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.2
+        }
       ]
     },
     {
-      "set": "treppenhaus", "time": "day", "variant": "open", "zoom": 1.5, "lens": 0.08, "music": "mystery",
-      "camera": {"move": "pan_right", "strength": 0.5},
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 1.5,
+      "lens": 0.08,
+      "music": "mystery",
+      "camera": {
+        "move": "pan_right",
+        "strength": 0.5
+      },
       "lines": [
-        {"speaker": "du", "text": "Unten im Hof. In die Mülltonne. Ich weiß es genau.", "emotion": "whisper", "fx": "inner", "delay": 0.2}
+        {
+          "speaker": "du",
+          "text": "Unten im Hof. In die Mülltonne. Ich weiß es genau.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.2
+        }
       ]
     },
     {
-      "set": "flur", "time": "day", "zoom": 2.5, "lens": 0.08, "music": "tension", "variant": "photo2",
-      "caption": "ZWEI PERSONEN", "caption_dur": 1.8,
-      "camera": {"move": "push_in", "strength": 0.8},
+      "set": "flur",
+      "time": "day",
+      "zoom": 2.2,
+      "lens": 0.08,
+      "music": "tension",
+      "variant": "photo2",
+      "caption": "ZWEI PERSONEN",
+      "caption_dur": 1.8,
+      "camera": {
+        "move": "tilt_down",
+        "strength": 0.8
+      },
       "lines": [
-        {"speaker": "du", "text": "Aber jetzt ist da noch jemand. Neben dem jungen Mann.", "emotion": "whisper", "fx": "inner", "delay": 0.3}
+        {
+          "speaker": "du",
+          "text": "Aber jetzt ist da noch jemand. Neben dem jungen Mann.",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.3
+        }
       ]
     },
     {
-      "set": "flur", "time": "day", "zoom": 2.8, "lens": 0.08, "music": "silence", "variant": "photo2",
-      "caption": "MEIN PULLOVER?!", "caption_dur": 2.0,
-      "camera": {"move": "push_in", "strength": 1.4, "punch": [0.5]},
-      "sfx": [{"name": "sting", "at": 0.5}],
+      "set": "flur",
+      "time": "day",
+      "zoom": 2.3,
+      "lens": 0.08,
+      "music": "silence",
+      "variant": "photo2",
+      "caption": "MEIN PULLOVER?!",
+      "caption_dur": 2.0,
+      "camera": {
+        "move": "tilt_down",
+        "strength": 1.0,
+        "punch": [
+          0.5
+        ]
+      },
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.5
+        }
+      ],
       "lines": [
-        {"speaker": "du", "text": "Die Person trägt meinen gelben Pullover.", "emotion": "scared", "fx": "inner", "delay": 0.4}
+        {
+          "speaker": "du",
+          "text": "Die Person trägt meinen gelben Pullover.",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.4
+        }
       ]
     },
     {
-      "set": "flur", "time": "day", "zoom": 2.4, "lens": 0.08, "music": "mystery", "variant": "photoback2",
-      "camera": {"move": "static", "punch": [0.2]},
-      "sfx": [{"name": "whoosh", "at": 0.0, "gain": 0.6}],
+      "set": "flur",
+      "time": "day",
+      "zoom": 2.4,
+      "lens": 0.08,
+      "music": "mystery",
+      "variant": "photoback2",
+      "camera": {
+        "move": "static",
+        "punch": [
+          0.2
+        ]
+      },
+      "sfx": [
+        {
+          "name": "whoosh",
+          "at": 0.0,
+          "gain": 0.6
+        }
+      ],
       "lines": [
-        {"speaker": "du", "text": "Und auf der Rückseite steht jetzt: Nicht wegwerfen. Nicht wegwerfen.", "emotion": "scared", "fx": "inner", "delay": 0.4}
+        {
+          "speaker": "du",
+          "text": "Und auf der Rückseite steht jetzt: Nicht wegwerfen. Nicht wegwerfen.",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.4
+        }
       ]
     },
     {
-      "set": "treppenhaus", "time": "day", "variant": "open", "zoom": 1.7, "lens": 0.08, "music": "mystery",
-      "camera": {"move": "push_in", "strength": 0.6},
-      "characters": [{"id": "helga", "spot": "tuer", "arms": "cross", "expr": "scared"}],
-      "sfx": [{"name": "creak", "at": 0.0, "gain": 0.6}],
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 1.7,
+      "lens": 0.08,
+      "music": "mystery",
+      "camera": {
+        "move": "push_in",
+        "strength": 0.6
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "cross",
+          "expr": "scared"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "creak",
+          "at": 0.0,
+          "gain": 0.6
+        }
+      ],
       "lines": [
-        {"speaker": "helga", "text": "Das Foto kommt immer zurück, Kind. Bei Oskar war es genauso.", "delay": 0.3},
-        {"speaker": "du", "text": "Oskar. O.", "emotion": "scared", "fx": "inner", "gap": 0.5}
-      ]
+        {
+          "speaker": "helga",
+          "text": "Das Foto kommt immer zurück, Kind. Bei Oskar war es genauso.",
+          "delay": 0.3
+        },
+        {
+          "speaker": "du",
+          "text": "Oskar. Der Vormieter von Wohnung vier B.",
+          "emotion": "scared",
+          "fx": "inner",
+          "gap": 0.5
+        }
+      ],
+      "caption": "O. = OSKAR?",
+      "caption_dur": 2.0
     },
     {
-      "set": "flur", "time": "day", "zoom": 2.0, "lens": 0.1, "music": "silence", "variant": "photo2",
-      "camera": {"move": "push_in", "strength": 1.6, "punch": [2.4]},
-      "sfx": [{"name": "knock", "at": 2.2}, {"name": "sting", "at": 2.4}],
+      "set": "flur",
+      "time": "day",
+      "zoom": 2.0,
+      "lens": 0.1,
+      "music": "silence",
+      "variant": "photo2",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.6,
+        "punch": [
+          2.4
+        ]
+      },
+      "sfx": [
+        {
+          "name": "knock",
+          "at": 2.2
+        },
+        {
+          "name": "sting",
+          "at": 2.4
+        }
+      ],
       "lines": [
-        {"speaker": "du", "text": "Wer hat es dann heute Nacht unter meine Tür geschoben?", "emotion": "whisper", "fx": "inner", "delay": 0.4}
+        {
+          "speaker": "du",
+          "text": "Wer hat es dann heute Nacht unter meine Tür geschoben?",
+          "emotion": "whisper",
+          "fx": "inner",
+          "delay": 0.4
+        }
       ],
       "blackout_at": 4.6
     },
     {
-      "set": "flur", "time": "day", "music": "tension", "min_dur": 6.0, "variant": "photo2",
+      "set": "flur",
+      "time": "day",
+      "music": "tension",
+      "min_dur": 6.0,
+      "variant": "photo2",
       "endcard": {
         "question": "WAS SOLL ICH TUN?",
-        "options": {"A": "FRAU BRANDT FRAGEN", "B": "OKAN DAS FOTO ZEIGEN"},
+        "options": {
+          "A": "FRAU BRANDT FRAGEN",
+          "B": "OKAN DAS FOTO ZEIGEN"
+        },
         "cta": "Schreib A oder B in die Kommentare!",
         "next": "TEIL 10 FOLGT"
       },
       "lines": [
-        {"speaker": "du", "text": "Was soll ich tun? A: Frau Brandt ausfragen. Oder B: Okan das Foto zeigen? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Frau Brandt ausfragen. Oder B: Okan das Foto zeigen? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.5,
+          "no_sub": true
+        }
       ]
     }
   ]

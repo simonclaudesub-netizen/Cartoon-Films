@@ -1,10 +1,93 @@
 {
   "id": "wohnung-4b-e09",
-  "state": "in_produktion",
+  "state": "geplant",
   "history": [
     {
       "t": "2026-11-24 13:30:46",
       "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-24 13:48:52",
+      "state": "abgelehnt"
+    },
+    {
+      "t": "2026-11-24 13:49:04",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-24 13:52:10",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 41.766667,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e09/final.mp4"
+    },
+    {
+      "t": "2026-11-24 13:52:10",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-24 13:52:55",
+      "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-24 13:54:57",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 41.766667,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e09/final.mp4"
+    },
+    {
+      "t": "2026-11-24 13:54:57",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-24 13:55:12",
+      "state": "geplant"
+    },
+    {
+      "t": "2026-11-24 13:59:48",
+      "state": "geplant"
     }
-  ]
+  ],
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 100.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 122.6,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "score": 100.0,
+  "duration": 41.766667,
+  "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e09/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "LvkoKwVp9DY",
+      "url": "https://youtube.com/shorts/LvkoKwVp9DY",
+      "privacy": "private",
+      "publish_at": "2026-11-24T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7711736106512943126",
+      "status": "PROCESSING_UPLOAD",
+      "caption": "Ich habe dieses Foto weggeworfen… heute lag es wieder vor meiner Tür – MIT MIR drauf 😨 | Wohnung 4B – Teil 9 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  }
 }

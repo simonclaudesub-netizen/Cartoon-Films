@@ -296,3 +296,50 @@ IndexError: list index out of range
 2026-11-23 13:46:30 [INFO] [wohnung-4b-e08] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'sAXSxe0Ut2c', 'url': 'https://youtube.com/shorts/sAXSxe0Ut2c', 'privacy': 'private', 'publish_at': '2026-11-23T17:00:00Z'}
 2026-11-23 13:46:55 [INFO] [wohnung-4b-e08] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7711362852107716630', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Am Morgen lag ein Foto von 1983 unter meiner Tür… von meiner Wohnung 😨 | Wohnung 4B – Teil 8 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
 2026-11-24 13:30:46 [INFO] [wohnung-4b-e09] Versuch 1: Zeitleiste + Stimmen
+2026-11-24 13:38:38 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 1: neue Takes für [('5.1', 0.73, 'Oskar.'), ('7.0', 0.91, 'Was soll ich tun? A. Frau Brand ausfragen oder B. Wo kann das Foto zeigen? Schreib es in die Kommentare.')]
+2026-11-24 13:40:15 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 2: neue Takes für [('5.1', 0.5, 'O.')]
+2026-11-24 13:40:59 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 3: neue Takes für [('5.1', 0.73, 'Oskar.')]
+2026-11-24 13:41:42 [WARN] [wohnung-4b-e09] Sprachaufnahme: beste Takes übernommen, offen: ['5.1']
+2026-11-24 13:41:42 [INFO] [wohnung-4b-e09] Laufzeit 39.5 s, 8 Einstellungen – rendere Video
+2026-11-24 13:42:16 [INFO] [wohnung-4b-e09] gerendert: [0, 1, 2, 3, 4, 5, 6, 7] | aus Cache: []
+2026-11-24 13:42:42 [INFO] [wohnung-4b-e09] Qualitätskontrolle läuft
+2026-11-24 13:43:10 [INFO] [wohnung-4b-e09] QC Versuch 1: 95.0 Punkte – nicht bestanden
+2026-11-24 13:43:10 [WARN] [wohnung-4b-e09] Korrekturen: ['Zeile 5.1 neu einsprechen, Take 2 (Ähnlichkeit 0.733)', "Zu schnelle Zeilen ['6.0'] langsamer sprechen"]
+2026-11-24 13:43:10 [INFO] [wohnung-4b-e09] Versuch 2: Zeitleiste + Stimmen
+2026-11-24 13:44:04 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 1: neue Takes für [('5.1', 0.5, 'O.')]
+2026-11-24 13:44:24 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 2: neue Takes für [('5.1', 0.5, 'O.')]
+2026-11-24 13:44:41 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 3: neue Takes für [('5.1', 0.73, 'Oskar.')]
+2026-11-24 13:44:58 [WARN] [wohnung-4b-e09] Sprachaufnahme: beste Takes übernommen, offen: ['5.1']
+2026-11-24 13:44:58 [INFO] [wohnung-4b-e09] Laufzeit 40.0 s, 8 Einstellungen – rendere Video
+2026-11-24 13:45:09 [INFO] [wohnung-4b-e09] gerendert: [5, 6] | aus Cache: [0, 1, 2, 3, 4, 7]
+2026-11-24 13:45:35 [INFO] [wohnung-4b-e09] Qualitätskontrolle läuft
+2026-11-24 13:46:03 [INFO] [wohnung-4b-e09] QC Versuch 2: 97.0 Punkte – nicht bestanden
+2026-11-24 13:46:03 [WARN] [wohnung-4b-e09] Korrekturen: ['Zeile 5.1 neu einsprechen, Take 14 (Ähnlichkeit 0.733)']
+2026-11-24 13:46:03 [INFO] [wohnung-4b-e09] Versuch 3: Zeitleiste + Stimmen
+2026-11-24 13:46:48 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 1: neue Takes für [('5.1', 0.73, 'Oskar.')]
+2026-11-24 13:47:08 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 2: neue Takes für [('5.1', 0.5, 'O.')]
+2026-11-24 13:47:26 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 3: neue Takes für [('5.1', 0.73, 'Oskar.')]
+2026-11-24 13:47:44 [WARN] [wohnung-4b-e09] Sprachaufnahme: beste Takes übernommen, offen: ['5.1']
+2026-11-24 13:47:45 [INFO] [wohnung-4b-e09] Laufzeit 40.2 s, 8 Einstellungen – rendere Video
+2026-11-24 13:47:55 [INFO] [wohnung-4b-e09] gerendert: [5] | aus Cache: [0, 1, 2, 3, 4, 6, 7]
+2026-11-24 13:48:22 [INFO] [wohnung-4b-e09] Qualitätskontrolle läuft
+2026-11-24 13:48:52 [INFO] [wohnung-4b-e09] QC Versuch 3: 97.0 Punkte – nicht bestanden
+2026-11-24 13:48:52 [WARN] [wohnung-4b-e09] Korrekturen: ['Zeile 5.1 neu einsprechen, Take 15 (Ähnlichkeit 0.733)']
+2026-11-24 13:48:52 [ERROR] [wohnung-4b-e09] Episode nach 3 Versuchen abgelehnt – wird NICHT veröffentlicht
+2026-11-24 13:49:04 [INFO] [wohnung-4b-e09] Versuch 1: Zeitleiste + Stimmen
+2026-11-24 13:50:01 [INFO] [wohnung-4b-e09] Sprachaufnahme Runde 1: neue Takes für [('5.1', 0.52, 'der Vormitter von Wodung 4B')]
+2026-11-24 13:50:55 [INFO] [wohnung-4b-e09] Sprachaufnahme: alle Zeilen sauber (Runde 2)
+2026-11-24 13:50:55 [INFO] [wohnung-4b-e09] Laufzeit 41.8 s, 8 Einstellungen – rendere Video
+2026-11-24 13:51:10 [INFO] [wohnung-4b-e09] gerendert: [5] | aus Cache: [0, 1, 2, 3, 4, 6, 7]
+2026-11-24 13:51:39 [INFO] [wohnung-4b-e09] Qualitätskontrolle läuft
+2026-11-24 13:52:10 [INFO] [wohnung-4b-e09] QC Versuch 1: 100.0 Punkte – bestanden
+2026-11-24 13:52:10 [INFO] [wohnung-4b-e09] automatisch freigegeben (QC 100.0 >= 90)
+2026-11-24 13:52:55 [INFO] [wohnung-4b-e09] Versuch 1: Zeitleiste + Stimmen
+2026-11-24 13:53:21 [INFO] [wohnung-4b-e09] Sprachaufnahme: alle Zeilen sauber (Runde 1)
+2026-11-24 13:53:21 [INFO] [wohnung-4b-e09] Laufzeit 41.8 s, 8 Einstellungen – rendere Video
+2026-11-24 13:53:56 [INFO] [wohnung-4b-e09] gerendert: [0, 1, 2, 3, 4, 5, 6, 7] | aus Cache: []
+2026-11-24 13:54:25 [INFO] [wohnung-4b-e09] Qualitätskontrolle läuft
+2026-11-24 13:54:57 [INFO] [wohnung-4b-e09] QC Versuch 1: 100.0 Punkte – bestanden
+2026-11-24 13:54:57 [INFO] [wohnung-4b-e09] automatisch freigegeben (QC 100.0 >= 90)
+2026-11-24 13:55:12 [INFO] [wohnung-4b-e09] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'LvkoKwVp9DY', 'url': 'https://youtube.com/shorts/LvkoKwVp9DY', 'privacy': 'private', 'publish_at': '2026-11-24T17:00:00Z'}
+2026-11-24 13:59:48 [INFO] [wohnung-4b-e09] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7711736106512943126', 'status': 'PROCESSING_UPLOAD', 'caption': 'Ich habe dieses Foto weggeworfen… heute lag es wieder vor meiner Tür – MIT MIR drauf 😨 | Wohnung 4B – Teil 9 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}

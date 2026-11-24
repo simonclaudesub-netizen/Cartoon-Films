@@ -1,0 +1,334 @@
+{
+  "checks": [
+    {
+      "cat": "technik",
+      "name": "Auflösung 1080x1920 (9:16)",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "1080x1920"
+    },
+    {
+      "cat": "technik",
+      "name": "30 fps",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "30.00"
+    },
+    {
+      "cat": "technik",
+      "name": "Dauer 30-60 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "40.0 s"
+    },
+    {
+      "cat": "technik",
+      "name": "H.264/yuv420p + AAC",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "h264/yuv420p"
+    },
+    {
+      "cat": "technik",
+      "name": "Dateigröße < 250 MB",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "7.1 MB"
+    },
+    {
+      "cat": "ton",
+      "name": "Lautheit -14 LUFS ±1,5",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "-14.1 LUFS"
+    },
+    {
+      "cat": "ton",
+      "name": "True Peak ≤ -1 dBTP",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "-1.3 dBTP"
+    },
+    {
+      "cat": "ton",
+      "name": "Keine Übersteuerung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0.000 % Samples"
+    },
+    {
+      "cat": "ton",
+      "name": "Ton hörbar (nicht stumm)",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "-14.1 LUFS"
+    },
+    {
+      "cat": "stimmen",
+      "name": "Sprachverständlichkeit (Whisper-Abgleich)",
+      "ok": false,
+      "points": 17.0,
+      "max": 20,
+      "detail": "Ø 0.95, 1 Zeile(n) unter Mindestwert (0.85, lange Sätze strenger) oder mit Nachlaut/Wiederholung"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine Render-Fehler",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "0 fehlerhafte Bilder"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine ungeplanten Schwarzbilder",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine eingefrorenen Bilder > 2,5 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Bildinhalt vorhanden (kein Leerbild)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0 leere Stichproben"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Alle Figuren in der Datenbank",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Aussehen = gesperrtes Model-Sheet",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "abweichend: [], nicht gesperrt: []"
+    },
+    {
+      "cat": "story",
+      "name": "Hook in der 1. Sekunde",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "0.00 s"
+    },
+    {
+      "cat": "story",
+      "name": "Cliffhanger + A/B-Abstimmung",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": ""
+    },
+    {
+      "cat": "story",
+      "name": "Zeilen ≤ 22 Wörter",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Sprechtempo ≤ 4 Wörter/s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Einstellungslänge 1-8,5 s (Tempo)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Nur Figuren aus dem Serien-Cast",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Jede Dialogzeile untertitelt",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "21 Einblendungen"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Max. 30 Zeichen je Einblendung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Mindest-Lesezeit 0,4 s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Keine Überlappung, innerhalb der Laufzeit",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": ""
+    }
+  ],
+  "critical": [],
+  "categories": {
+    "technik": {
+      "points": 15,
+      "max": 15
+    },
+    "ton": {
+      "points": 15,
+      "max": 15
+    },
+    "stimmen": {
+      "points": 17.0,
+      "max": 20
+    },
+    "bild": {
+      "points": 15,
+      "max": 15
+    },
+    "konsistenz": {
+      "points": 10,
+      "max": 10
+    },
+    "story": {
+      "points": 15,
+      "max": 15
+    },
+    "untertitel": {
+      "points": 10,
+      "max": 10
+    }
+  },
+  "line_tests": [
+    {
+      "key": "0.0",
+      "speaker": "du",
+      "text": "Ich habe dieses Foto gestern weggeworfen. Heute Morgen lag es wieder unter meiner Tür.",
+      "heard": "Ich habe dieses Foto gestern weggeworfen. Heute Morgen lag es wieder unter meiner Tür.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "1.0",
+      "speaker": "du",
+      "text": "Unten im Hof. In die Mülltonne. Ich weiß es genau.",
+      "heard": "im Hof, in die Mülltonne, ich weiß es genau.",
+      "similarity": 0.941,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.0",
+      "speaker": "du",
+      "text": "Aber jetzt ist da noch jemand. Neben dem jungen Mann.",
+      "heard": "Aber jetzt ist da noch jemand, neben dem jungen Mann.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.0",
+      "speaker": "du",
+      "text": "Die Person trägt meinen gelben Pullover.",
+      "heard": "die Person trägt meinen gelben Pullover.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "4.0",
+      "speaker": "du",
+      "text": "Und auf der Rückseite steht jetzt: Nicht wegwerfen. Nicht wegwerfen.",
+      "heard": "Und auf der Rückseite steht jetzt nicht wegwerfen, nicht wegwerfen.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.0",
+      "speaker": "helga",
+      "text": "Das Foto kommt immer zurück, Kind. Bei Oskar war es genauso.",
+      "heard": "Das Foto kommt immer zurück, Kind. Bei Oscar war es genauso.",
+      "similarity": 0.938,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.1",
+      "speaker": "du",
+      "text": "Oskar. O.",
+      "heard": "Oskar.",
+      "similarity": 0.733,
+      "extra": [],
+      "ok": false
+    },
+    {
+      "key": "6.0",
+      "speaker": "du",
+      "text": "Wer hat es dann heute Nacht unter meine Tür geschoben?",
+      "heard": "Wer hat es dann heute Nacht unter meine Tür geschoben?",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "7.0",
+      "speaker": "du",
+      "text": "Was soll ich tun? A: Frau Brandt ausfragen. Oder B: Okan das Foto zeigen? Schreib es in die Kommentare!",
+      "heard": "Was soll ich tun? A. Frau Brandt ausfragen. Oder B. Okaan das Foto zeigen? Schreib es in die Kommentare.",
+      "similarity": 0.966,
+      "extra": [],
+      "ok": true
+    }
+  ],
+  "blocking": [
+    "Zeile 5.1 (du): gehört 'Oskar.'"
+  ],
+  "fast_lines": [],
+  "score": 97.0,
+  "passed": false,
+  "duration": 39.966667,
+  "contact_sheet": "/home/user/Cartoon-Films/episodes/wohnung-4b-e09/qc_contact.png"
+}
