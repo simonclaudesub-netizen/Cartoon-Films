@@ -166,7 +166,7 @@ class Flur(Set):
         a = c.p(0, yc, 2.0)
         P.line(ctx, [a, (a[0], a[1] + 40)], 3)
         P.ellipse(ctx, a[0], a[1] + 55, 34, 22, "#f2f0e6")
-        if self.has("note") or self.has("photoback"):
+        if self.has("note") or self.has("photoback") or self.has("photoback2"):
             # Zettel (bzw. Foto-Rückseite), unter der Tür durchgeschoben (liegt auf dem Boden)
             pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
             P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
@@ -181,11 +181,12 @@ class Flur(Set):
                 P.text(ctx, "Gut gemacht.", -6, 8, 36, color="#2b2b33")
                 P.text(ctx, "– O.", 60, 62, 36, color="#2b2b33")
             else:
-                P.text(ctx, "Nicht öffnen.", -6, -30, 34, color="#2b2b33")
-                P.text(ctx, "Nicht öffnen.", -6, 22, 34, color="#2b2b33")
+                word = "Nicht öffnen." if self.has("photoback") else "Nicht wegwerfen."
+                P.text(ctx, word, -6, -30, 34, color="#2b2b33")
+                P.text(ctx, word, -6, 22, 34, color="#2b2b33")
                 P.text(ctx, "– O.", 70, 76, 34, color="#2b2b33")
             ctx.restore()
-        if self.has("photo"):
+        if self.has("photo") or self.has("photo2"):
             # Altes Foto (Vorderseite) auf dem Boden: junger Mann vor einer Tür „4B“, sepia
             pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
             P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
@@ -202,7 +203,12 @@ class Flur(Set):
             P.text(ctx, "4B", 70, -70, 30, color="#e9d9b4")
             P.ellipse(ctx, -50, -60, 26, 30, "#4a3624")              # Kopf (Silhouette)
             P.rrect(ctx, -90, -30, 80, 140, 18, "#4a3624", 0)        # Körper
-            P.text(ctx, "1983", -150, 95, 26, color="#3b2c1c")
+            if self.has("photo2"):
+                # zweite Person: im senfgelben Kapuzenpulli der Hauptfigur
+                P.ellipse(ctx, -150, -55, 24, 28, "#4a3624")
+                P.rrect(ctx, -188, -26, 76, 136, 18, "#c9a23a", 0)
+            P.text(ctx, "1983", -185 if self.has("photo2") else -150, -110 if self.has("photo2") else 95, 26,
+                   color="#3b2c1c")
             ctx.restore()
 
     def dynamic(self, ctx, t):
