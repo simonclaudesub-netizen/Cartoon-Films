@@ -49,6 +49,10 @@
     {
       "t": "2026-11-24 13:59:48",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-25 13:27:01",
+      "state": "geplant"
     }
   ],
   "attempts": [
@@ -86,8 +90,26 @@
       "platform": "tiktok",
       "mode": "entwurf",
       "publish_id": "v_inbox_file~v2.7711736106512943126",
-      "status": "PROCESSING_UPLOAD",
+      "status": "SEND_TO_USER_INBOX",
       "caption": "Ich habe dieses Foto weggeworfen… heute lag es wieder vor meiner Tür – MIT MIR drauf 😨 | Wohnung 4B – Teil 9 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  },
+  "votes": {
+    "counts": {
+      "A": 0,
+      "B": 0
+    },
+    "total": 0,
+    "winner": null,
+    "sources": {
+      "youtube": {
+        "counts": {
+          "A": 0,
+          "B": 0
+        },
+        "total": 0,
+        "winner": null
+      }
     }
   }
 }

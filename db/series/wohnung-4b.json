@@ -32,7 +32,9 @@
       "Woher weiß Frau Brandt, dass 'er' schon einmal hier war?",
       "Wie kommt das weggeworfene Foto zurück – und wer schiebt es nachts unter die Tür?",
       "Warum steht auf dem Foto jetzt eine zweite Person im Pullover der Hauptfigur?",
-      "Oskar = O.? Was ist mit Oskar passiert, und woher weiß Frau Brandt davon?"
+      "Oskar = O.? Was ist mit Oskar passiert, und woher weiß Frau Brandt davon?",
+      "Hat Frau Brandt Oskar damals gekannt – und warum weiß sie so viel?",
+      "Wer ruft Frau Brandt mit ihrer eigenen Stimme an?"
     ]
   },
   "cast": [
@@ -91,6 +93,11 @@
       "id": "wohnung-4b-e09",
       "n": 9,
       "title": "Wieder da"
+    },
+    {
+      "id": "wohnung-4b-e10",
+      "n": 10,
+      "title": "Oskar"
     }
   ],
   "votes": [
@@ -245,11 +252,30 @@
           "winner": null
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e09",
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "total": 0,
+      "winner": null,
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 0
+          },
+          "total": 0,
+          "winner": null
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 10 'Oskar' – Frau Brandt bittet dich zu Tee in 4A und erzählt: Oskar wohnte 1983 in 4B, hat um 03:07 Uhr die Tür geöffnet, weil seine eigene Stimme davor bat. Seitdem kommt sein Foto zu jedem neuen Mieter. Dann klingelt ihr Telefon – am anderen Ende sagt Frau Brandts eigene Stimme: 'Ich bin's.'",
-    "B": "Teil 10 'Zweimal Okan' – Du zeigst Okan im Keller das Foto. Er wird blass, sagt zweimal: 'Das bin ich. Das bin ich.' – der junge Mann auf dem Foto ist Okan, nicht Oskar. Aber wer ist dann O.? Okan: 'Oskar war mein Bruder. Mein Bruder.'"
+    "A": "Teil 11 'Aufgelegt' – Du nimmst Frau Brandt das Telefon ab und legst auf. Sofort klingelt es wieder – diesmal DEIN Handy, Anrufer: 'Frau Brandt'. Neben dir sagt Frau Brandt zweimal: 'Das bin ich nicht. Das bin ich nicht.' Auf dem Display: Anruf aus Wohnung 4B.",
+    "B": "Teil 11 'Weiter zuhören' – Die Stimme am Telefon flüstert Frau Brandts Geheimnis: 'Du hast Oskar damals gehört. Und nicht geholfen.' Frau Brandt wird blass und gibt zu: Sie wohnte schon 1983 im Haus. Dann sagt die Stimme deinen Namen."
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

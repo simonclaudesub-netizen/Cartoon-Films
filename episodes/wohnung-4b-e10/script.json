@@ -1,0 +1,275 @@
+{
+  "id": "wohnung-4b-e10",
+  "series": "wohnung-4b",
+  "episode": 10,
+  "title": "Oskar",
+  "label": "WOHNUNG 4B · TEIL 10",
+  "summary": "Keine Stimmen für Teil 9 – gewählt wurde Option A: Frau Brandt ausfragen, weil sie Oskars Geschichte erzählt (Staffelbogen). Oskar wohnte früher in 4B. Mitten in der Nacht klopfte es, mit seiner eigenen Stimme. Er hat aufgemacht – am Morgen war nur noch das Foto da. Seitdem kommt es zu jedem, der in 4B wohnt. Dann klingelt Frau Brandts Telefon, und ihre eigene Stimme sagt: 'Hallo. Ich bin's.'",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Sofort auflegen",
+      "B": "Weiter zuhören"
+    }
+  },
+  "cover_shot": 5,
+  "publish": {
+    "title": "Meine Nachbarin bekommt einen Anruf… von ihrer EIGENEN Stimme 😨 | Wohnung 4B – Teil 10",
+    "description": "Vor über vierzig Jahren hat der Mann aus meiner Wohnung nachts die Tür geöffnet – weil seine eigene Stimme davor stand. Am Morgen war nur noch sein Foto da. Das erzählt mir meine Nachbarin Frau Brandt. Dann klingelt ihr Telefon. Und am anderen Ende spricht sie selbst.\nWas soll ich tun? Schreib A (sofort auflegen) oder B (weiter zuhören) in die Kommentare! Die Mehrheit entscheidet Teil 11.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": [
+      "#wohnung4b",
+      "#pov",
+      "#mystery",
+      "#gruselig",
+      "#creepy",
+      "#cartoon",
+      "#animation",
+      "#serie",
+      "#storytime",
+      "#shorts"
+    ]
+  },
+  "shots": [
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 1.7,
+      "lens": 0.08,
+      "music": "tension",
+      "caption": "SEIT 1983 WEG?!",
+      "caption_dur": 1.8,
+      "camera": {
+        "move": "push_in",
+        "strength": 1.0
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "tuer",
+          "arms": "cross",
+          "expr": "sad"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "sting",
+          "at": 0.0,
+          "gain": 0.8
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Der Mann auf dem Foto vor meiner Tür ist seit über vierzig Jahren verschwunden.",
+          "emotion": "scared",
+          "fx": "inner",
+          "delay": 0.2
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 2.2,
+      "lens": 0.08,
+      "music": "mystery",
+      "camera": {
+        "move": "push_in",
+        "strength": 0.6
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "mitte",
+          "arms": "down",
+          "expr": "sad"
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Oskar. Er hat früher in deiner Wohnung gewohnt.",
+          "delay": 0.2
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 2.4,
+      "lens": 0.08,
+      "music": "tension",
+      "caption": "SEINE EIGENE STIMME",
+      "caption_dur": 2.0,
+      "camera": {
+        "move": "push_in",
+        "strength": 0.8
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "mitte",
+          "arms": "cross",
+          "expr": "scared"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "knock",
+          "at": 0.2,
+          "gain": 0.6
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Mitten in der Nacht hat es bei ihm geklopft. Mit seiner eigenen Stimme.",
+          "delay": 0.6
+        }
+      ]
+    },
+    {
+      "set": "flur",
+      "time": "night",
+      "zoom": 1.8,
+      "lens": 0.08,
+      "music": "silence",
+      "variant": "photo",
+      "caption": "NUR DAS FOTO",
+      "caption_dur": 2.0,
+      "camera": {
+        "move": "tilt_down",
+        "strength": 0.8
+      },
+      "sfx": [
+        {
+          "name": "creak",
+          "at": 0.3,
+          "gain": 0.7
+        },
+        {
+          "name": "sting",
+          "at": 1.0,
+          "gain": 0.7
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Er hat aufgemacht. Am Morgen war nur noch das Foto da.",
+          "delay": 0.3
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 2.2,
+      "lens": 0.08,
+      "music": "mystery",
+      "camera": {
+        "move": "static"
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "mitte",
+          "arms": "down",
+          "expr": "sad"
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Und seitdem kommt das Foto zu jedem, der in meiner Wohnung wohnt?",
+          "emotion": "whisper",
+          "delay": 0.3
+        },
+        {
+          "speaker": "helga",
+          "text": "Zu jedem. Zu jedem.",
+          "gap": 0.4
+        }
+      ]
+    },
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "zoom": 2.2,
+      "lens": 0.08,
+      "music": "silence",
+      "camera": {
+        "move": "push_in",
+        "strength": 1.4,
+        "punch": [
+          2.2
+        ]
+      },
+      "characters": [
+        {
+          "id": "helga",
+          "spot": "mitte",
+          "arms": "hold",
+          "prop": "phone",
+          "expr": "scared"
+        }
+      ],
+      "sfx": [
+        {
+          "name": "buzz",
+          "at": 0.0
+        },
+        {
+          "name": "sting",
+          "at": 2.2
+        }
+      ],
+      "lines": [
+        {
+          "speaker": "helga",
+          "text": "Hallo. Ich bin es.",
+          "fx": "phone",
+          "delay": 1.0
+        },
+        {
+          "speaker": "du",
+          "text": "Das ist ihre eigene Stimme.",
+          "emotion": "scared",
+          "fx": "inner",
+          "gap": 0.7
+        }
+      ],
+      "blackout_at": 5.2
+    },
+    {
+      "set": "treppenhaus",
+      "time": "day",
+      "variant": "open",
+      "music": "tension",
+      "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {
+          "A": "SOFORT AUFLEGEN",
+          "B": "WEITER ZUHÖREN"
+        },
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 11 FOLGT"
+      },
+      "lines": [
+        {
+          "speaker": "du",
+          "text": "Was soll ich tun? A: Sofort auflegen. Oder B: Weiter zuhören? Schreib es in die Kommentare!",
+          "emotion": "neutral",
+          "delay": 0.5,
+          "no_sub": true
+        }
+      ]
+    }
+  ]
+}
