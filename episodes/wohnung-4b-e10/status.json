@@ -1,10 +1,68 @@
 {
   "id": "wohnung-4b-e10",
-  "state": "in_produktion",
+  "state": "geplant",
   "history": [
     {
       "t": "2026-11-25 13:28:16",
       "state": "in_produktion"
+    },
+    {
+      "t": "2026-11-25 13:37:38",
+      "state": "freigabe_ausstehend",
+      "score": 100.0,
+      "duration": 35.966667,
+      "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e10/final.mp4"
+    },
+    {
+      "t": "2026-11-25 13:37:38",
+      "state": "freigegeben",
+      "approved_by": "qc-automatik"
+    },
+    {
+      "t": "2026-11-25 13:37:52",
+      "state": "geplant"
+    },
+    {
+      "t": "2026-11-25 13:38:17",
+      "state": "geplant"
     }
-  ]
+  ],
+  "score": 100.0,
+  "attempts": [
+    {
+      "attempt": 1,
+      "score": 100.0,
+      "passed": true,
+      "critical": [],
+      "seconds": 561.8,
+      "rendered_shots": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "duration": 35.966667,
+  "final": "/home/user/Cartoon-Films/episodes/wohnung-4b-e10/final.mp4",
+  "approved_by": "qc-automatik",
+  "published": {
+    "youtube": {
+      "platform": "youtube",
+      "id": "8PVu8iMM_Ec",
+      "url": "https://youtube.com/shorts/8PVu8iMM_Ec",
+      "privacy": "private",
+      "publish_at": "2026-11-25T17:00:00Z"
+    },
+    "tiktok": {
+      "platform": "tiktok",
+      "mode": "entwurf",
+      "publish_id": "v_inbox_file~v2.7712102570482927638",
+      "status": "SEND_TO_USER_INBOX",
+      "caption": "Meine Nachbarin bekommt einen Anruf… von ihrer EIGENEN Stimme 😨 | Wohnung 4B – Teil 10 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  }
 }
