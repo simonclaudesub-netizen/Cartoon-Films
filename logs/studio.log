@@ -343,3 +343,4 @@ IndexError: list index out of range
 2026-11-24 13:54:57 [INFO] [wohnung-4b-e09] automatisch freigegeben (QC 100.0 >= 90)
 2026-11-24 13:55:12 [INFO] [wohnung-4b-e09] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'LvkoKwVp9DY', 'url': 'https://youtube.com/shorts/LvkoKwVp9DY', 'privacy': 'private', 'publish_at': '2026-11-24T17:00:00Z'}
 2026-11-24 13:59:48 [INFO] [wohnung-4b-e09] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7711736106512943126', 'status': 'PROCESSING_UPLOAD', 'caption': 'Ich habe dieses Foto weggeworfen… heute lag es wieder vor meiner Tür – MIT MIR drauf 😨 | Wohnung 4B – Teil 9 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
+2026-11-25 13:28:16 [INFO] [wohnung-4b-e10] Versuch 1: Zeitleiste + Stimmen
