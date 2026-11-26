@@ -34,7 +34,8 @@
       "Warum steht auf dem Foto jetzt eine zweite Person im Pullover der Hauptfigur?",
       "Oskar = O.? Was ist mit Oskar passiert, und woher weiß Frau Brandt davon?",
       "Hat Frau Brandt Oskar damals gekannt – und warum weiß sie so viel?",
-      "Wer ruft Frau Brandt mit ihrer eigenen Stimme an?"
+      "Wer ruft Frau Brandt mit ihrer eigenen Stimme an?",
+      "Wer ruft aus der abgeschlossenen Wohnung 4B an – und mit welchem Telefon?"
     ]
   },
   "cast": [
@@ -98,6 +99,11 @@
       "id": "wohnung-4b-e10",
       "n": 10,
       "title": "Oskar"
+    },
+    {
+      "id": "wohnung-4b-e11",
+      "n": 11,
+      "title": "Aufgelegt"
     }
   ],
   "votes": [
@@ -271,11 +277,30 @@
           "winner": null
         }
       }
+    },
+    {
+      "episode": "wohnung-4b-e10",
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "total": 0,
+      "winner": null,
+      "sources": {
+        "youtube": {
+          "counts": {
+            "A": 0,
+            "B": 0
+          },
+          "total": 0,
+          "winner": null
+        }
+      }
     }
   ],
   "next_plans": {
-    "A": "Teil 11 'Aufgelegt' – Du nimmst Frau Brandt das Telefon ab und legst auf. Sofort klingelt es wieder – diesmal DEIN Handy, Anrufer: 'Frau Brandt'. Neben dir sagt Frau Brandt zweimal: 'Das bin ich nicht. Das bin ich nicht.' Auf dem Display: Anruf aus Wohnung 4B.",
-    "B": "Teil 11 'Weiter zuhören' – Die Stimme am Telefon flüstert Frau Brandts Geheimnis: 'Du hast Oskar damals gehört. Und nicht geholfen.' Frau Brandt wird blass und gibt zu: Sie wohnte schon 1983 im Haus. Dann sagt die Stimme deinen Namen."
+    "A": "Teil 12 'Aufgeschlossen' – Tagsüber, Okan wartet unten nicht: Du schließt 4B auf. Die Wohnung ist leer, das Festnetztelefon (das es eigentlich nicht gibt) liegt auf dem Boden, der Hörer daneben. Daraus flüstert deine eigene Stimme: 'Danke.' Auf dem Boden: ein zweites Foto – du vor Tür 4B, aufgenommen von innen.",
+    "B": "Teil 12 'Okan kommt' – Okan geht zweimal sagend voran ('Bleib hinter mir. Bleib hinter mir.') und schließt 4B mit dem Generalschlüssel auf. Drinnen alles ruhig. Dann klingelt Okans Handy: Anrufer 'Okan'. Okan sieht dich an und sagt nur einmal: 'Geh rein.'"
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

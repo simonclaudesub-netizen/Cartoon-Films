@@ -1,0 +1,92 @@
+{
+  "id": "wohnung-4b-e11",
+  "series": "wohnung-4b",
+  "episode": 11,
+  "title": "Aufgelegt",
+  "label": "WOHNUNG 4B · TEIL 11",
+  "summary": "Keine Stimmen für Teil 10 – gewählt wurde Option A: sofort auflegen (passt zur Serienbibel; Plan B hätte Frau Brandt schon 1983 im Haus gebraucht). Du nimmst Frau Brandt das Telefon ab und legst auf. Sofort klingelt dein Handy: 'Frau Brandt'. Neben dir sagt sie zweimal: 'Das bin ich nicht.' Der Anruf kommt aus Wohnung 4B – deiner Wohnung. Dann eine Nachricht: 'Ich bin es. Mach auf.'",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Wohnung aufschließen",
+      "B": "Okan anrufen"
+    }
+  },
+  "cover_shot": 3,
+  "publish": {
+    "title": "Meine Nachbarin steht neben mir… und ruft mich gleichzeitig an – aus MEINER Wohnung 😨 | Wohnung 4B – Teil 11",
+    "description": "Am Telefon meiner Nachbarin spricht ihre eigene Stimme. Ich lege auf. Sofort klingelt mein Handy: Frau Brandt ruft an. Aber Frau Brandt steht neben mir. Und der Anruf kommt aus meiner eigenen Wohnung.\nWas soll ich tun? Schreib A (Wohnung aufschließen) oder B (Okan anrufen) in die Kommentare! Die Mehrheit entscheidet Teil 12.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#creepy", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+  },
+  "shots": [
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "zoom": 2.0, "lens": 0.08, "music": "tension",
+      "caption": "IHRE EIGENE STIMME", "caption_dur": 1.8,
+      "camera": {"move": "push_in", "strength": 1.0},
+      "characters": [{"id": "helga", "spot": "mitte", "arms": "hold", "prop": "phone", "expr": "scared"}],
+      "sfx": [{"name": "sting", "at": 0.0, "gain": 0.8}],
+      "lines": [
+        {"speaker": "du", "text": "Am Telefon meiner Nachbarin spricht ihre eigene Stimme. Ich lege sofort auf.", "emotion": "scared", "fx": "inner", "delay": 0.2}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "music": "tension",
+      "camera": {"move": "static", "shake": [0.2]},
+      "pov": {"mode": "phone", "contact": "Frau Brandt", "avatar": "#8b5d7d", "status": "Eingehender Anruf …", "messages": []},
+      "sfx": [{"name": "buzz", "at": 0.0}, {"name": "buzz", "at": 1.2}],
+      "lines": [
+        {"speaker": "du", "text": "Sofort klingelt mein Handy. Frau Brandt.", "emotion": "scared", "fx": "inner", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "zoom": 2.2, "lens": 0.08, "music": "mystery",
+      "camera": {"move": "push_in", "strength": 0.8},
+      "characters": [{"id": "helga", "spot": "mitte", "arms": "cross", "expr": "scared"}],
+      "lines": [
+        {"speaker": "helga", "text": "Das bin ich nicht. Das bin ich nicht.", "delay": 0.3},
+        {"speaker": "du", "text": "Sie steht doch direkt neben mir.", "emotion": "whisper", "fx": "inner", "gap": 0.4}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "music": "silence",
+      "caption": "AUS WOHNUNG 4B?!", "caption_dur": 2.0,
+      "camera": {"move": "push_in", "strength": 1.2, "punch": [0.4]},
+      "pov": {"mode": "phone", "contact": "Frau Brandt", "avatar": "#8b5d7d", "status": "Festnetz · Lindenweg 9, Wohnung 4B", "messages": []},
+      "sfx": [{"name": "sting", "at": 0.4}],
+      "lines": [
+        {"speaker": "du", "text": "Der Anruf kommt aus meiner Wohnung. Und die ist abgeschlossen.", "emotion": "scared", "fx": "inner", "delay": 0.6}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "zoom": 2.4, "lens": 0.08, "music": "tension",
+      "camera": {"move": "push_in", "strength": 0.8},
+      "characters": [{"id": "helga", "spot": "mitte", "arms": "down", "expr": "scared"}],
+      "lines": [
+        {"speaker": "helga", "text": "Geh nicht ran, Kind. Wer da drin ist, kennt jetzt auch meine Stimme.", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "music": "silence",
+      "camera": {"move": "push_in", "strength": 1.4, "punch": [2.0]},
+      "pov": {"mode": "phone", "contact": "Frau Brandt", "avatar": "#8b5d7d", "status": "online",
+              "messages": [{"from": "helga", "text": "Ich bin es. Mach auf.", "at": 0.6}]},
+      "sfx": [{"name": "ping", "at": 0.6}, {"name": "sting", "at": 2.0}],
+      "lines": [
+        {"speaker": "du", "text": "Eine Nachricht. Von Frau Brandt. Aus meiner Wohnung.", "emotion": "whisper", "fx": "inner", "delay": 1.4}
+      ],
+      "blackout_at": 5.0
+    },
+    {
+      "set": "treppenhaus", "time": "day", "variant": "open", "music": "tension", "min_dur": 6.0,
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {"A": "AUFSCHLIESSEN", "B": "OKAN ANRUFEN"},
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 12 FOLGT"
+      },
+      "lines": [
+        {"speaker": "du", "text": "Was soll ich tun? A: Meine Wohnung aufschließen. Oder B: Okan anrufen? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+      ]
+    }
+  ]
+}

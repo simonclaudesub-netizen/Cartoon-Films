@@ -25,6 +25,10 @@
     {
       "t": "2026-11-25 13:38:17",
       "state": "geplant"
+    },
+    {
+      "t": "2026-11-26 13:26:27",
+      "state": "geplant"
     }
   ],
   "score": 100.0,
@@ -63,6 +67,24 @@
       "publish_id": "v_inbox_file~v2.7712102570482927638",
       "status": "SEND_TO_USER_INBOX",
       "caption": "Meine Nachbarin bekommt einen Anruf… von ihrer EIGENEN Stimme 😨 | Wohnung 4B – Teil 10 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime"
+    }
+  },
+  "votes": {
+    "counts": {
+      "A": 0,
+      "B": 0
+    },
+    "total": 0,
+    "winner": null,
+    "sources": {
+      "youtube": {
+        "counts": {
+          "A": 0,
+          "B": 0
+        },
+        "total": 0,
+        "winner": null
+      }
     }
   }
 }
