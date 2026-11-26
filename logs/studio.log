@@ -356,3 +356,11 @@ IndexError: list index out of range
 2026-11-26 13:35:05 [INFO] [wohnung-4b-e11] Sprachaufnahme Runde 1: neue Takes für [('2.0', 0.66, 'Das bin ich nicht.')]
 2026-11-26 13:36:02 [INFO] [wohnung-4b-e11] Sprachaufnahme Runde 2: neue Takes für [('2.0', 0.66, 'Das bin ich nicht.')]
 2026-11-26 13:36:56 [INFO] [wohnung-4b-e11] Sprachaufnahme Runde 3: neue Takes für [('2.0', 0.66, 'Das bin ich nicht.')]
+2026-11-26 13:37:50 [INFO] [wohnung-4b-e11] Sprachaufnahme: alle Zeilen sauber (Runde 4)
+2026-11-26 13:37:50 [INFO] [wohnung-4b-e11] Laufzeit 35.6 s, 7 Einstellungen – rendere Video
+2026-11-26 13:38:26 [INFO] [wohnung-4b-e11] gerendert: [0, 1, 2, 3, 4, 5, 6] | aus Cache: []
+2026-11-26 13:38:53 [INFO] [wohnung-4b-e11] Qualitätskontrolle läuft
+2026-11-26 13:39:23 [INFO] [wohnung-4b-e11] QC Versuch 1: 98.0 Punkte – bestanden
+2026-11-26 13:39:23 [INFO] [wohnung-4b-e11] automatisch freigegeben (QC 98.0 >= 90)
+2026-11-26 13:39:42 [INFO] [wohnung-4b-e11] veröffentlicht auf youtube: {'platform': 'youtube', 'id': 'nwizZU5B9MQ', 'url': 'https://youtube.com/shorts/nwizZU5B9MQ', 'privacy': 'private', 'publish_at': '2026-11-26T17:00:00Z'}
+2026-11-26 13:40:07 [INFO] [wohnung-4b-e11] veröffentlicht auf tiktok: {'platform': 'tiktok', 'mode': 'entwurf', 'publish_id': 'v_inbox_file~v2.7712474078401316886', 'status': 'SEND_TO_USER_INBOX', 'caption': 'Meine Nachbarin steht neben mir… und ruft mich gleichzeitig an – aus MEINER Wohnung 😨 | Wohnung 4B – Teil 11 #duentscheidest #wohnung4b #pov #mystery #gruselig #creepy #cartoon #animation #serie #storytime'}
