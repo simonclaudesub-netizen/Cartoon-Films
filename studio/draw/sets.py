@@ -186,7 +186,7 @@ class Flur(Set):
                 P.text(ctx, word, -6, 22, 34, color="#2b2b33")
                 P.text(ctx, "– O.", 70, 76, 34, color="#2b2b33")
             ctx.restore()
-        if self.has("photo") or self.has("photo2"):
+        if self.has("photo") or self.has("photo2") or self.has("photo3"):
             # Altes Foto (Vorderseite) auf dem Boden: junger Mann vor einer Tür „4B“, sepia
             pts = [c.p(x, yf, z) for x, z in ((-0.27, 2.5), (0.27, 2.58), (0.23, 3.08), (-0.29, 3.0))]
             P.poly(ctx, [(p[0] + 6, p[1] + 6) for p in pts], "#000000", lw=0, alpha=0.18)
@@ -202,6 +202,12 @@ class Flur(Set):
             # Inhalt bleibt innerhalb des Fotorands (sichtbarer Bereich ca. x -110…130)
             P.rrect(ctx, 20, -120, 100, 230, 6, "#7a5c3c", 3)       # Tür
             P.text(ctx, "4B", 52, -70, 30, color="#e9d9b4")
+            if self.has("photo3"):
+                # neues Foto: nur die Hauptfigur (senfgelber Kapuzenpulli) vor Tür 4B, ohne Jahreszahl
+                P.ellipse(ctx, -12, -60, 22, 26, "#4a3624")
+                P.rrect(ctx, -44, -32, 64, 142, 16, "#c9a23a", 0)
+                ctx.restore()
+                return
             P.ellipse(ctx, -12, -60, 22, 26, "#4a3624")              # Kopf (Silhouette)
             P.rrect(ctx, -44, -32, 64, 142, 16, "#4a3624", 0)        # Körper
             if self.has("photo2"):

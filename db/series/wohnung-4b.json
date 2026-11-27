@@ -35,7 +35,9 @@
       "Oskar = O.? Was ist mit Oskar passiert, und woher weiß Frau Brandt davon?",
       "Hat Frau Brandt Oskar damals gekannt – und warum weiß sie so viel?",
       "Wer ruft Frau Brandt mit ihrer eigenen Stimme an?",
-      "Wer ruft aus der abgeschlossenen Wohnung 4B an – und mit welchem Telefon?"
+      "Wer ruft aus der abgeschlossenen Wohnung 4B an – und mit welchem Telefon?",
+      "Wer hat das Foto von dir vor Tür 4B gemacht – und von wo?",
+      "Wer dankt dir mit deiner eigenen Stimme fürs Aufschließen?"
     ]
   },
   "cast": [
@@ -104,6 +106,11 @@
       "id": "wohnung-4b-e11",
       "n": 11,
       "title": "Aufgelegt"
+    },
+    {
+      "id": "wohnung-4b-e12",
+      "n": 12,
+      "title": "Aufgeschlossen"
     }
   ],
   "votes": [
@@ -299,8 +306,8 @@
     }
   ],
   "next_plans": {
-    "A": "Teil 12 'Aufgeschlossen' – Tagsüber, Okan wartet unten nicht: Du schließt 4B auf. Die Wohnung ist leer, das Festnetztelefon (das es eigentlich nicht gibt) liegt auf dem Boden, der Hörer daneben. Daraus flüstert deine eigene Stimme: 'Danke.' Auf dem Boden: ein zweites Foto – du vor Tür 4B, aufgenommen von innen.",
-    "B": "Teil 12 'Okan kommt' – Okan geht zweimal sagend voran ('Bleib hinter mir. Bleib hinter mir.') und schließt 4B mit dem Generalschlüssel auf. Drinnen alles ruhig. Dann klingelt Okans Handy: Anrufer 'Okan'. Okan sieht dich an und sagt nur einmal: 'Geh rein.'"
+    "A": "Teil 13 'Fenster' – Du rufst aus dem Fenster in den Hof. Unten steht Okan und schaut hoch – und neben ihm steht jemand im senfgelben Kapuzenpulli und winkt. Okan ruft zweimal: 'Wer ist bei dir? Wer ist bei dir?'",
+    "B": "Teil 13 'Schlafzimmer' – Du öffnest langsam die Schlafzimmertür. Das Bett ist gemacht, auf dem Kissen liegt Oskars altes Foto – jetzt ist der junge Mann darauf verschwunden, nur die Tür 4B ist noch zu sehen. Von hinten sagt deine Stimme: 'Jetzt bin ich dran.'"
   },
   "content_rules": [
     "Keine Gewalt, kein Blut, keine realen Personen oder Marken",

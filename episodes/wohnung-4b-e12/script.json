@@ -1,0 +1,89 @@
+{
+  "id": "wohnung-4b-e12",
+  "series": "wohnung-4b",
+  "episode": 12,
+  "title": "Aufgeschlossen",
+  "label": "WOHNUNG 4B · TEIL 12",
+  "summary": "Stimmen zu Teil 11 nicht abrufbar (YouTube-Zugang abgelaufen); bisher kamen nie Stimmen – gewählt wurde die spannendere Option A: aufschließen. Tagsüber schließt du 4B auf. Leer. Aus dem Schlafzimmer sagt deine eigene Stimme: 'Danke, dass du aufgeschlossen hast.' Im Flur liegt ein neues Foto: du vor Tür 4B – vor einer Minute aufgenommen. Okan ruft an und sagt zweimal: 'Komm sofort raus.' Hinter dir fällt die Tür zu.",
+  "cliffhanger": {
+    "question": "Was soll ich tun?",
+    "options": {
+      "A": "Durchs Fenster rufen",
+      "B": "Ins Schlafzimmer schauen"
+    }
+  },
+  "cover_shot": 4,
+  "publish": {
+    "title": "Jemand ruft mich aus meiner eigenen Wohnung an… also schließe ich auf 😨 | Wohnung 4B – Teil 12",
+    "description": "Jemand hat mich aus meiner abgeschlossenen Wohnung angerufen. Ich schließe auf. Niemand da. Dann sagt meine eigene Stimme aus dem Schlafzimmer: 'Danke.' Und im Flur liegt ein Foto von mir – aufgenommen vor einer Minute.\nWas soll ich tun? Schreib A (durchs Fenster rufen) oder B (ins Schlafzimmer schauen) in die Kommentare! Die Mehrheit entscheidet Teil 13.\n\nAlle Figuren und Geschichten sind frei erfunden. Dieses Video wurde mit KI und prozeduraler Animation erstellt.",
+    "hashtags": ["#wohnung4b", "#pov", "#mystery", "#gruselig", "#creepy", "#cartoon", "#animation", "#serie", "#storytime", "#shorts"]
+  },
+  "shots": [
+    {
+      "set": "wohnzimmer", "time": "day", "zoom": 1.4, "lens": 0.08, "music": "tension",
+      "caption": "WER WAR HIER?", "caption_dur": 1.8,
+      "camera": {"move": "pan_left", "strength": 0.6},
+      "sfx": [{"name": "keys", "at": 0.0}, {"name": "creak", "at": 0.5, "gain": 0.7}],
+      "lines": [
+        {"speaker": "du", "text": "Jemand hat mich aus meiner abgeschlossenen Wohnung angerufen. Also schließe ich auf.", "emotion": "scared", "fx": "inner", "delay": 0.2}
+      ]
+    },
+    {
+      "set": "wohnzimmer", "time": "day", "zoom": 1.8, "lens": 0.08, "music": "mystery",
+      "camera": {"move": "pan_right", "strength": 0.5},
+      "lines": [
+        {"speaker": "du", "text": "Leer. Niemand da.", "emotion": "whisper", "fx": "inner", "delay": 0.2}
+      ]
+    },
+    {
+      "set": "wohnzimmer", "time": "day", "zoom": 2.0, "lens": 0.1, "music": "silence",
+      "caption": "MEINE STIMME?!", "caption_dur": 2.0,
+      "camera": {"move": "push_in", "strength": 1.2, "punch": [0.8]},
+      "sfx": [{"name": "sting", "at": 0.8}],
+      "lines": [
+        {"speaker": "du", "text": "Danke, dass du aufgeschlossen hast.", "emotion": "neutral", "fx": "door", "delay": 0.6},
+        {"speaker": "du", "text": "Das kam aus meinem Schlafzimmer. Mit meiner Stimme.", "emotion": "scared", "fx": "inner", "gap": 0.6}
+      ]
+    },
+    {
+      "set": "flur", "time": "day", "zoom": 1.9, "lens": 0.08, "music": "mystery", "variant": "photo3",
+      "camera": {"move": "tilt_down", "strength": 0.8},
+      "sfx": [{"name": "whoosh", "at": 0.0, "gain": 0.6}],
+      "lines": [
+        {"speaker": "du", "text": "Im Flur liegt ein neues Foto.", "emotion": "whisper", "fx": "inner", "delay": 0.3}
+      ]
+    },
+    {
+      "set": "flur", "time": "day", "zoom": 2.2, "lens": 0.08, "music": "silence", "variant": "photo3",
+      "caption": "VOR EINER MINUTE?!", "caption_dur": 2.0,
+      "camera": {"move": "tilt_down", "strength": 1.0, "punch": [0.6]},
+      "sfx": [{"name": "sting", "at": 0.6}],
+      "lines": [
+        {"speaker": "du", "text": "Das bin ich. Vor meiner Tür. Gerade eben, als ich aufgeschlossen habe.", "emotion": "scared", "fx": "inner", "delay": 0.4}
+      ]
+    },
+    {
+      "set": "flur", "time": "day", "music": "tension",
+      "camera": {"move": "push_in", "strength": 1.4, "punch": [3.0]},
+      "pov": {"mode": "phone", "contact": "Okan (Hausmeister)", "avatar": "#3a6ea5", "status": "Anruf läuft …", "messages": []},
+      "sfx": [{"name": "buzz", "at": 0.0}, {"name": "thud", "at": 3.0}, {"name": "sting", "at": 3.1}],
+      "lines": [
+        {"speaker": "okan", "text": "Komm sofort raus. Komm sofort raus.", "fx": "phone", "delay": 0.3},
+        {"speaker": "du", "text": "Hinter mir fällt die Tür zu.", "emotion": "scared", "fx": "inner", "gap": 0.7}
+      ],
+      "blackout_at": 5.6
+    },
+    {
+      "set": "flur", "time": "day", "music": "tension", "min_dur": 6.0, "variant": "photo3",
+      "endcard": {
+        "question": "WAS SOLL ICH TUN?",
+        "options": {"A": "FENSTER: UM HILFE RUFEN", "B": "INS SCHLAFZIMMER"},
+        "cta": "Schreib A oder B in die Kommentare!",
+        "next": "TEIL 13 FOLGT"
+      },
+      "lines": [
+        {"speaker": "du", "text": "Was soll ich tun? A: Durchs Fenster um Hilfe rufen. Oder B: Ins Schlafzimmer schauen? Schreib es in die Kommentare!", "emotion": "neutral", "delay": 0.5, "no_sub": true}
+      ]
+    }
+  ]
+}
