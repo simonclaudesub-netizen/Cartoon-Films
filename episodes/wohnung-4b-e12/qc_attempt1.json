@@ -1,0 +1,334 @@
+{
+  "checks": [
+    {
+      "cat": "technik",
+      "name": "Auflösung 1080x1920 (9:16)",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "1080x1920"
+    },
+    {
+      "cat": "technik",
+      "name": "30 fps",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "30.00"
+    },
+    {
+      "cat": "technik",
+      "name": "Dauer 30-60 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "35.7 s"
+    },
+    {
+      "cat": "technik",
+      "name": "H.264/yuv420p + AAC",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "h264/yuv420p"
+    },
+    {
+      "cat": "technik",
+      "name": "Dateigröße < 250 MB",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "6.4 MB"
+    },
+    {
+      "cat": "ton",
+      "name": "Lautheit -14 LUFS ±1,5",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "-14.1 LUFS"
+    },
+    {
+      "cat": "ton",
+      "name": "True Peak ≤ -1 dBTP",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "-1.2 dBTP"
+    },
+    {
+      "cat": "ton",
+      "name": "Keine Übersteuerung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0.000 % Samples"
+    },
+    {
+      "cat": "ton",
+      "name": "Ton hörbar (nicht stumm)",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "-14.1 LUFS"
+    },
+    {
+      "cat": "stimmen",
+      "name": "Sprachverständlichkeit (Whisper-Abgleich)",
+      "ok": true,
+      "points": 20.0,
+      "max": 20,
+      "detail": "Ø 1.00, 0 Zeile(n) unter Mindestwert (0.85, lange Sätze strenger) oder mit Nachlaut/Wiederholung"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine Render-Fehler",
+      "ok": true,
+      "points": 5,
+      "max": 5,
+      "detail": "0 fehlerhafte Bilder"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine ungeplanten Schwarzbilder",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Keine eingefrorenen Bilder > 2,5 s",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "bild",
+      "name": "Bildinhalt vorhanden (kein Leerbild)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "0 leere Stichproben"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Alle Figuren in der Datenbank",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "[]"
+    },
+    {
+      "cat": "konsistenz",
+      "name": "Aussehen = gesperrtes Model-Sheet",
+      "ok": true,
+      "points": 6,
+      "max": 6,
+      "detail": "abweichend: [], nicht gesperrt: []"
+    },
+    {
+      "cat": "story",
+      "name": "Hook in der 1. Sekunde",
+      "ok": true,
+      "points": 3,
+      "max": 3,
+      "detail": "0.00 s"
+    },
+    {
+      "cat": "story",
+      "name": "Cliffhanger + A/B-Abstimmung",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": ""
+    },
+    {
+      "cat": "story",
+      "name": "Zeilen ≤ 22 Wörter",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Sprechtempo ≤ 4 Wörter/s",
+      "ok": false,
+      "points": 0,
+      "max": 2,
+      "detail": "['Hinter mir fällt die Tür zu.']"
+    },
+    {
+      "cat": "story",
+      "name": "Einstellungslänge 1-8,5 s (Tempo)",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "story",
+      "name": "Nur Figuren aus dem Serien-Cast",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Jede Dialogzeile untertitelt",
+      "ok": true,
+      "points": 4,
+      "max": 4,
+      "detail": "18 Einblendungen"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Max. 30 Zeichen je Einblendung",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Mindest-Lesezeit 0,4 s",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": "[]"
+    },
+    {
+      "cat": "untertitel",
+      "name": "Keine Überlappung, innerhalb der Laufzeit",
+      "ok": true,
+      "points": 2,
+      "max": 2,
+      "detail": ""
+    }
+  ],
+  "critical": [],
+  "categories": {
+    "technik": {
+      "points": 15,
+      "max": 15
+    },
+    "ton": {
+      "points": 15,
+      "max": 15
+    },
+    "stimmen": {
+      "points": 20.0,
+      "max": 20
+    },
+    "bild": {
+      "points": 15,
+      "max": 15
+    },
+    "konsistenz": {
+      "points": 10,
+      "max": 10
+    },
+    "story": {
+      "points": 13,
+      "max": 15
+    },
+    "untertitel": {
+      "points": 10,
+      "max": 10
+    }
+  },
+  "line_tests": [
+    {
+      "key": "0.0",
+      "speaker": "du",
+      "text": "Jemand hat mich aus meiner abgeschlossenen Wohnung angerufen. Also schließe ich auf.",
+      "heard": "Jemand hat mich aus meiner abgeschlossenen Wohnung angerufen, also schließe ich auf.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "1.0",
+      "speaker": "du",
+      "text": "Leer. Niemand da.",
+      "heard": "leer. Niemand da.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.0",
+      "speaker": "du",
+      "text": "Danke, dass du aufgeschlossen hast.",
+      "heard": "Danke, dass du aufgeschlossen hast.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "2.1",
+      "speaker": "du",
+      "text": "Das kam aus meinem Schlafzimmer. Mit meiner Stimme.",
+      "heard": "Das kam aus meinem Schlafzimmer mit meiner Stimme.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "3.0",
+      "speaker": "du",
+      "text": "Im Flur liegt ein neues Foto.",
+      "heard": "im Flur liegt ein neues Foto.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "4.0",
+      "speaker": "du",
+      "text": "Das bin ich. Vor meiner Tür. Gerade eben, als ich aufgeschlossen habe.",
+      "heard": "Das bin ich vor meiner Tür, gerade eben als ich aufgeschlossen habe.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.0",
+      "speaker": "okan",
+      "text": "Komm sofort raus. Komm sofort raus.",
+      "heard": "Komm sofort raus, komm sofort raus!",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "5.1",
+      "speaker": "du",
+      "text": "Hinter mir fällt die Tür zu.",
+      "heard": "Hinter mir fällt die Tür zu.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    },
+    {
+      "key": "6.0",
+      "speaker": "du",
+      "text": "Was soll ich tun? A: Durchs Fenster um Hilfe rufen. Oder B: Ins Schlafzimmer schauen? Schreib es in die Kommentare!",
+      "heard": "Was soll ich tun? A. Durchs Fenster um Hilfe rufen oder B. ins Schlafzimmer schauen. Schreib es in die Kommentare.",
+      "similarity": 1.0,
+      "extra": [],
+      "ok": true
+    }
+  ],
+  "fast_lines": [
+    "5.1"
+  ],
+  "score": 98.0,
+  "blocking": [],
+  "passed": true,
+  "duration": 35.733,
+  "contact_sheet": "/home/user/Cartoon-Films/episodes/wohnung-4b-e12/qc_contact.png"
+}
